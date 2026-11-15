@@ -1,0 +1,86 @@
+{
+ "tday": "2026-11-13",
+ "asof": "2026-11-13T11:22:00+00:00",
+ "price": 3892.265,
+ "bias": "Ribassista forte",
+ "score": -0.95,
+ "close": "2026-11-13T22:00:00+00:00",
+ "invalidation": 3938.1,
+ "evaluated": true,
+ "setups": [
+  {
+   "id": "A",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3919.5,
+   "zone_hi": 3924.2,
+   "trigger": null,
+   "entry": 3921.9,
+   "stop": 3938.1,
+   "risk": 16.2,
+   "targets": [
+    {
+     "price": 3900.0,
+     "rr": 1.35,
+     "label": "Soglia psicologica 3900 +3",
+     "proj": false
+    },
+    {
+     "price": 3877.8,
+     "rr": 2.72,
+     "label": "Chiusura di ieri +4",
+     "proj": false
+    },
+    {
+     "price": 3852.3,
+     "rr": 4.29,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.35,
+   "title": "Vendita su rimbalzo"
+  },
+  {
+   "id": "B",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3869.1,
+   "zone_hi": 3877.8,
+   "trigger": 3869.1,
+   "entry": 3866.7,
+   "stop": 3883.0,
+   "risk": 16.2,
+   "targets": [
+    {
+     "price": 3819.1,
+     "rr": 2.94,
+     "label": "Pivot S1",
+     "proj": false
+    }
+   ],
+   "rr1": 2.94,
+   "title": "Rottura ribassista"
+  }
+ ],
+ "results": [
+  {
+   "id": "A",
+   "title": "Vendita su rimbalzo",
+   "status": "non attivato",
+   "R": 0.0,
+   "entry_px": null,
+   "exit_px": null
+  },
+  {
+   "id": "B",
+   "title": "Rottura ribassista",
+   "status": "non attivato",
+   "R": 0.0,
+   "entry_px": null,
+   "exit_px": null
+  }
+ ]
+}

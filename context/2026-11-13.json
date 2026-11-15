@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-13",
+  "note_time": "12:20",
+  "analyst_note": [
+    "Ieri la seduta più pesante della settimana: −2,8% a 3876, con minimo a 3852, il livello più basso da ottobre 2025. Il grosso del calo è arrivato fra le 14:30 e le 16:30: la frase di Trump («non ci serve un accordo con l'Iran») ha riacceso petrolio e timori d'inflazione, e i banchieri Fed intervenuti in giornata (Hammack, Goolsbee, Daly, in serata Williams) hanno confermato la linea restrittiva. Decennale USA oltre il 5,1%, indice del dollaro a 103,2.",
+    "Il piano di ieri: lo scenario B (rottura sotto 3957,5, ingresso a 3956,6) ha raggiunto l'obiettivo a 3900 intorno alle 14:45, +4,0R nel registro. Anche lo scenario D pubblicato nell'aggiornamento di fine mattinata è arrivato a 3900 (+3,5R), ma era la stessa idea pochi dollari più in basso, non un secondo risultato indipendente. A e C non si sono attivati. È una giornata favorevole dentro una statistica che resta intorno a zero: le sedute in forte tendenza sono proprio il caso in cui le rotture funzionano.",
+    "Oggi il mercato rimbalza: massimo a 3923 nella notte, poi di nuovo sotto 3900. Per gli analisti di OANDA è un aggiustamento di posizioni dopo un ipervenduto estremo, non un cambio di quadro, e l'oro perde ancora circa il 4% nella settimana. Il prezzo oscilla nella fascia 3888–3900; sopra, 3919–3924 (massimo della notte) è il primo livello dove una vendita ha un rischio definito (scenario A); sotto ci sono 3869–3878 (chiusura di ieri, minimo della settimana scorsa) e poi il minimo di ieri a 3852.",
+    "Tre cautele. Alle 14:30 escono i prezzi alla produzione di ottobre (attesi +0,4%, core +0,3%), il dato che può decidere la giornata: un numero alto rafforza le attese di un rialzo Fed più ampio, uno basso può allungare il rimbalzo; fino ad allora il mercato tende a restare fermo. Lo scenario B (rottura sotto 3869) ha il minimo di ieri a 3852 a meno di 1R dall'ingresso: è lì che si capisce se il ribasso riparte davvero. Ed è venerdì, dopo tre sedute di vendite: le ricoperture prima del fine settimana possono essere brusche in entrambe le direzioni."
+  ],
+  "drivers": [
+    {
+      "text": "Giovedì 12/11 l'oro ha perso il 2,8% toccando 3852 $, minimo da ottobre 2025, mentre il mercato alzava le probabilità di un rialzo Fed da 50 punti base a dicembre (una settimana prima erano a zero).",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/gold-plunges-to-one-year-low-near-3-850-as-fed-hawks-take-charge-202611122013"
+    },
+    {
+      "text": "Il calo è partito quando Trump ha dichiarato «non ci serve un accordo con l'Iran»: petrolio in rialzo, più timori d'inflazione e dollaro ai massimi dell'anno. Le richieste di sussidi di disoccupazione sono salite a 200 mila (attese 194 mila) senza cambiare il quadro.",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/gold-falls-below-4-000-as-traders-weigh-a-half-point-fed-rate-hike-202611121051"
+    },
+    {
+      "text": "Fed: i future prezzano all'89% un rialzo di 25 punti base a dicembre e all'11% uno di 50. Per Williams (Fed di New York) potrebbero servire altri rialzi per riportare l'inflazione sotto controllo.",
+      "source": "Reuters",
+      "url": "https://rallies.ai/news/gold-rises-on-bargain-hunting-but-heads-for-weekly-decline-c9e2e4dec7416469"
+    },
+    {
+      "text": "Oggi rimbalzo da ricoperture: +0,7% a 3903 $ alle 11:06 (ora di Roma), ma circa −4% nella settimana. Per Kelvin Wong (OANDA) è un aggiustamento di posizioni dopo un ipervenduto estremo; per Nitesh Shah un PPI alto limiterebbe il recupero.",
+      "source": "Reuters",
+      "url": "https://rallies.ai/news/gold-rebounds-but-heads-for-weekly-fall-before-us-inflation-data-e249b643b8b362d5"
+    },
+    {
+      "text": "Dollaro e rendimenti: indice DXY intorno a 103,2, massimo da 19 mesi, e decennale USA vicino al 5,13%. Il dollaro stamattina prende fiato dopo tre sedute di rialzo, e questo aiuta il rimbalzo dell'oro senza cambiarne la direzione.",
+      "source": "1TRADER · FXStreet",
+      "url": "https://1trader.com/en/gold-price-2026-11-13/"
+    },
+    {
+      "text": "Analisi tecniche di terzi: il rimbalzo può estendersi solo sopra 3960 e poi 4000, altrimenti resta esposto il minimo in area 3855–3865 (Moneta Markets); sotto 3870 e 3851 le proiezioni indicano 3794 (FXEmpire, citata da 1TRADER). Prima resistenza di rilievo sul giornaliero a 4038.",
+      "source": "Moneta Markets",
+      "url": "https://www.monetamarkets.com/markets/precious-metals-stage-a-recovery-as-fed-tightening-expectations-keep-currency-markets-on-edge-13th-november-2026/"
+    },
+    {
+      "text": "Prossimi catalizzatori: oggi prezzi alla produzione (14:30) e interventi di Collins, Logan, Bowman e Daly; la prossima settimana vendite al dettaglio USA (martedì 17/11, 14:30) e verbali della Fed (mercoledì 18/11, 20:00).",
+      "source": "ForexFactory",
+      "url": "https://www.forexfactory.com/calendar"
+    }
+  ],
+  "event_overrides": [
+    {
+      "match": "Core PPI m/m",
+      "rel": 3,
+      "date": "2026-11-13",
+      "note": "Secondo dato d'inflazione della settimana dopo il CPI di martedì. Sopra le attese = più probabilità di un rialzo Fed da 50 punti base, dollaro e rendimenti su (negativo per l'oro); sotto le attese = spazio al rimbalzo."
+    },
+    {
+      "match": "FOMC Member Collins",
+      "rel": 2,
+      "date": "2026-11-13"
+    },
+    {
+      "match": "FOMC Member Logan",
+      "rel": 2,
+      "date": "2026-11-13",
+      "note": "In settimana ha detto che è possibile alzare i tassi «più rapidamente»: è fra le voci più restrittive."
+    },
+    {
+      "match": "FOMC Member Bowman",
+      "rel": 2,
+      "date": "2026-11-13"
+    },
+    {
+      "match": "FOMC Member Daly",
+      "rel": 2,
+      "date": "2026-11-13"
+    }
+  ]
+}

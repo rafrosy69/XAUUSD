@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-12",
+  "note_time": "11:50",
+  "analyst_note": [
+    "Terza seduta di calo. Dopo il rimbalzo notturno fino a 4000, in mattinata l'oro ha rotto il supporto a 3957–3970 e alle 10:00 ha toccato 3924, il minimo dal 4 novembre; poco prima di mezzogiorno è risalito in area 3950. Il motore non è cambiato: dollaro ai massimi da 19 mesi (indice DXY fino a 103,08) e un mercato che dà per quasi certo un rialzo dei tassi Fed a dicembre, con una quota di scommesse su 50 punti base.",
+    "Lo scenario B del piano del mattino (rottura sotto 3957,5) si è attivato alle 08:45 a 3956,6. Il prezzo è sceso fino a 3924, cioè +2,3R, senza raggiungere l'obiettivo a 3900, ed è poi tornato a ridosso del prezzo d'ingresso: gran parte del guadagno potenziale è stata restituita. Le regole meccaniche tengono lo stop a 3970,8 e l'obiettivo a 3900 fino a fine seduta. Lo scenario A (vendita in area 4012–4024) non è stato avvicinato.",
+    "Il recupero dal minimo ha riportato il prezzo nella fascia 3950–3959 (pivot S1 e minimo della sessione asiatica), che da supporto è diventata la prima resistenza. Se regge, il ribasso può riprendere verso 3937–3941 e il minimo di oggi; se cede, le aree successive sono 3964–3975 e soprattutto 3982–3989 (minimo e chiusura di ieri), dove una nuova vendita avrebbe il rischio meglio definito (scenario C). Due cautele: il range di oggi ha già coperto circa il 90% di quello medio, quindi lo spazio statistico per nuove estensioni è limitato finché non arrivano notizie; e la soglia 3950 è già stata attraversata in entrambe le direzioni stamattina, per cui una nuova chiusura sotto quel livello (scenario D) è un segnale meno pulito di una prima rottura.",
+    "Dalle 14:30 cambia il ritmo: sussidi di disoccupazione (attesi 194 mila) e poi una serie di banchieri Fed — Hammack, Goolsbee, Daly, Schmid — sul tema «25 o 50 punti base a dicembre»; alle 19:00 l'asta del Treasury a 30 anni. Un dato debole o toni più cauti possono innescare ricoperture rapide su un mercato venduto da tre sedute; conferme del quadro restrittivo riaprirebbero la strada verso 3900."
+  ],
+  "drivers": [
+    {
+      "text": "Oro al minimo dal 4 novembre: alle 08:32 (ora di Roma) lo spot perdeva lo 0,7% a 3959 $, con i future sui tassi che prezzano un rialzo Fed a dicembre e un altro a marzo. Per gli analisti di OCBC i rischi di breve sono bilanciati e il quadro di medio termine non è diventato ribassista.",
+      "source": "Reuters",
+      "url": "https://rallies.ai/news/gold-hits-more-than-one-week-low-on-firm-dollar-fed-hike-bets-2eb88eec06fa12a7"
+    },
+    {
+      "text": "Dollaro ai massimi da 19 mesi: l'indice DXY ha toccato 103,08 in mattinata e poi ha ridotto i guadagni. Un dollaro più forte rende l'oro più caro per chi compra in altre valute.",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/us-dollar-index-dxy-trims-gains-after-hitting-19-month-highs-at-10308-202611121025"
+    },
+    {
+      "text": "Fed: il CME FedWatch indica circa il 91% di probabilità di un rialzo a dicembre; il mercato assegna circa il 12% a una mossa da 50 punti base, ipotesi lasciata aperta dal governatore Waller. Per PIMCO l'inflazione persistente giustifica rialzi sia a dicembre sia a gennaio; anche Goldman Sachs ne prevede un altro a inizio 2027.",
+      "source": "FXStreet · Reuters",
+      "url": "https://au.investing.com/news/economy-news/dollar-almost-unchanged-after-reaching-19month-high-rate-divergence-in-focus-4764308"
+    },
+    {
+      "text": "All'origine del movimento: l'inflazione USA di ottobre (martedì 10/11), +0,4% sul mese contro +0,3% atteso e indice core +0,3% contro +0,2%. Da allora l'oro ha perso oltre il 4% dai massimi di lunedì.",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/gold-drifts-below-4-000-as-high-us-yields-fuel-december-fed-hike-odds-202611111838"
+    },
+    {
+      "text": "Rendimenti: Société Générale vede spazio per un'ulteriore salita del decennale USA, con riferimento al 5,36%. Rendimenti più alti aumentano il costo-opportunità di detenere oro.",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/us-10-year-yield-up-move-eyes-536-societe-generale-202611121031"
+    },
+    {
+      "text": "Medio Oriente, segnali contrastanti: secondo il Wall Street Journal Trump è disposto a far riaprire i colloqui con l'Iran dal vicepresidente Vance, mentre gli attacchi con mine nello Stretto di Hormuz sostengono il petrolio. Per ora l'incertezza alimenta la domanda di dollari più che quella di oro.",
+      "source": "FXStreet · TradeTheNews",
+      "url": "https://www.fxstreet.com/analysis/trading-has-been-dictated-by-nvidia-ceo-uncertainty-202611120720"
+    },
+    {
+      "text": "Analisi tecniche di terzi: per FX Leaders il quadro resta ribassista sotto 4015 $, con obiettivi a 3920 e 3872 dopo la perdita di 3969 (il primo è stato sfiorato stamattina a 3924); per VT Markets la resistenza è fra 4000 e 4050.",
+      "source": "FX Leaders",
+      "url": "https://www.fxleaders.com/news/2026/11/12/gold-price-forecast-xau-usd-tests-3969-as-dollar-climbs-ahead-of-ppi/"
+    },
+    {
+      "text": "Prossimi catalizzatori: oggi sussidi di disoccupazione (14:30), interventi di Hammack, Goolsbee, Daly e Schmid, asta del Treasury a 30 anni (19:00); stanotte Williams (00:30); domani i prezzi alla produzione di ottobre (14:30).",
+      "source": "ForexFactory",
+      "url": "https://www.forexfactory.com/calendar"
+    }
+  ],
+  "event_overrides": [
+    {
+      "match": "Unemployment Claims",
+      "rel": 2,
+      "date": "2026-11-12",
+      "note": "Primo dato USA dopo il CPI. Sotto le attese = lavoro solido, dollaro e rendimenti su (negativo per l'oro); sopra le attese = sollievo."
+    },
+    {
+      "match": "FOMC Member Hammack",
+      "rel": 2,
+      "date": "2026-11-12",
+      "note": "Altre fonti indicano le 15:00. Con il mercato concentrato su «25 o 50 punti base a dicembre», ogni banchiere Fed può muovere rendimenti e oro."
+    },
+    {
+      "match": "FOMC Member Barr",
+      "rel": 1,
+      "date": "2026-11-12"
+    },
+    {
+      "match": "FOMC Member Goolsbee",
+      "rel": 2,
+      "date": "2026-11-12",
+      "note": "Altre fonti indicano le 17:30."
+    },
+    {
+      "match": "FOMC Member Daly",
+      "rel": 2,
+      "date": "2026-11-12"
+    },
+    {
+      "match": "FOMC Member Schmid",
+      "rel": 2,
+      "date": "2026-11-12"
+    },
+    {
+      "match": "30-y Bond Auction",
+      "rel": 2,
+      "date": "2026-11-12",
+      "note": "Con il decennale al 5%, un'asta debole spingerebbe ancora i rendimenti (negativo per l'oro); una domanda forte darebbe respiro."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+# Aggiornamento automatico del briefing e pubblicazione del sito su GitHub Pages.
+# Questo file va copiato nel repository come  .github/workflows/aggiorna-sito.yml
+# (scheda Actions → "set up a workflow yourself" → incollare → Commit changes).
+# Istruzioni passo per passo: PUBBLICAZIONE.md
+
+name: Aggiorna briefing e sito
+
+on:
+  schedule:
+    # GitHub ragiona in ora UTC. Roma è UTC+1 con l'ora solare e UTC+2 con l'ora legale:
+    # il primo orario vale d'inverno, quello tra parentesi d'estate. L'avvio può tardare qualche minuto.
+    - cron: "40 6 * * 1-5"    # 07:40 (08:40)  piano ufficiale, prima dell'apertura di Londra
+    - cron: "10 12 * * 1-5"   # 13:10 (14:10)  prima dei dati USA
+    - cron: "40 16 * * 1-5"   # 17:40 (18:40)  pomeriggio di New York
+    - cron: "30 22 * * 1-5"   # 23:30 (00:30)  dopo la chiusura: esiti del giorno e piano provvisorio per l'indomani
+    - cron: "0 20 * * 0"      # domenica 21:00 (22:00)  briefing della settimana, a mercato chiuso
+  workflow_dispatch:           # avvio a mano: Actions → Aggiorna briefing e sito → Run workflow
+
+concurrency:
+  group: briefing
+  cancel-in-progress: false
+
+jobs:
+  briefing:
+    name: Genera il briefing
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write          # per salvare piani, registro e archivio nel repository
+      pages: write             # per verificare se GitHub Pages è attivo
+    outputs:
+      pages: ${{ steps.pages.outcome }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installa le dipendenze
+        run: pip install -r requirements.txt
+
+      - name: Genera briefing e sito
+        run: python run_briefing.py
+
+      - name: Salva piani, registro e archivio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # la copia grezza del calendario resta fuori dal repository
+          git add -A -- output ':(exclude)output/cache/calendar_*.json'
+          if git diff --cached --quiet; then
+            echo "Nessuna novità da salvare."
+          else
+            git commit -q -m "Briefing del $(TZ=Europe/Rome date '+%d/%m/%Y %H:%M')"
+            git push || { git pull --rebase && git push; }
+          fi
+
+      - name: GitHub Pages è attivo?
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
+      - name: Prepara il sito
+        if: steps.pages.outcome == 'success'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+      - name: Sito non pubblicato
+        if: steps.pages.outcome != 'success'
+        run: echo "::warning::GitHub Pages non è attivo. Briefing generato e salvato, sito non pubblicato. Per pubblicarlo - Settings, Pages, Source = GitHub Actions."
+
+  pubblica:
+    name: Pubblica il sito
+    needs: briefing
+    if: needs.briefing.outputs.pages == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Pubblica su GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v5

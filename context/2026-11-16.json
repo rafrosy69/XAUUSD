@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-16",
+  "note_time": "domenica 15/11 alle 18:30, a mercato chiuso",
+  "analyst_note": [
+    "Venerdì l'oro ha chiuso a 3883 (+0,2%) dopo una seduta in altalena: massimo a 3923 nella notte, minimo a 3868 nel pomeriggio. I prezzi alla produzione di ottobre hanno dato un quadro misto (+0,3% sul mese contro +0,4% atteso, ma +6,5% sull'anno, il massimo da novembre 2022) e il prezzo ha reagito con uno strappo nei due sensi, 3906 e 3873 nella stessa mezz'ora, senza prendere una direzione. Nessuno dei due scenari del piano si è attivato: il rimbalzo si è fermato sotto la zona di vendita 3919–3924 e il minimo ha bucato 3869 solo per pochi istanti, senza la chiusura M15 richiesta.",
+    "La settimana si chiude a −4,6%, da 4069 a 3883. I motori sono stati tre: l'inflazione USA di ottobre sopra le attese, i banchieri Fed che hanno aperto a un rialzo da 50 punti base, e il dollaro ai massimi da 19 mesi con il decennale USA oltre il 5,1%. I future danno per certo un rialzo a dicembre: circa 89% per 25 punti base, 11% per 50.",
+    "Nel fine settimana il Medio Oriente è tornato a scaldarsi: il Bahrein ha intercettato attacchi iraniani, altre due petroliere hanno urtato mine nello Stretto di Hormuz e Teheran ha ribadito le sue condizioni per un accordo; Trump ha detto che potrebbe fermare nuovi attacchi in assenza di provocazioni, mantenendo però il blocco navale. Per l'oro è un rischio a due facce: più petrolio significa più inflazione e tassi più alti, il canale che ha pesato nelle ultime settimane, ma un'escalation vera può riaccendere la domanda di beni rifugio. In entrambi i casi la riapertura di mezzanotte può avvenire in gap.",
+    "Sul piano tecnico il quadro resta ribassista su tutti i timeframe e il prezzo è fermo nella fascia 3883–3895. Sopra ci sono 3900–3906 e poi 3915–3923 (massimo di venerdì), dove lo scenario A cerca la vendita. Sotto, 3868–3870 (minimo di venerdì) e subito dopo 3850–3852, il minimo dell'anno: lo scenario B (rottura sotto 3866,6) lo incontra a meno di 1R dall'ingresso, quindi il segnale più pulito resta una chiusura sotto 3850.",
+    "La settimana entrante: lunedì alle 18:00 parla il presidente della Fed Warsh, l'evento che può spostare di più le attese su dicembre; martedì alle 14:30 le vendite al dettaglio di ottobre; mercoledì alle 20:00 i verbali della riunione Fed. Questo piano è preparato a mercato chiuso: va aggiornato lunedì a mercato aperto, prima dell'apertura di Londra."
+  ],
+  "drivers": [
+    {
+      "text": "Prezzi alla produzione USA di ottobre (venerdì 13/11): +0,3% sul mese contro +0,4% atteso, dopo il +1,4% rivisto di settembre; +6,5% sull'anno, l'aumento più forte da novembre 2022.",
+      "source": "Reuters",
+      "url": "https://finance.yahoo.com/economy/policy/articles/us-producer-prices-rise-further-134401757.html"
+    },
+    {
+      "text": "L'indice core è salito dello 0,3%, in linea con le attese. Per Jeffrey Roach (LPL Financial) il dato non rende urgente un rialzo da 50 punti base: lo scenario centrale resta 25.",
+      "source": "Kitco News",
+      "url": "https://www.kitco.com/news/article/2026-11-13/gold-prices-testing-resistance-3900-producers-prices-continue-rise"
+    },
+    {
+      "text": "Fed: dopo il dato i future sui Fed funds prezzano al 100% un rialzo il 9 dicembre, con circa l'89% per 25 punti base e l'11% per 50. Decennale USA intorno al 5,13%.",
+      "source": "FatTail · Reuters",
+      "url": "https://fattail.ai/october-ppi-2026/"
+    },
+    {
+      "text": "Bilancio della settimana: oro in calo di circa il 4,7%. I prossimi test sono le vendite al dettaglio (martedì) e i verbali Fed (mercoledì); sotto 3852 $ l'attenzione passerebbe a 3821–3830 e poi a 3800.",
+      "source": "Admiral Markets",
+      "url": "https://admiralmarkets.com/analytics/traders-blog/gold-price-today-13-november-2026"
+    },
+    {
+      "text": "Medio Oriente (domenica 15/11): il Bahrein ha intercettato attacchi aerei iraniani; il presidente del parlamento iraniano Qalibaf ha ribadito che Teheran accetterà un accordo solo alle sue sette condizioni; Trump ha detto che potrebbe sospendere nuovi attacchi in assenza di provocazioni, ma che il blocco navale continuerà.",
+      "source": "Moneycontrol",
+      "url": "https://www.moneycontrol.com/news/business/markets/dalal-street-week-ahead-wpi-inflation-crude-oil-among-10-key-factors-to-watch-14080497.html"
+    },
+    {
+      "text": "Flussi: secondo il World Gold Council gli investitori in ETF sono rimasti alla finestra in questo trimestre dopo gli acquisti record del terzo; le banche centrali restano compratrici nette, mentre cala la domanda di monete e lingotti.",
+      "source": "CNBC TV18",
+      "url": "https://www.tradingview.com/news/cnbctv:426e2c588094b:0/"
+    },
+    {
+      "text": "Previsioni di terzi per la settimana: orientamento ribassista con intervallo atteso 3900–3790 e invalidazione sopra 4085 (RoboForex).",
+      "source": "RoboForex",
+      "url": "https://roboforex.com/beginners/analytics/forex-forecast/gold/xau-usd-gold-weekly-forecast-2026-11-13/"
+    }
+  ],
+  "event_overrides": [
+    {
+      "match": "Fed Chairman Warsh",
+      "rel": 3,
+      "date": "2026-11-16",
+      "note": "L'evento del giorno: ogni indicazione su «25 o 50 punti base» a dicembre muove rendimenti, dollaro e oro. Secondo altre fonti è un discorso di apertura: i passaggi sulla politica monetaria potrebbero essere brevi."
+    },
+    {
+      "match": "Empire State Manufacturing Index",
+      "rel": 2,
+      "date": "2026-11-16",
+      "note": "Primo dato di novembre sull'attività manifatturiera."
+    },
+    {
+      "match": "FOMC Member Williams",
+      "rel": 2,
+      "date": "2026-11-16",
+      "note": "Giovedì ha segnalato che potrebbero servire altri rialzi."
+    },
+    {
+      "match": "FOMC Member Waller",
+      "rel": 2,
+      "date": "2026-11-17",
+      "note": "È il governatore che ha aperto all'ipotesi di un rialzo da 50 punti base."
+    }
+  ]
+}
