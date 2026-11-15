@@ -1,0 +1,6 @@
+# generati a ogni esecuzione
+site/
+*.zip
+__pycache__/
+# copia grezza del calendario: resta sul computer
+output/cache/calendar_*.json
