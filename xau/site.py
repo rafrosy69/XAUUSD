@@ -425,11 +425,31 @@ def make_zip(site_dir: str, zip_path: str) -> int:
     return os.path.getsize(zip_path)
 
 
-def build(out_dir: str, site_dir: str, cfg: dict | None = None, assets_dir: str | None = None, zip_path: str | None = None) -> dict | None:
-    """(Re)build the whole site from the briefings in `out_dir`. Returns None when there is nothing to publish."""
+def sitemap(days: list[dict], cfg: dict) -> str:
+    """Addresses of every page for the search engines (needs the public address of the site)."""
+    base = cfg["indirizzo"]
+    last = days[-1]["generated"].tz_convert(ROME).isoformat(timespec="seconds")
+    urls = [(base, last), (base + "archivio/", last)]
+    urls += [(f"{base}archivio/{d['day']}.html", d["generated"].tz_convert(ROME).isoformat(timespec="seconds")) for d in reversed(days)]
+    rows = "".join(f"<url><loc>{E(u)}</loc><lastmod>{t}</lastmod></url>\n" for u, t in urls)
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + rows + "</urlset>\n")
+
+
+def build(out_dir: str, site_dir: str, cfg: dict | None = None, assets_dir: str | None = None, zip_path: str | None = None,
+          verify_dirs: tuple = ()) -> dict | None:
+    """(Re)build the whole site from the briefings in `out_dir`. Returns None when there is nothing to publish.
+    Ownership-verification files of the search engines (google*.html, BingSiteAuth.xml) found in the assets
+    folder or in `verify_dirs` are published at the root of the site as they are."""
     assets = []
     if assets_dir and os.path.isdir(assets_dir):
         assets = [f for f in sorted(os.listdir(assets_dir)) if f.lower().endswith((".png", ".ico", ".svg", ".jpg", ".webp", ".txt"))]
+    proofs = {}
+    for folder in (assets_dir, *verify_dirs):
+        if folder and os.path.isdir(folder):
+            for f in sorted(os.listdir(folder)):
+                if re.fullmatch(r"google[0-9A-Za-z_-]+\.html|BingSiteAuth\.xml", f):
+                    proofs[f] = os.path.join(folder, f)
     cfg = dict(cfg or load_config(None), _assets=tuple(assets))
     days = collect(out_dir)
     if not days:
@@ -458,11 +478,18 @@ def build(out_dir: str, site_dir: str, cfg: dict | None = None, assets_dir: str 
     _write(os.path.join(site_dir, ".nojekyll"), "")
     for f in assets:
         shutil.copyfile(os.path.join(assets_dir, f), os.path.join(site_dir, f))
+    for f, src in proofs.items():
+        shutil.copyfile(src, os.path.join(site_dir, f))
+    smap = os.path.join(site_dir, "sitemap.xml")
+    if cfg["indirizzo"] and cfg["indicizzabile"]:
+        _write(smap, sitemap(days, cfg))
+    elif os.path.exists(smap):                           # no longer public: do not leave a stale map behind
+        os.remove(smap)
     size = 0
     for base, _, names in os.walk(site_dir):
         size += sum(os.path.getsize(os.path.join(base, f)) for f in names)
     out = {"dir": site_dir, "pages": len(days) + 2, "sessions": len(days), "latest": latest["day"], "bytes": size,
-           "generated": latest["generated"], "zip": None}
+           "generated": latest["generated"], "zip": None, "sitemap": os.path.exists(smap), "proofs": sorted(proofs)}
     if zip_path:
         make_zip(site_dir, zip_path)
         out["zip"] = zip_path

@@ -61,19 +61,23 @@ reale è chiesto dal browser di chi legge a gold-api.com.
 Il briefing si rigenera da solo e il sito si aggiorna senza toccare nulla. Con l'account gratuito GitHub
 Pages funziona solo sui repository **pubblici**: codice, piani e registro saranno visibili a tutti.
 
-Una volta sola:
+Una volta sola (non serve estrarre file né usare programmi):
 
-1. Creare un account su <https://github.com> e un nuovo repository, per esempio `oro-intraday`, di tipo
-   **Public**, senza file iniziali.
-2. Scaricare `xauusd-github.zip`, estrarlo, aprire la cartella `xauusd_monitor` e trascinare **tutto il suo
-   contenuto** nella pagina del repository («uploading an existing file»). Confermare con *Commit changes*.
-3. Scheda **Actions** → *set up a workflow yourself*. Dare al file il nome `aggiorna-sito.yml`, cancellare il
-   testo proposto, incollare il contenuto di `github/aggiorna-sito.yml`, poi *Commit changes*.
-4. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-5. Scheda **Actions** → *Aggiorna briefing e sito* → *Run workflow*. Dopo due o tre minuti il sito è su
-   `https://<utente>.github.io/<repository>/`.
-6. Aprire `site.json` nel repository (icona della matita), compilare `indirizzo` con l'indirizzo del sito e
-   gli altri campi del punto 1b, salvare. Dal giro successivo valgono le nuove impostazioni.
+1. Creare un account su <https://github.com> e un nuovo repository di tipo **Public**.
+2. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+3. **Add file → Upload files**: caricare `xauusd-github.zip` così com'è, senza estrarlo, poi *Commit changes*.
+4. Creare nel repository il file `.github/workflows/aggiorna-sito.yml` con il contenuto di
+   `github/aggiorna-sito.yml`, poi *Commit changes*.
+
+Al salvataggio del punto 4 parte la prima esecuzione: scompatta il pacchetto nel repository, genera il
+briefing e pubblica il sito su `https://<utente>.github.io/<repository>/` (servono da tre a cinque minuti).
+
+Per rendere tutto più semplice, `python3 github/prepara_pacchetto.py --repo utente/repository` ricrea il
+pacchetto, stampa i link diretti alle tre pagine (quello del punto 4 apre il file già compilato) e scrive
+`GUIDA_GITHUB.html`, una guida illustrata con gli stessi link.
+
+Per cambiare le impostazioni basta aprire `site.json` nel repository (icona della matita), modificare e
+salvare: ogni modifica fatta a mano nel repository fa partire subito un aggiornamento.
 
 Da lì in poi il briefing parte da solo a questi orari (ora di Roma; d'estate un'ora dopo, perché GitHub usa
 l'ora UTC):
@@ -87,21 +91,23 @@ l'ora UTC):
 | domenica 21:00 | Briefing della settimana, a mercato chiuso |
 
 Gli orari si cambiano nelle righe `cron` di `aggiorna-sito.yml`. L'avvio può tardare di qualche minuto. In
-qualsiasi momento si può lanciare un aggiornamento a mano dal punto 5.
+qualsiasi momento si può lanciare un aggiornamento a mano: scheda Actions → *Aggiorna briefing e sito* →
+*Run workflow*.
 
 Da sapere:
 
-- **Collaudo.** Il flusso è stato provato in locale passo per passo (installazione pulita, generazione,
-  salvataggio, sito), ma non su GitHub: la prima esecuzione è il collaudo vero. Se fallisce, il motivo è
-  nel registro dell'esecuzione (scheda Actions).
+- **Collaudo.** Il flusso è stato provato in locale passo per passo (installazione del pacchetto,
+  generazione, salvataggio, sito), ma non su GitHub: la prima esecuzione è il collaudo vero. Se fallisce,
+  il motivo è nel registro dell'esecuzione (scheda Actions).
 - **Fonti dei dati.** Se l'esecuzione si ferma con «dati di mercato non disponibili», il feed dei prezzi
   rifiuta le richieste dai server di GitHub. In quel caso il sito resta all'ultima versione e mostra
   l'avviso di dati non aggiornati. L'alternativa è far girare lo script sul proprio computer (vedi README)
   e caricare la cartella `site/`.
 - **Lettura del giorno.** Il commento alle notizie non è automatico: compare solo se nel repository c'è il
   file `context/<data>.json` della seduta. Lo si può caricare a mano nella cartella `context`.
-- **Senza GitHub Pages attivo** (punto 4 saltato, o repository privato con account gratuito) l'esecuzione
-  genera e salva comunque il briefing e segnala che il sito non è stato pubblicato.
+- **Senza GitHub Pages attivo** (punto 2 saltato, o repository privato con account gratuito) l'esecuzione
+  genera e salva comunque il briefing e segnala che il sito non è stato pubblicato. Dopo aver attivato
+  Pages: scheda Actions → *Aggiorna briefing e sito* → *Run workflow*.
 - GitHub sospende le esecuzioni pianificate dei repository pubblici rimasti a lungo senza attività: se
   arriva l'avviso, si riattivano dalla scheda Actions.
 
@@ -120,6 +126,24 @@ Da sapere:
 
 Le immagini in `assets/` (`og.png` per le anteprime dei link, `apple-touch-icon.png` per l'icona sul
 telefono) si possono sostituire con le proprie, mantenendo i nomi.
+
+## Farsi trovare su Google
+
+1. In `site.json` impostare `indirizzo` (l'indirizzo pubblico del sito) e `"indicizzabile": true`. Da quel
+   momento le pagine non chiedono più di essere escluse e il sito pubblica anche `sitemap.xml`, l'elenco
+   delle pagine per i motori di ricerca.
+2. Aprire <https://search.google.com/search-console>, aggiungere il sito come proprietà di tipo
+   **Prefisso URL** e scegliere la verifica con **File HTML**: Google fa scaricare un file `google….html`.
+3. Caricare quel file nel progetto, nella cartella principale o in `assets/`, senza rinominarlo: viene
+   pubblicato così com'è alla radice del sito. Poi cliccare **Verifica** su Google.
+4. In Search Console, menu **Sitemap**: scrivere `sitemap.xml` e cliccare **Invia**.
+
+Google decide da solo se e quando mostrare le pagine: di solito servono da qualche giorno a qualche
+settimana.
+
+Per aggiornare i programmi di un repository già attivo senza toccare piani, registro e note:
+`python3 github/prepara_pacchetto.py --aggiornamento` crea `xauusd-aggiornamento.zip`, da caricare nel
+repository come un file qualsiasi.
 
 ## 4. Altre strade
 

@@ -67,16 +67,18 @@ def publish(a, quiet: bool = False) -> bool:
     site_dir = os.path.abspath(a.site) if a.site else os.path.join(os.path.dirname(out), "site")
     try:
         cfg = site.load_config(a.site_config or os.path.join(HERE, "site.json"))
-        res = site.build(out, site_dir, cfg, assets_dir=os.path.join(HERE, "assets"),
-                         zip_path=os.path.join(os.path.dirname(site_dir), site.ZIP_ROOT + ".zip"))
+        res = site.build(out, site_dir, cfg, assets_dir=os.path.join(HERE, "assets"), verify_dirs=(HERE,),
+                         zip_path=None if a.no_zip else os.path.join(os.path.dirname(site_dir), site.ZIP_ROOT + ".zip"))
     except Exception as ex:
         print(f"ATTENZIONE: sito non aggiornato ({ex}).", file=sys.stderr)
         return False
     if res is None:
         log("Sito: nessun briefing da pubblicare.", quiet)
         return False
-    log(f"Sito: {res['dir']}/index.html · {res['sessions']} sedute in archivio · {res['bytes'] / 1e6:.1f} MB · "
-        f"pacchetto {res['zip']}", quiet)
+    log(f"Sito: {res['dir']}/index.html · {res['sessions']} sedute in archivio · {res['bytes'] / 1e6:.1f} MB"
+        + (f" · pacchetto {res['zip']}" if res["zip"] else ""), quiet)
+    if res["sitemap"] or res["proofs"]:
+        log("      motori di ricerca: " + ", ".join((["sitemap.xml"] if res["sitemap"] else []) + res["proofs"]), quiet)
     for r in site.reminders(cfg):
         log(f"      site.json · {r}", quiet)
     return True
@@ -92,6 +94,7 @@ def main(argv=None) -> int:
     ap.add_argument("--site", help="cartella del sito da pubblicare (default: 'site' accanto alla cartella di output)")
     ap.add_argument("--site-config", help="impostazioni del sito (default: site.json)")
     ap.add_argument("--no-site", action="store_true", help="non aggiornare il sito")
+    ap.add_argument("--no-zip", action="store_true", help="non creare xauusd-sito.zip accanto alla cartella del sito")
     ap.add_argument("--site-only", action="store_true", help="ricostruisce solo il sito dai briefing già presenti (nessun download)")
     ap.add_argument("--quiet", action="store_true")
     a = ap.parse_args(argv)

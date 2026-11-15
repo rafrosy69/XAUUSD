@@ -317,6 +317,21 @@ def test_site():
         assert "<meta property='og:image' content='https://esempio.it/oro/og.png'>" in last
         assert "Pubblicato da <b>Mario &lt;Rossi&gt;</b>" in index and "href='mailto:m@esempio.it'" in index
         assert "Può detenere posizioni sull&#x27;oro." in index and "non usa cookie" in index
+        # search engines: page map only for a public, indexable site; ownership files published untouched
+        smap = read("sitemap.xml")
+        assert smap.count("<url>") == 4 and "<loc>https://esempio.it/oro/</loc>" in smap
+        assert "<loc>https://esempio.it/oro/archivio/2026-11-16.html</loc><lastmod>2026-11-15T18:33:00+01:00</lastmod>" in smap
+        with open(os.path.join(pics, "google1a2b3c4d5e6f7a8b.html"), "w", encoding="utf-8") as fh:
+            fh.write("google-site-verification: google1a2b3c4d5e6f7a8b.html")
+        with open(os.path.join(tmp, "googleffff0000aaaa1111.html"), "w", encoding="utf-8") as fh:
+            fh.write("google-site-verification: googleffff0000aaaa1111.html")
+        res = site.build(out, web, cfg, assets_dir=pics, verify_dirs=(tmp,))
+        assert res["sitemap"] and res["proofs"] == ["google1a2b3c4d5e6f7a8b.html", "googleffff0000aaaa1111.html"]
+        assert read("google1a2b3c4d5e6f7a8b.html") == "google-site-verification: google1a2b3c4d5e6f7a8b.html"
+        assert read("googleffff0000aaaa1111.html").endswith("googleffff0000aaaa1111.html")
+        site.build(out, web, dict(cfg, indicizzabile=False), assets_dir=pics)
+        assert not os.path.exists(os.path.join(web, "sitemap.xml")) and "noindex,nofollow" in read("index.html")
+        site.build(out, web, cfg, assets_dir=pics)
         assert len(site.reminders(site.load_config(None))) == 4 and site.reminders(cfg) == []
         assert "href='archivio/2026-11-13.html'" in index and "2026-11-12.html" not in index
 
