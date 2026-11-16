@@ -211,6 +211,43 @@
    "title": "Vendita su rimbalzo",
    "pub": "2026-11-16T21:30:00+00:00",
    "official": false,
+   "withdrawn": "2026-11-16T21:43:00+00:00"
+  },
+  {
+   "id": "H",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3883.2,
+   "zone_hi": 3895.3,
+   "trigger": null,
+   "entry": 3889.3,
+   "stop": 3908.8,
+   "risk": 19.5,
+   "targets": [
+    {
+     "price": 3870.0,
+     "rr": 0.99,
+     "label": "Minimo di ieri (PDL) +5",
+     "proj": false
+    },
+    {
+     "price": 3852.3,
+     "rr": 1.89,
+     "label": "Min sett. scorsa (PWL) +1",
+     "proj": false
+    },
+    {
+     "price": 3835.9,
+     "rr": 2.73,
+     "label": "Pivot S2 +1",
+     "proj": false
+    }
+   ],
+   "rr1": 0.99,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-16T21:43:00+00:00",
+   "official": false,
    "withdrawn": null
   }
  ]
