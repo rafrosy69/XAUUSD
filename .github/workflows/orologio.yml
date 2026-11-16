@@ -1,0 +1,62 @@
+# Orologio: ogni 25 minuti fa partire l'aggiornamento e si ricarica da solo, senza dipendere dagli orari di GitHub.
+# Serve nel repository l'ambiente "attesa" con Wait timer = 25 (Settings, Environments): quel numero e
+# l'intervallo tra un aggiornamento e l'altro, in minuti (minimo 5).
+name: Orologio
+on:
+  workflow_run:
+    workflows: ["Aggiorna ogni 30 minuti"]
+    types: [completed]
+  schedule:
+    - cron: "25 * * * *"
+  workflow_dispatch:
+permissions:
+  actions: write
+jobs:
+  attendi:
+    name: Attendi e riparti
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: attesa
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      IO: ${{ github.run_number }}
+      ID: ${{ github.run_id }}
+      EV: ${{ github.event_name }}
+    steps:
+      - name: Fai ripartire l'aggiornamento
+        run: |
+          avvia() {
+            for i in 1 2 3; do
+              if gh workflow run "$1" --ref main; then echo "Avviato: $1"; return 0; fi
+              sleep 20
+            done
+            echo "::error::Non sono riuscito ad avviare $1"
+            return 1
+          }
+          nato=$(gh run view "$ID" --json createdAt -q .createdAt)
+          passati=$(( $(date +%s) - $(date -d "$nato" +%s) ))
+          if [ "$passati" -lt 240 ]; then
+            echo "::error::Manca il tempo di attesa. Settings, Environments, attesa - spunta Wait timer e scrivi 25 (minimo 5)"
+            exit 1
+          fi
+          # un solo orologio alla volta: vince il giro piu recente; quello avviato dagli orari di GitHub
+          # serve solo a ripartire se la catena si e fermata
+          if [ "$EV" = schedule ]; then
+            q="[.[] | select(.status != \"completed\" and .number != $IO)] | length"
+          else
+            q="[.[] | select(.status != \"completed\" and .number > $IO and .event != \"schedule\")] | length"
+          fi
+          altri=$(gh run list --workflow Orologio --limit 30 --json number,status,event -q "$q" || echo 0)
+          if [ "$altri" != "0" ]; then
+            echo "Un altro giro dell'orologio e gia in attesa. Mi fermo."
+            exit 0
+          fi
+          esito=0
+          avvia Orologio || esito=1
+          g=$(date -u +%u)
+          h=$(date -u +%H)
+          if [ "$g" -le 5 ] || { [ "$g" = 7 ] && [ "$h" -ge 20 ]; }; then
+            avvia "Aggiorna ogni 30 minuti" || esito=1
+          fi
+          exit $esito
