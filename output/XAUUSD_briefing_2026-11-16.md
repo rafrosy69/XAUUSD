@@ -1,45 +1,47 @@
 # XAU/USD — Briefing intraday · lunedì 16 novembre 2026
 
-_Dati aggiornati alle 16:48 del 16/11 (ora di Roma). Prezzi spot, lato bid._
+_Dati aggiornati alle 17:24 del 16/11 (ora di Roma). Prezzi spot, lato bid._
 
-**Prezzo 3864,8** (−18,5 $ da ven) · **Trend: Ribassista forte** (−0,95) · ATR D1 90 $ · RSI H1 45
+**Prezzo 3858,8** (−24,5 $ da ven) · **Trend: Ribassista forte** (−1,00) · ATR D1 90 $ · RSI H1 43
 
 ## In sintesi
-- **Scenari già pubblicati oggi** (piano ufficiale delle 23:00) — A · Vendita su rimbalzo: in attesa; B · Rottura ribassista: **stop** intorno alle 15:35 (−1R).
+- **Scenari già pubblicati oggi** (piano ufficiale delle 23:00) — A · Vendita su rimbalzo: in attesa; B · Rottura ribassista: **stop** intorno alle 15:35 (−1R); D · Rottura ribassista: **posizione aperta** dalle 17:00 a 3858,9, ora 0,0R (punta massima +0,2R), stop 3873,1, T1 3835,9.
 - **Come sono finiti gli scenari della seduta precedente (ven 13/11)** — scenari A e B non attivati.
-- **Contesto di trend: ribassista forte** (punteggio −0,95 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 ribassista, M15 ribassista. Struttura H1: massimi e minimi decrescenti.
+- **Contesto di trend: ribassista forte** (punteggio −1,00 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 ribassista, M15 ribassista. Struttura H1: massimi e minimi decrescenti.
 - **Ultima seduta (ven 13/11)**: chiusura a 3883,2 (+0,17%), range 3867,6–3923,0 = 55 $ (62% dell'ATR giornaliero).
 - **Oggi finora**: apertura 3864,0, minimo 3832,1, massimo 3901,1; range 69 $, pari al 79% del range medio giornaliero (ADR20 = 87 $).
-- **Zone chiave** — resistenze: 3883,2–3895,3 · 3900,0–3905,7 · 3923,0. Supporti: 3850,0–3852,3 · 3832,1–3835,9 · 3800,0–3804,2.
+- **Zone chiave** — resistenze: 3859,6–3870,0 · 3883,2–3895,3 · 3900,0–3905,7. Supporti: 3850,0–3852,3 · 3832,1–3835,9 · 3800,0–3804,2.
 - **Eventi da presidiare (ora di Roma)**: 18:00 Fed: discorso del presidente Warsh.
 
 **Lettura del giorno (scritta domenica 15/11 alle 18:30, a mercato chiuso).** Venerdì l'oro ha chiuso a 3883 (+0,2%) dopo una seduta in altalena: massimo a 3923 nella notte, minimo a 3868 nel pomeriggio. I prezzi alla produzione di ottobre hanno dato un quadro misto (+0,3% sul mese contro +0,4% atteso, ma +6,5% sull'anno, il massimo da novembre 2022) e il prezzo ha reagito con uno strappo nei due sensi, 3906 e 3873 nella stessa mezz'ora, senza prendere una direzione. Nessuno dei due scenari del piano si è attivato: il rimbalzo si è fermato sotto la zona di vendita 3919–3924 e il minimo ha bucato 3869 solo per pochi istanti, senza la chiusura M15 richiesta. La settimana si chiude a −4,6%, da 4069 a 3883. I motori sono stati tre: l'inflazione USA di ottobre sopra le attese, i banchieri Fed che hanno aperto a un rialzo da 50 punti base, e il dollaro ai massimi da 19 mesi con il decennale USA oltre il 5,1%. I future danno per certo un rialzo a dicembre: circa 89% per 25 punti base, 11% per 50. Nel fine settimana il Medio Oriente è tornato a scaldarsi: il Bahrein ha intercettato attacchi iraniani, altre due petroliere hanno urtato mine nello Stretto di Hormuz e Teheran ha ribadito le sue condizioni per un accordo; Trump ha detto che potrebbe fermare nuovi attacchi in assenza di provocazioni, mantenendo però il blocco navale. Per l'oro è un rischio a due facce: più petrolio significa più inflazione e tassi più alti, il canale che ha pesato nelle ultime settimane, ma un'escalation vera può riaccendere la domanda di beni rifugio. In entrambi i casi la riapertura di mezzanotte può avvenire in gap. Sul piano tecnico il quadro resta ribassista su tutti i timeframe e il prezzo è fermo nella fascia 3883–3895. Sopra ci sono 3900–3906 e poi 3915–3923 (massimo di venerdì), dove lo scenario A cerca la vendita. Sotto, 3868–3870 (minimo di venerdì) e subito dopo 3850–3852, il minimo dell'anno: lo scenario B (rottura sotto 3866,6) lo incontra a meno di 1R dall'ingresso, quindi il segnale più pulito resta una chiusura sotto 3850. La settimana entrante: lunedì alle 18:00 parla il presidente della Fed Warsh, l'evento che può spostare di più le attese su dicembre; martedì alle 14:30 le vendite al dettaglio di ottobre; mercoledì alle 20:00 i verbali della riunione Fed. Questo piano è preparato a mercato chiuso: va aggiornato lunedì a mercato aperto, prima dell'apertura di Londra.
 
-## Scenari già pubblicati oggi — situazione alle 16:48
-- **A · Vendita su rimbalzo** (SHORT, piano ufficiale: zona 3914,9–3923,0 · stop 3936,5 · T1 3895,3) — **IN ATTESA**. Prezzo d'ingresso 3919,0 non ancora raggiunto (massimo dalla pubblicazione: 3901,1); dista 54 $ dal prezzo attuale.
+## Scenari già pubblicati oggi — situazione alle 17:24
+- **A · Vendita su rimbalzo** (SHORT, piano ufficiale: zona 3914,9–3923,0 · stop 3936,5 · T1 3895,3) — **IN ATTESA**. Prezzo d'ingresso 3919,0 non ancora raggiunto (massimo dalla pubblicazione: 3901,1); dista 60 $ dal prezzo attuale.
 - **B · Rottura ribassista** (SHORT, piano ufficiale: chiusura M15 sotto 3866,6 · stop 3880,1 · T1 3804,2) — **STOP**. Ingresso alle 07:00 a 3836,9 (chiusura M15 di conferma); rischio 43,2 $/oz. Stop colpito intorno alle 15:35: −1R.
+- **D · Rottura ribassista** (SHORT, aggiornamento delle 16:48 · fuori registro: chiusura M15 sotto 3859,6 · stop 3873,1 · T1 3835,9) — **APERTA**. Ingresso alle 17:00 a 3858,9 (chiusura M15 di conferma); rischio 14,2 $/oz. Miglior prezzo toccato: 3856,3 (+0,2R). Alle 17:24: 0,0R (+0,1 $/oz); mancano 23 $ a T1 e 14 $ allo stop.
 - _Il piano ufficiale è quello delle 23:00; esiti secondo le regole meccaniche del registro (uscita a T1, allo stop o a fine seduta, stop mai spostato)._
 
-## Piano operativo (scenari ricalcolati alle 16:48)
-- **C · Vendita su rimbalzo** (SHORT, con il trend): zona 3883,2–3895,3 (centro 3889,3); stop **3908,8** (rischio 19,5 $/oz); T1 3870,0 (1,0R) · T2 3852,3 (1,9R) · T3 3835,9 (2,7R) · raggiungibilità storica 44%.
-- **D · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3859,6 (ingresso ≈ 3857,3); stop **3873,1** (rischio 15,7 $/oz); T1 3835,9 (1,4R) · T2 3804,2 (3,4R) · raggiungibilità storica 85%.
+## Piano operativo (scenari ricalcolati alle 17:24)
+- **C · Vendita su rimbalzo** (SHORT, con il trend): zona 3883,2–3895,3 (centro 3889,3); stop **3908,8** (rischio 19,5 $/oz); T1 3870,0 (1,0R) · T2 3852,3 (1,9R) · T3 3835,9 (2,7R) · raggiungibilità storica 22%.
+- **E · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3849,4 (ingresso ≈ 3847,1); stop **3862,9** (rischio 15,7 $/oz); T1 3804,2 (2,7R) · raggiungibilità storica 66%.
 - **Invalidazione** della lettura ribassista: chiusura H1 sopra 3908,8.
 
 ## Livelli chiave
 
 | Zona | Tipo | Cosa c'è | Forza | Distanza | Tocco oggi |
 |---|---|---|---|---|---|
-| 3995,7–4000,3 | Resistenza | Soglia psicologica 4000, Min D1 del 29/07, Max H1 del 12/11 | ★★★ | +130,9 $ | 0% |
-| 3970,0–3975,3 | Resistenza | Pivot R3, Min D1 del 23/10, Max H4 del 02/11 | ★★★ | +105,2 $ | 2% |
-| 3941,5–3950,0 | Resistenza | Pivot R2, Cifra tonda 3950, Min D1 del 30/06 | ★★ | +76,7 $ | 2% |
-| 3923,0 | Resistenza | Massimo di ieri (PDH) | ★★ | +58,2 $ | 6% |
-| 3900,0–3905,7 | Resistenza | Soglia psicologica 3900, Max sessione Asia, Max H1 del 13/11 | ★★★ | +35,2 $ | 16% |
-| 3883,2–3895,3 | Resistenza | Chiusura di ieri, Pivot P, Min H4 del 03/11 | ★★★ | +18,5 $ | 44% |
-| 3859,6–3870,0 | Zona attuale | Minimo di ieri (PDL), Pivot S1, Min mese scorso | ★★★ | 0,0 $ | — |
-| **3864,8** | **PREZZO** | | | | |
-| 3850,0–3852,3 | Supporto | Min sett. scorsa (PWL), Cifra tonda 3850 | ★★ | −12,4 $ | 66% |
-| 3832,1–3835,9 | Supporto | Pivot S2, Min sessione Asia | ★★ | −28,9 $ | 30% |
-| 3800,0–3804,2 | Supporto | Soglia psicologica 3800, Pivot S3 | ★★ | −60,6 $ | 8% |
+| 3995,7–4000,3 | Resistenza | Soglia psicologica 4000, Min D1 del 29/07, Max H1 del 12/11 | ★★★ | +136,9 $ | 0% |
+| 3970,1–3975,3 | Resistenza | Pivot R3, Min D1 del 23/10, Max H4 del 02/11 | ★★★ | +111,3 $ | 1% |
+| 3941,5–3950,0 | Resistenza | Pivot R2, Cifra tonda 3950, Min D1 del 30/06 | ★★ | +82,8 $ | 2% |
+| 3923,0 | Resistenza | Massimo di ieri (PDH) | ★★ | +64,2 $ | 2% |
+| 3900,0–3905,7 | Resistenza | Soglia psicologica 3900, Max sessione Asia, Max H1 del 13/11 | ★★★ | +41,2 $ | 7% |
+| 3883,2–3895,3 | Resistenza | Chiusura di ieri, Pivot P, Min H4 del 03/11 | ★★★ | +24,5 $ | 22% |
+| 3859,6–3870,0 | Resistenza | Minimo di ieri (PDL), Pivot S1, Min mese scorso | ★★★ | +0,8 $ | 98% |
+| **3858,8** | **PREZZO** | | | | |
+| 3850,0–3852,3 | Supporto | Min sett. scorsa (PWL), Cifra tonda 3850 | ★★ | −6,4 $ | 78% |
+| 3832,1–3835,9 | Supporto | Pivot S2, Min sessione Asia | ★★ | −22,8 $ | 31% |
+| 3814,3 | Supporto | Proiezione ADR (min) | ★ | −44,5 $ | 11% |
+| 3800,0–3804,2 | Supporto | Soglia psicologica 3800, Pivot S3 | ★★ | −54,5 $ | 5% |
 
 ## Agenda (ora di Roma)
 - **14:30** USD · Indice Empire State (atteso 17,6, prec. 25,5) — Primo dato di novembre sull'attività manifatturiera.
