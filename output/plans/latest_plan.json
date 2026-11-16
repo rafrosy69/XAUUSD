@@ -1,15 +1,15 @@
 {
- "tday": "2026-11-16",
- "asof": "2026-11-16T21:43:00+00:00",
- "price": 3857.447,
+ "tday": "2026-11-17",
+ "asof": "2026-11-16T22:00:00+00:00",
+ "price": 3856.36,
  "bias": "Ribassista forte",
  "score": -1.0,
- "close": "2026-11-16T22:00:00+00:00",
- "invalidation": 3908.8,
+ "close": "2026-11-17T22:00:00+00:00",
+ "invalidation": 3908.6,
  "evaluated": false,
  "setups": [
   {
-   "id": "H",
+   "id": "A",
    "type": "fade",
    "dir": -1,
    "role": "con il trend",
@@ -17,51 +17,57 @@
    "zone_hi": 3895.3,
    "trigger": null,
    "entry": 3889.3,
-   "stop": 3908.8,
-   "risk": 19.5,
+   "stop": 3908.6,
+   "risk": 19.3,
    "targets": [
     {
      "price": 3870.0,
-     "rr": 0.99,
-     "label": "Minimo di ieri (PDL) +5",
+     "rr": 1.0,
+     "label": "Pivot P +4",
      "proj": false
     },
     {
-     "price": 3852.3,
-     "rr": 1.89,
-     "label": "Min sett. scorsa (PWL) +1",
+     "price": 3856.4,
+     "rr": 1.71,
+     "label": "Chiusura di ieri +2",
      "proj": false
     },
     {
-     "price": 3835.9,
-     "rr": 2.73,
-     "label": "Pivot S2 +1",
+     "price": 3832.1,
+     "rr": 2.96,
+     "label": "Minimo di ieri (PDL)",
      "proj": false
     }
    ],
-   "rr1": 0.99,
+   "rr1": 1.0,
    "title": "Vendita su rimbalzo"
   },
   {
-   "id": "F",
+   "id": "B",
    "type": "break",
    "dir": -1,
    "role": "con il trend · rottura",
-   "zone_lo": 3849.4,
-   "zone_hi": 3853.9,
-   "trigger": 3849.4,
-   "entry": 3847.1,
-   "stop": 3862.9,
-   "risk": 15.7,
+   "zone_lo": 3850.0,
+   "zone_hi": 3856.4,
+   "trigger": 3850.0,
+   "entry": 3847.8,
+   "stop": 3863.3,
+   "risk": 15.5,
    "targets": [
     {
-     "price": 3804.2,
-     "rr": 2.72,
+     "price": 3832.1,
+     "rr": 1.01,
+     "label": "Minimo di ieri (PDL)",
+     "proj": false
+    },
+    {
+     "price": 3800.0,
+     "rr": 3.09,
      "label": "Soglia psicologica 3800 +1",
      "proj": false
     }
    ],
-   "rr1": 2.72,
+   "rr1": 1.01,
    "title": "Rottura ribassista"
   }
  ]
