@@ -245,6 +245,19 @@ PLAN_FIELDS = ("id", "type", "dir", "role", "zone_lo", "zone_hi", "trigger", "en
 LETTERS = "ABCDEFGHJKLMNPQRSTUVWXYZ"
 
 
+def next_letter(used) -> str:
+    """First free scenario id: A…Z (without I and O), then AA, AB, … so that a session refreshed many
+    times never runs out of ids. An id is never given twice in the same session."""
+    for c in LETTERS:
+        if c not in used:
+            return c
+    for a in LETTERS:
+        for b in LETTERS:
+            if a + b not in used:
+                return a + b
+    raise RuntimeError("identificativi degli scenari esauriti")
+
+
 def _same(a: dict, b: dict, tol: float = 0.25) -> bool:
     """Same trade idea: same kind and side, same entry and stop (targets are not part of the identity)."""
     return (a["type"] == b["type"] and a["dir"] == b["dir"] and abs(a["entry"] - b["entry"]) <= tol
@@ -329,7 +342,7 @@ def sync_book(outdir: str, A: dict, m5: pd.DataFrame, title_fn) -> dict | None:
             matched.add(m["id"])                  # already in position: shown in the status table only
             continue
         if m is None:
-            sc["id"] = next(c for c in LETTERS if c not in used)
+            sc["id"] = next_letter(used)
             used.add(sc["id"])
             added.append(entry(sc, False))
         else:

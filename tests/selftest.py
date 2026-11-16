@@ -141,6 +141,19 @@ def test_session_book():
         assert st and st["same"] and [x["id"] for x in A["scenarios"]] == ["A"] and plan["asof"].startswith("2026-01-05T07:00")
 
 
+def test_letters():
+    """Scenario ids for a session refreshed every few minutes: never reused, never exhausted."""
+    from xau import extras
+    used = set()
+    seq = []
+    for _ in range(60):
+        seq.append(extras.next_letter(used))
+        used.add(seq[-1])
+    assert seq[:3] == ["A", "B", "C"] and "I" not in seq and "O" not in seq and len(set(seq)) == 60
+    assert seq[23] == "Z" and seq[24] == "AA" and seq[25] == "AB"
+    assert extras.next_letter({"A", "C"}) == "B"
+
+
 def test_calendar_week():
     """The weekly feed is kept only when it covers the week of the session (weekend briefings)."""
     import tempfile
@@ -363,8 +376,8 @@ def test_no_lookahead():
 
 
 if __name__ == "__main__":
-    for fn in (test_conventions, test_evaluation, test_tracking, test_session_book, test_calendar_week, test_week_stats,
-               test_site, test_no_lookahead):
+    for fn in (test_conventions, test_evaluation, test_tracking, test_session_book, test_letters, test_calendar_week,
+               test_week_stats, test_site, test_no_lookahead):
         fn()
         print(f"ok  {fn.__name__}")
     print("Tutti i controlli superati.")

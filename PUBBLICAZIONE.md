@@ -79,20 +79,13 @@ pacchetto, stampa i link diretti alle tre pagine (quello del punto 4 apre il fil
 Per cambiare le impostazioni basta aprire `site.json` nel repository (icona della matita), modificare e
 salvare: ogni modifica fatta a mano nel repository fa partire subito un aggiornamento.
 
-Da lì in poi il briefing parte da solo a questi orari (ora di Roma; d'estate un'ora dopo, perché GitHub usa
-l'ora UTC):
+Da lì in poi il briefing parte da solo **ogni 30 minuti** dal lunedì al venerdì, giorno e notte, e la
+domenica sera (righe `cron` di `aggiorna-sito.yml`, in ora UTC). Gli orari di GitHub sono indicativi: un
+aggiornamento può arrivare in ritardo o saltare, ma con questa cadenza il successivo arriva presto. In
+qualsiasi momento si può lanciare un aggiornamento a mano: scheda Actions → il flusso → *Run workflow*.
 
-| Quando | A che cosa serve |
-|---|---|
-| lun–ven 07:40 | Piano ufficiale, prima dell'apertura di Londra |
-| lun–ven 13:10 | Aggiornamento prima dei dati USA |
-| lun–ven 17:40 | Pomeriggio di New York |
-| lun–ven 23:30 | Dopo la chiusura: esiti del giorno, piano provvisorio per l'indomani |
-| domenica 21:00 | Briefing della settimana, a mercato chiuso |
-
-Gli orari si cambiano nelle righe `cron` di `aggiorna-sito.yml`. L'avvio può tardare di qualche minuto. In
-qualsiasi momento si può lanciare un aggiornamento a mano: scheda Actions → *Aggiorna briefing e sito* →
-*Run workflow*.
+A ogni giro vengono salvati nel repository piani e registro; le pagine dei briefing, che sono file grandi,
+solo ogni tre ore e nelle ore di fine seduta (lo fa `github/salva.sh`), così il repository non si gonfia.
 
 Da sapere:
 

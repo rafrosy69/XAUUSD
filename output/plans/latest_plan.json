@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-16",
- "asof": "2026-11-16T16:24:00+00:00",
- "price": 3858.766,
+ "asof": "2026-11-16T20:32:00+00:00",
+ "price": 3857.515,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-16T22:00:00+00:00",
@@ -43,7 +43,7 @@
    "title": "Vendita su rimbalzo"
   },
   {
-   "id": "E",
+   "id": "F",
    "type": "break",
    "dir": -1,
    "role": "con il trend · rottura",
