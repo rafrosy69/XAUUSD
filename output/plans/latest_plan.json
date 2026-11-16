@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-17",
- "asof": "2026-11-16T22:00:00+00:00",
- "price": 3856.36,
+ "asof": "2026-11-16T23:19:00+00:00",
+ "price": 3854.37,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-17T22:00:00+00:00",
@@ -29,7 +29,7 @@
     {
      "price": 3856.4,
      "rr": 1.71,
-     "label": "Chiusura di ieri +2",
+     "label": "Chiusura di ieri +4",
      "proj": false
     },
     {
