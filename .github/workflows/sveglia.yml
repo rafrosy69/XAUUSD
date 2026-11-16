@@ -1,0 +1,46 @@
+# Sveglia di riserva: se per 25 minuti non parte nessun aggiornamento, lo fa partire lei.
+# Serve nel repository l'ambiente "attesa" con Wait timer = 25 (Settings, Environments): quel numero e
+# l'intervallo tra un aggiornamento e l'altro, in minuti (minimo 5).
+name: Sveglia
+on:
+  workflow_run:
+    workflows: ["Aggiorna ogni 30 minuti"]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  actions: write
+jobs:
+  attendi:
+    name: Attendi e riparti
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: attesa
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      IO: ${{ github.run_number }}
+      ID: ${{ github.run_id }}
+    steps:
+      - name: Fai ripartire l'aggiornamento
+        run: |
+          nato=$(gh run view "$ID" --json createdAt -q .createdAt)
+          passati=$(( $(date +%s) - $(date -d "$nato" +%s) ))
+          if [ "$passati" -lt 240 ]; then
+            echo "::error::Manca il tempo di attesa. Settings, Environments, attesa - spunta Wait timer e scrivi 25 (minimo 5)"
+            exit 1
+          fi
+          nuove=$(gh run list --workflow Sveglia --limit 20 --json number,status -q "[.[] | select(.status != \"completed\" and .number > $IO)] | length" || echo 0)
+          if [ "$nuove" != "0" ]; then
+            echo "Esiste una sveglia piu recente. Mi fermo."
+            exit 0
+          fi
+          g=$(date -u +%u)
+          h=$(date -u +%H)
+          f="Aggiorna ogni 30 minuti"
+          if [ "$g" = 6 ] || { [ "$g" = 7 ] && [ "$h" -lt 20 ]; }; then f="Sveglia"; fi
+          for i in 1 2 3; do
+            if gh workflow run "$f" --ref main; then echo "Avviato: $f"; exit 0; fi
+            sleep 20
+          done
+          echo "::error::Non sono riuscita ad avviare $f"
+          exit 1
