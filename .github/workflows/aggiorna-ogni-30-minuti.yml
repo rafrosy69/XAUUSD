@@ -1,0 +1,86 @@
+# Aggiorna il briefing ogni 30 minuti e pubblica il sito (istruzioni: PUBBLICAZIONE.md)
+name: Aggiorna ogni 30 minuti
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Ora UTC: da lunedi a venerdi ogni 30 minuti, piu la domenica sera
+    - cron: "10,40 * * * 1-5"
+    - cron: "10,40 20-23 * * 0"
+  workflow_dispatch:
+concurrency:
+  group: briefing
+  cancel-in-progress: false
+jobs:
+  briefing:
+    name: Genera il briefing
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pages: write
+    outputs:
+      pages: ${{ steps.pages.outcome }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Installa il pacchetto caricato
+        run: |
+          p=""
+          for z in *.zip; do
+            if [ -f "$z" ] && unzip -l "$z" | grep -q run_briefing.py; then p="$z"; break; fi
+          done
+          if [ -n "$p" ]; then
+            t="$(mktemp -d)"
+            unzip -q -o "$p" -d "$t"
+            d="$(dirname "$(find "$t" -name run_briefing.py | head -n 1)")"
+            rm -rf "$d/.github"
+            cp -a "$d/." .
+            git rm -q --cached -- "$p"
+            rm -f -- "$p"
+          fi
+          if [ ! -f xau/engine.py ] || [ ! -f github/salva.sh ]; then
+            echo "::error::Manca il pacchetto. Carica nel repository xauusd-github.zip oppure xauusd-aggiornamento.zip"
+            exit 1
+          fi
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Calendario gia scaricato
+        uses: actions/cache@v5
+        continue-on-error: true
+        with:
+          path: output/cache/calendar_*.json
+          key: calendario-${{ github.run_id }}
+          restore-keys: calendario-
+      - name: Genera briefing e sito
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python run_briefing.py
+      - name: Salva piani e archivio
+        run: bash github/salva.sh
+      - name: Pages attivo?
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+      - if: steps.pages.outcome == 'success'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+      - if: steps.pages.outcome != 'success'
+        run: echo "::warning::GitHub Pages non attivo. Briefing salvato, sito non pubblicato. Settings, Pages, Source = GitHub Actions"
+  pubblica:
+    name: Pubblica il sito
+    needs: briefing
+    if: needs.briefing.outputs.pages == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v5
