@@ -69,6 +69,62 @@
    "pub": "2026-11-17T07:58:00+00:00",
    "official": true,
    "withdrawn": null
+  },
+  {
+   "id": "C",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3850.0,
+   "zone_hi": 3856.4,
+   "trigger": null,
+   "entry": 3853.2,
+   "stop": 3869.6,
+   "risk": 16.5,
+   "targets": [
+    {
+     "price": 3832.1,
+     "rr": 1.28,
+     "label": "Minimo di ieri (PDL)",
+     "proj": false
+    },
+    {
+     "price": 3800.0,
+     "rr": 3.23,
+     "label": "Soglia psicologica 3800 +2",
+     "proj": false
+    }
+   ],
+   "rr1": 1.28,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-17T13:39:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "D",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3829.9,
+   "zone_hi": 3834.4,
+   "trigger": 3829.9,
+   "entry": 3827.7,
+   "stop": 3843.2,
+   "risk": 15.5,
+   "targets": [
+    {
+     "price": 3800.0,
+     "rr": 1.79,
+     "label": "Soglia psicologica 3800 +2",
+     "proj": false
+    }
+   ],
+   "rr1": 1.79,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-17T13:39:00+00:00",
+   "official": false,
+   "withdrawn": null
   }
  ]
 }
