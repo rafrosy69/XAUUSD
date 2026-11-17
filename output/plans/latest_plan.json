@@ -1,11 +1,11 @@
 {
  "tday": "2026-11-17",
- "asof": "2026-11-17T05:52:00+00:00",
- "price": 3883.875,
+ "asof": "2026-11-17T06:17:00+00:00",
+ "price": 3873.135,
  "bias": "Ribassista",
- "score": -0.35,
+ "score": -0.5,
  "close": "2026-11-17T22:00:00+00:00",
- "invalidation": 3976.4,
+ "invalidation": 3908.6,
  "evaluated": false,
  "setups": [
   {
@@ -13,33 +13,33 @@
    "type": "fade",
    "dir": -1,
    "role": "con il trend",
-   "zone_lo": 3958.7,
-   "zone_hi": 3963.2,
+   "zone_lo": 3883.2,
+   "zone_hi": 3895.3,
    "trigger": null,
-   "entry": 3960.9,
-   "stop": 3976.4,
-   "risk": 15.5,
+   "entry": 3889.3,
+   "stop": 3908.6,
+   "risk": 19.3,
    "targets": [
     {
-     "price": 3941.5,
-     "rr": 1.25,
-     "label": "Min D1 del 30/06",
-     "proj": false
-    },
-    {
-     "price": 3905.7,
-     "rr": 3.56,
-     "label": "Massimo di ieri (PDH) +2",
-     "proj": false
-    },
-    {
      "price": 3870.0,
-     "rr": 5.87,
+     "rr": 1.0,
      "label": "Pivot P +4",
+     "proj": false
+    },
+    {
+     "price": 3856.4,
+     "rr": 1.71,
+     "label": "Chiusura di ieri +3",
+     "proj": false
+    },
+    {
+     "price": 3832.1,
+     "rr": 2.96,
+     "label": "Minimo di ieri (PDL)",
      "proj": false
     }
    ],
-   "rr1": 1.25,
+   "rr1": 1.0,
    "title": "Vendita su rimbalzo"
   },
   {
