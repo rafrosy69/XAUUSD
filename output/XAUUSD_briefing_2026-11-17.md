@@ -1,41 +1,43 @@
 # XAU/USD — Briefing intraday · martedì 17 novembre 2026
 
-_Dati aggiornati alle 02:00 del 17/11 (ora di Roma). Prezzi spot, lato bid._
+_Dati aggiornati alle 05:11 del 17/11 (ora di Roma). Prezzi spot, lato bid._
 
-**Prezzo 3852,4** (−4,0 $ da ieri) · **Trend: Ribassista forte** (−0,95) · ATR D1 88 $ · RSI H1 43
+**Prezzo 3869,3** (+12,9 $ da ieri) · **Trend: Ribassista** (−0,50) · ATR D1 88 $ · RSI H1 51
 
 ## In sintesi
 - **Come sono finiti gli scenari di ieri (lun 16/11)** — B · Rottura ribassista: **stop** (−1R); D · Rottura ribassista (aggiornamento, fuori registro): chiusa a fine seduta (+0,2R); E · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); scenari A, F e H non attivati.
-- **Contesto di trend: ribassista forte** (punteggio −0,95 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 ribassista, M15 ribassista. Struttura H1: struttura mista.
+- **Contesto di trend: ribassista** (punteggio −0,50 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 moderatamente ribassista, M15 rialzista. Struttura H1: struttura mista.
 - **Ieri (lun 16/11)**: chiusura a 3856,4 (−0,69%), range 3832,1–3901,1 = 69 $ (78% dell'ATR giornaliero).
-- **Oggi finora**: apertura 3856,0, minimo 3851,4, massimo 3864,4; range 13 $, pari al 15% del range medio giornaliero (ADR20 = 88 $).
-- **Zone chiave** — resistenze: 3863,2–3870,0 · 3883,2–3895,3 · 3900,0–3905,7. Supporti: 3832,1 · 3794,3–3800,0.
+- **Oggi finora**: apertura 3856,0, minimo 3843,3, massimo 3879,9; range 37 $, pari al 42% del range medio giornaliero (ADR20 = 88 $).
+- **Zone chiave** — resistenze: 3883,2–3895,3 · 3900,0–3905,7 · 3958,7–3963,2. Supporti: 3850,0–3856,4 · 3832,1 · 3794,3–3800,0.
 - **Eventi da presidiare (ora di Roma)**: 14:30 Vendite al dettaglio core m/m; 14:30 Vendite al dettaglio m/m.
 
 ## Piano operativo (scenari condizionali)
-- **A · Vendita su rimbalzo** (SHORT, con il trend): zona 3883,2–3895,3 (centro 3889,3); stop **3908,6** (rischio 19,3 $/oz); T1 3870,0 (1,0R) · T2 3856,4 (1,7R) · T3 3832,1 (3,0R) · raggiungibilità storica 53%.
-- **B · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3850,0 (ingresso ≈ 3847,8); stop **3863,3** (rischio 15,5 $/oz); T1 3832,1 (1,0R) · T2 3800,0 (3,1R) · raggiungibilità storica 97%.
+- **A · Vendita su rimbalzo** (SHORT, con il trend): zona 3883,2–3895,3 (centro 3889,3); stop **3908,6** (rischio 19,3 $/oz); T1 3870,0 (1,0R) · T2 3856,4 (1,7R) · T3 3832,1 (3,0R) · raggiungibilità storica 70%.
+- **B · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3850,0 (ingresso ≈ 3847,8); stop **3863,3** (rischio 15,5 $/oz); T1 3832,1 (1,0R) · T2 3800,0 (3,1R) · raggiungibilità storica 64%.
 - **Invalidazione** della lettura ribassista: chiusura H1 sopra 3908,6.
 
 ## Livelli chiave
 
 | Zona | Tipo | Cosa c'è | Forza | Distanza | Tocco oggi |
 |---|---|---|---|---|---|
-| 3970,1–3975,3 | Resistenza | Min D1 del 23/10, Max H4 del 02/11, EMA200 H1 | ★★ | +117,7 $ | 3% |
-| 3958,7–3963,2 | Resistenza | Pivot R3, Min D1 del 24/06, EMA50 H4 | ★★ | +106,3 $ | 4% |
-| 3900,0–3905,7 | Resistenza | Massimo di ieri (PDH), Soglia psicologica 3900, Max H1 del 13/11 | ★★★ | +47,6 $ | 31% |
-| 3883,2–3895,3 | Resistenza | Pivot R1, Chiusura sett. scorsa, Min H4 del 03/11 | ★★★ | +30,9 $ | 52% |
-| 3863,2–3870,0 | Resistenza | Pivot P, Apertura settimana, Min mese scorso | ★★★ | +10,8 $ | 78% |
-| 3850,0–3856,4 | Zona attuale | Chiusura di ieri, Min sett. scorsa (PWL), Apertura di oggi | ★★★ | 0,0 $ | — |
-| **3852,4** | **PREZZO** | | | | |
-| 3841,0 | Supporto | Min H1 del 16/11 | ★ | −11,4 $ | 78% |
-| 3832,1 | Supporto | Minimo di ieri (PDL) | ★★ | −20,2 $ | 64% |
-| 3825,3 | Supporto | Pivot S1 | ★ | −27,1 $ | 56% |
-| 3794,3–3800,0 | Supporto | Soglia psicologica 3800, Pivot S2 | ★★ | −52,4 $ | 32% |
+| 3995,7–4000,3 | Resistenza | Soglia psicologica 4000, Min D1 del 29/07, SMA20 D1 | ★★★ | +126,4 $ | 2% |
+| 3970,1–3975,3 | Resistenza | Min D1 del 23/10, Max H4 del 02/11 | ★★ | +100,8 $ | 4% |
+| 3958,7–3963,2 | Resistenza | Pivot R3, Min D1 del 24/06, EMA50 H4 | ★★ | +89,4 $ | 5% |
+| 3900,0–3905,7 | Resistenza | Massimo di ieri (PDH), Soglia psicologica 3900, Max H1 del 13/11 | ★★★ | +30,7 $ | 43% |
+| 3883,2–3895,3 | Resistenza | Pivot R1, Chiusura sett. scorsa, Max H4 del 16/11 | ★★★ | +14,0 $ | 70% |
+| 3879,9 | Resistenza | Massimo di oggi | ★ | +10,6 $ | 76% |
+| **3869,3** | **PREZZO** | | | | |
+| 3863,2–3870,0 | Zona attuale | Pivot P, Apertura settimana, Min mese scorso | ★★★ | 0,0 $ | — |
+| 3850,0–3856,4 | Supporto | Chiusura di ieri, Min sett. scorsa (PWL), Apertura di oggi | ★★★ | −12,9 $ | 75% |
+| 3841,0 | Supporto | Minimo di oggi, Min H1 del 16/11 | ★ | −28,3 $ | 50% |
+| 3832,1 | Supporto | Minimo di ieri (PDL) | ★★ | −37,1 $ | 38% |
+| 3825,3 | Supporto | Pivot S1 | ★ | −44,0 $ | 34% |
+| 3794,3–3800,0 | Supporto | Soglia psicologica 3800, Pivot S2, Proiezione ADR (min) | ★★ | −69,3 $ | 17% |
 
 ## Agenda (ora di Roma)
 - **14:30** USD · Vendite al dettaglio core m/m (atteso 0,4%, prec. 0,9%)
-- **14:30** USD · Vendite al dettaglio m/m (atteso 0,2%, prec. 0,8%)
+- **14:30** USD · Vendite al dettaglio m/m (atteso 0,1%, prec. 0,8%)
 - _Domani 20:00_ USD · Verbali FOMC
 - _gio 19/11 14:30_ USD · Indice Philadelphia Fed (atteso 19,2, prec. 20,9)
 - _gio 19/11 14:30_ USD · Richieste settimanali di sussidi di disoccupazione (atteso 199K, prec. 200K)
