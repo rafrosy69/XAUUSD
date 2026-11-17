@@ -147,7 +147,7 @@
     {
      "price": 3800.0,
      "rr": 3.09,
-     "label": "Soglia psicologica 3800 +2",
+     "label": "Soglia psicologica 3800 +1",
      "proj": false
     }
    ],
@@ -191,6 +191,43 @@
    "rr1": 1.25,
    "title": "Vendita su rimbalzo",
    "pub": "2026-11-17T15:45:00+00:00",
+   "official": false,
+   "withdrawn": "2026-11-17T16:10:00+00:00"
+  },
+  {
+   "id": "G",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3883.2,
+   "zone_hi": 3895.3,
+   "trigger": null,
+   "entry": 3889.3,
+   "stop": 3908.6,
+   "risk": 19.3,
+   "targets": [
+    {
+     "price": 3870.0,
+     "rr": 1.0,
+     "label": "Pivot P +4",
+     "proj": false
+    },
+    {
+     "price": 3856.4,
+     "rr": 1.71,
+     "label": "Chiusura di ieri +3",
+     "proj": false
+    },
+    {
+     "price": 3843.3,
+     "rr": 2.38,
+     "label": "Min sessione Asia +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.0,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-17T16:10:00+00:00",
    "official": false,
    "withdrawn": null
   }

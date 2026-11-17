@@ -1,45 +1,45 @@
 {
  "tday": "2026-11-17",
- "asof": "2026-11-17T15:45:00+00:00",
- "price": 3879.543,
+ "asof": "2026-11-17T16:10:00+00:00",
+ "price": 3870.631,
  "bias": "Ribassista",
- "score": -0.45,
+ "score": -0.5,
  "close": "2026-11-17T22:00:00+00:00",
- "invalidation": 3976.4,
+ "invalidation": 3908.6,
  "evaluated": false,
  "setups": [
   {
-   "id": "F",
+   "id": "G",
    "type": "fade",
    "dir": -1,
    "role": "con il trend",
-   "zone_lo": 3958.7,
-   "zone_hi": 3963.2,
+   "zone_lo": 3883.2,
+   "zone_hi": 3895.3,
    "trigger": null,
-   "entry": 3960.9,
-   "stop": 3976.4,
-   "risk": 15.5,
+   "entry": 3889.3,
+   "stop": 3908.6,
+   "risk": 19.3,
    "targets": [
     {
-     "price": 3941.5,
-     "rr": 1.25,
-     "label": "Min D1 del 30/06",
-     "proj": false
-    },
-    {
-     "price": 3905.7,
-     "rr": 3.56,
-     "label": "Massimo di ieri (PDH) +2",
-     "proj": false
-    },
-    {
      "price": 3870.0,
-     "rr": 5.87,
+     "rr": 1.0,
      "label": "Pivot P +4",
+     "proj": false
+    },
+    {
+     "price": 3856.4,
+     "rr": 1.71,
+     "label": "Chiusura di ieri +3",
+     "proj": false
+    },
+    {
+     "price": 3843.3,
+     "rr": 2.38,
+     "label": "Min sessione Asia +1",
      "proj": false
     }
    ],
-   "rr1": 1.25,
+   "rr1": 1.0,
    "title": "Vendita su rimbalzo"
   },
   {
@@ -63,7 +63,7 @@
     {
      "price": 3800.0,
      "rr": 3.09,
-     "label": "Soglia psicologica 3800 +2",
+     "label": "Soglia psicologica 3800 +1",
      "proj": false
     }
    ],
