@@ -5,3 +5,5 @@ seduta,piano_delle,trend,setup,titolo,esito,R,ingresso,uscita
 2026-11-13,12:22,Ribassista forte,B,Rottura ribassista,non attivato,0.0,,
 2026-11-16,23:00,Ribassista forte,A,Vendita su rimbalzo,non attivato,0.0,,
 2026-11-16,23:00,Ribassista forte,B,Rottura ribassista,stop,-1.0,3836.867,3880.1
+2026-11-17,08:58,Ribassista forte,A,Vendita su rimbalzo,target 1,1.0,3889.3,3870.0
+2026-11-17,08:58,Ribassista forte,B,Rottura ribassista,stop,-1.0,3846.09,3863.3

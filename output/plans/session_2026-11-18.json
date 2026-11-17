@@ -1,0 +1,68 @@
+{
+ "tday": "2026-11-18",
+ "official_asof": "2026-11-17T22:00:00+00:00",
+ "setups": [
+  {
+   "id": "A",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3939.4,
+   "zone_hi": 3943.7,
+   "trigger": null,
+   "entry": 3941.5,
+   "stop": 3956.6,
+   "risk": 15.1,
+   "targets": [
+    {
+     "price": 3923.0,
+     "rr": 1.23,
+     "label": "Max H4 del 13/11",
+     "proj": false
+    },
+    {
+     "price": 3905.7,
+     "rr": 2.38,
+     "label": "Max settimana in corso +3",
+     "proj": false
+    },
+    {
+     "price": 3890.7,
+     "rr": 3.38,
+     "label": "Massimo di ieri (PDH) +4",
+     "proj": false
+    }
+   ],
+   "rr1": 1.23,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-17T22:00:00+00:00",
+   "official": true,
+   "withdrawn": null
+  },
+  {
+   "id": "B",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3826.9,
+   "zone_hi": 3836.7,
+   "trigger": 3826.9,
+   "entry": 3824.8,
+   "stop": 3839.8,
+   "risk": 15.1,
+   "targets": [
+    {
+     "price": 3804.8,
+     "rr": 1.33,
+     "label": "Soglia psicologica 3800 +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.33,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-17T22:00:00+00:00",
+   "official": true,
+   "withdrawn": null
+  }
+ ]
+}

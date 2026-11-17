@@ -1,67 +1,67 @@
 {
- "tday": "2026-11-17",
- "asof": "2026-11-17T21:54:00+00:00",
- "price": 3849.697,
+ "tday": "2026-11-18",
+ "asof": "2026-11-17T22:00:00+00:00",
+ "price": 3849.09,
  "bias": "Ribassista forte",
  "score": -0.95,
- "close": "2026-11-17T22:00:00+00:00",
- "invalidation": 3908.6,
+ "close": "2026-11-18T22:00:00+00:00",
+ "invalidation": 3956.6,
  "evaluated": false,
  "setups": [
   {
-   "id": "G",
+   "id": "A",
    "type": "fade",
    "dir": -1,
    "role": "con il trend",
-   "zone_lo": 3883.2,
-   "zone_hi": 3895.3,
+   "zone_lo": 3939.4,
+   "zone_hi": 3943.7,
    "trigger": null,
-   "entry": 3889.3,
-   "stop": 3908.6,
-   "risk": 19.3,
+   "entry": 3941.5,
+   "stop": 3956.6,
+   "risk": 15.1,
    "targets": [
     {
-     "price": 3870.0,
-     "rr": 1.0,
-     "label": "Pivot P +4",
+     "price": 3923.0,
+     "rr": 1.23,
+     "label": "Max H4 del 13/11",
      "proj": false
     },
     {
-     "price": 3856.4,
-     "rr": 1.71,
-     "label": "Chiusura di ieri +3",
-     "proj": false
-    },
-    {
-     "price": 3843.3,
+     "price": 3905.7,
      "rr": 2.38,
-     "label": "Minimo di ieri (PDL) +3",
+     "label": "Max settimana in corso +3",
+     "proj": false
+    },
+    {
+     "price": 3890.7,
+     "rr": 3.38,
+     "label": "Massimo di ieri (PDH) +4",
      "proj": false
     }
    ],
-   "rr1": 1.0,
+   "rr1": 1.23,
    "title": "Vendita su rimbalzo"
   },
   {
-   "id": "H",
+   "id": "B",
    "type": "break",
    "dir": -1,
    "role": "con il trend · rottura",
-   "zone_lo": 3832.1,
-   "zone_hi": 3843.3,
-   "trigger": 3832.1,
-   "entry": 3829.9,
-   "stop": 3845.4,
-   "risk": 15.5,
+   "zone_lo": 3826.9,
+   "zone_hi": 3836.7,
+   "trigger": 3826.9,
+   "entry": 3824.8,
+   "stop": 3839.8,
+   "risk": 15.1,
    "targets": [
     {
-     "price": 3800.0,
-     "rr": 1.93,
+     "price": 3804.8,
+     "rr": 1.33,
      "label": "Soglia psicologica 3800 +1",
      "proj": false
     }
    ],
-   "rr1": 1.93,
+   "rr1": 1.33,
    "title": "Rottura ribassista"
   }
  ]
