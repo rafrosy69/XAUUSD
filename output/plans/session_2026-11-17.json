@@ -1,6 +1,6 @@
 {
  "tday": "2026-11-17",
- "official_asof": "2026-11-17T03:06:00+00:00",
+ "official_asof": "2026-11-17T03:31:00+00:00",
  "setups": [
   {
    "id": "A",
@@ -17,7 +17,7 @@
     {
      "price": 3870.0,
      "rr": 1.0,
-     "label": "Pivot P +5",
+     "label": "Pivot P +4",
      "proj": false
     },
     {
@@ -35,7 +35,7 @@
    ],
    "rr1": 1.0,
    "title": "Vendita su rimbalzo",
-   "pub": "2026-11-17T03:06:00+00:00",
+   "pub": "2026-11-17T03:31:00+00:00",
    "official": true,
    "withdrawn": null
   },
@@ -60,13 +60,13 @@
     {
      "price": 3800.0,
      "rr": 3.09,
-     "label": "Soglia psicologica 3800 +1",
+     "label": "Soglia psicologica 3800 +2",
      "proj": false
     }
    ],
    "rr1": 1.01,
    "title": "Rottura ribassista",
-   "pub": "2026-11-17T03:06:00+00:00",
+   "pub": "2026-11-17T03:31:00+00:00",
    "official": true,
    "withdrawn": null
   }

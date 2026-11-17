@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-17",
- "asof": "2026-11-17T03:06:00+00:00",
- "price": 3871.69,
+ "asof": "2026-11-17T03:31:00+00:00",
+ "price": 3875.1,
  "bias": "Ribassista",
  "score": -0.5,
  "close": "2026-11-17T22:00:00+00:00",
@@ -23,7 +23,7 @@
     {
      "price": 3870.0,
      "rr": 1.0,
-     "label": "Pivot P +5",
+     "label": "Pivot P +4",
      "proj": false
     },
     {
@@ -63,7 +63,7 @@
     {
      "price": 3800.0,
      "rr": 3.09,
-     "label": "Soglia psicologica 3800 +1",
+     "label": "Soglia psicologica 3800 +2",
      "proj": false
     }
    ],
