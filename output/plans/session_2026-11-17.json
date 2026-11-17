@@ -1,6 +1,6 @@
 {
  "tday": "2026-11-17",
- "official_asof": "2026-11-17T00:35:00+00:00",
+ "official_asof": "2026-11-17T01:00:00+00:00",
  "setups": [
   {
    "id": "A",
@@ -35,7 +35,7 @@
    ],
    "rr1": 1.0,
    "title": "Vendita su rimbalzo",
-   "pub": "2026-11-17T00:35:00+00:00",
+   "pub": "2026-11-17T01:00:00+00:00",
    "official": true,
    "withdrawn": null
   },
@@ -66,7 +66,7 @@
    ],
    "rr1": 1.01,
    "title": "Rottura ribassista",
-   "pub": "2026-11-17T00:35:00+00:00",
+   "pub": "2026-11-17T01:00:00+00:00",
    "official": true,
    "withdrawn": null
   }
