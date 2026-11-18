@@ -1,33 +1,33 @@
 {
  "tday": "2026-11-18",
- "asof": "2026-11-18T04:57:00+00:00",
- "price": 3786.195,
+ "asof": "2026-11-18T05:22:00+00:00",
+ "price": 3793.315,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-18T22:00:00+00:00",
- "invalidation": 3817.7,
+ "invalidation": 3849.6,
  "evaluated": false,
  "setups": [
   {
-   "id": "G",
+   "id": "H",
    "type": "fade",
    "dir": -1,
    "role": "con il trend",
-   "zone_lo": 3800.0,
-   "zone_hi": 3804.8,
+   "zone_lo": 3826.9,
+   "zone_hi": 3836.7,
    "trigger": null,
-   "entry": 3802.4,
-   "stop": 3817.7,
-   "risk": 15.3,
+   "entry": 3831.8,
+   "stop": 3849.6,
+   "risk": 17.8,
    "targets": [
     {
-     "price": 3700.0,
-     "rr": 6.7,
-     "label": "Soglia psicologica 3700",
+     "price": 3804.8,
+     "rr": 1.52,
+     "label": "Soglia psicologica 3800 +1",
      "proj": false
     }
    ],
-   "rr1": 6.7,
+   "rr1": 1.52,
    "title": "Vendita su rimbalzo"
   },
   {
