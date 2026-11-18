@@ -206,6 +206,31 @@
    "title": "Vendita su rimbalzo",
    "pub": "2026-11-18T05:22:00+00:00",
    "official": false,
+   "withdrawn": "2026-11-18T06:12:00+00:00"
+  },
+  {
+   "id": "J",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3800.0,
+   "zone_hi": 3804.8,
+   "trigger": null,
+   "entry": 3802.4,
+   "stop": 3817.7,
+   "risk": 15.3,
+   "targets": [
+    {
+     "price": 3700.0,
+     "rr": 6.7,
+     "label": "Soglia psicologica 3700",
+     "proj": false
+    }
+   ],
+   "rr1": 6.7,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-18T06:12:00+00:00",
+   "official": false,
    "withdrawn": null
   }
  ]
