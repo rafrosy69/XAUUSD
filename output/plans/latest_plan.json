@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-18",
- "asof": "2026-11-18T02:31:00+00:00",
- "price": 3805.09,
+ "asof": "2026-11-18T02:57:00+00:00",
+ "price": 3801.715,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-18T22:00:00+00:00",
@@ -29,28 +29,6 @@
    ],
    "rr1": 1.52,
    "title": "Vendita su rimbalzo"
-  },
-  {
-   "id": "C",
-   "type": "break",
-   "dir": -1,
-   "role": "con il trend · rottura",
-   "zone_lo": 3800.0,
-   "zone_hi": 3804.8,
-   "trigger": 3800.0,
-   "entry": 3797.8,
-   "stop": 3812.9,
-   "risk": 15.1,
-   "targets": [
-    {
-     "price": 3700.0,
-     "rr": 6.5,
-     "label": "Soglia psicologica 3700",
-     "proj": false
-    }
-   ],
-   "rr1": 6.5,
-   "title": "Rottura ribassista"
   }
  ]
 }
