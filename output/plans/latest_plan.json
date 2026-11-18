@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-18",
- "asof": "2026-11-18T07:53:00+00:00",
- "price": 3768.235,
+ "asof": "2026-11-18T08:18:00+00:00",
+ "price": 3760.7,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-18T22:00:00+00:00",
@@ -21,13 +21,13 @@
    "risk": 15.3,
    "targets": [
     {
-     "price": 3700.0,
-     "rr": 6.7,
-     "label": "Soglia psicologica 3700",
+     "price": 3764.6,
+     "rr": 2.47,
+     "label": "Min sessione Asia",
      "proj": false
     }
    ],
-   "rr1": 6.7,
+   "rr1": 2.47,
    "title": "Vendita su rimbalzo"
   },
   {

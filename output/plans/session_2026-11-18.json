@@ -221,13 +221,13 @@
    "risk": 15.3,
    "targets": [
     {
-     "price": 3700.0,
-     "rr": 6.7,
-     "label": "Soglia psicologica 3700",
+     "price": 3764.6,
+     "rr": 2.47,
+     "label": "Min sessione Asia",
      "proj": false
     }
    ],
-   "rr1": 6.7,
+   "rr1": 2.47,
    "title": "Vendita su rimbalzo",
    "pub": "2026-11-18T06:12:00+00:00",
    "official": false,
