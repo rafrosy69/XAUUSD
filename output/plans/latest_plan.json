@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-18",
- "asof": "2026-11-18T20:32:00+00:00",
- "price": 3726.849,
+ "asof": "2026-11-18T20:57:00+00:00",
+ "price": 3729.146,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-18T22:00:00+00:00",
@@ -23,7 +23,7 @@
     {
      "price": 3764.6,
      "rr": 2.47,
-     "label": "Min sessione Asia +1",
+     "label": "Min sessione Asia",
      "proj": false
     }
    ],
