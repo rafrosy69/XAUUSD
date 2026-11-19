@@ -420,19 +420,13 @@
    "risk": 15.7,
    "targets": [
     {
-     "price": 3572.0,
-     "rr": 1.5,
-     "label": "proiezione 1.5R",
-     "proj": true
-    },
-    {
-     "price": 3556.3,
-     "rr": 2.5,
-     "label": "proiezione 2.5R",
-     "proj": true
+     "price": 3500.0,
+     "rr": 6.08,
+     "label": "Soglia psicologica 3500",
+     "proj": false
     }
    ],
-   "rr1": 1.5,
+   "rr1": 6.08,
    "title": "Rottura ribassista",
    "pub": "2026-11-19T19:29:00+00:00",
    "official": false,
