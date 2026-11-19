@@ -1,6 +1,6 @@
 {
  "tday": "2026-11-20",
- "official_asof": "2026-11-19T22:00:00+00:00",
+ "official_asof": "2026-11-19T23:25:00+00:00",
  "setups": [
   {
    "id": "A",
@@ -8,7 +8,7 @@
    "dir": -1,
    "role": "con il trend · rottura",
    "zone_lo": 3619.8,
-   "zone_hi": 3625.6,
+   "zone_hi": 3627.5,
    "trigger": 3619.8,
    "entry": 3617.5,
    "stop": 3633.8,
@@ -23,7 +23,7 @@
    ],
    "rr1": 1.07,
    "title": "Rottura ribassista",
-   "pub": "2026-11-19T22:00:00+00:00",
+   "pub": "2026-11-19T23:25:00+00:00",
    "official": true,
    "withdrawn": null
   }

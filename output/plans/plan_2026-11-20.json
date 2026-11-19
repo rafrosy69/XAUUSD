@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-20",
- "asof": "2026-11-19T22:00:00+00:00",
- "price": 3625.555,
+ "asof": "2026-11-19T23:25:00+00:00",
+ "price": 3627.135,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-20T22:00:00+00:00",
@@ -14,7 +14,7 @@
    "dir": -1,
    "role": "con il trend · rottura",
    "zone_lo": 3619.8,
-   "zone_hi": 3625.6,
+   "zone_hi": 3627.5,
    "trigger": 3619.8,
    "entry": 3617.5,
    "stop": 3633.8,
