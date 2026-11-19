@@ -1,13 +1,41 @@
 {
  "tday": "2026-11-19",
- "asof": "2026-11-19T05:19:00+00:00",
- "price": 3731.988,
+ "asof": "2026-11-19T05:44:00+00:00",
+ "price": 3738.89,
  "bias": "Ribassista forte",
- "score": -0.9,
+ "score": -0.8,
  "close": "2026-11-19T22:00:00+00:00",
- "invalidation": null,
+ "invalidation": 3856.8,
  "evaluated": false,
  "setups": [
+  {
+   "id": "F",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3832.1,
+   "zone_hi": 3843.3,
+   "trigger": null,
+   "entry": 3837.7,
+   "stop": 3856.8,
+   "risk": 19.1,
+   "targets": [
+    {
+     "price": 3815.0,
+     "rr": 1.19,
+     "label": "Pivot R1",
+     "proj": false
+    },
+    {
+     "price": 3727.2,
+     "rr": 5.8,
+     "label": "Minimo di ieri (PDL) +2",
+     "proj": false
+    }
+   ],
+   "rr1": 1.19,
+   "title": "Vendita su rimbalzo"
+  },
   {
    "id": "E",
    "type": "break",
