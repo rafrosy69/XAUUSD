@@ -1,8 +1,8 @@
 # XAU/USD — Briefing intraday · giovedì 19 novembre 2026
 
-_Dati aggiornati alle 08:49 del 19/11 (ora di Roma). Prezzi spot, lato bid._
+_Dati aggiornati alle 12:11 del 19/11 (ora di Roma). Prezzi spot, lato bid._
 
-**Prezzo 3732,1** (+7,1 $ da ieri) · **Trend: Ribassista forte** (−1,00) · ATR D1 90 $ · RSI H1 42
+**Prezzo 3729,8** (+4,8 $ da ieri) · **Trend: Ribassista forte** (−1,00) · ATR D1 90 $ · RSI H1 42
 
 ## In sintesi
 - **Scenari già pubblicati oggi** (piano ufficiale delle 03:47) — A · Rottura ribassista: **T1 raggiunto** intorno alle 04:05 (+0,4R); B · Vendita su rimbalzo: **stop** intorno alle 06:35 (−1R).
@@ -13,29 +13,29 @@ _Dati aggiornati alle 08:49 del 19/11 (ora di Roma). Prezzi spot, lato bid._
 - **Zone chiave** — resistenze: 3832,1–3843,3 · 3850,0–3857,3 · 3864,0–3870,0. Supporti: 3719,7–3727,2.
 - **Eventi da presidiare (ora di Roma)**: 14:30 Indice Philadelphia Fed; 14:30 Richieste settimanali di sussidi di disoccupazione.
 
-## Scenari già pubblicati oggi — situazione alle 08:49
+## Scenari già pubblicati oggi — situazione alle 12:11
 - **A · Rottura ribassista** (SHORT, piano ufficiale: chiusura M15 sotto 3719,7 · stop 3733,1 · T1 3700,0) — **TARGET 1**. Ingresso alle 04:00 a 3709,1 (chiusura M15 di conferma); rischio 24,0 $/oz. T1 raggiunto intorno alle 04:05: +0,4R.
 - **B · Vendita su rimbalzo** (SHORT, aggiornamento delle 04:13 · fuori registro: zona 3719,7–3727,2 · stop 3740,6 · T1 3700,0) — **STOP**. Ingresso alle 05:00 a 3723,4 (ordine a centro zona); rischio 17,2 $/oz. Stop colpito intorno alle 06:35: −1R.
 - _Il piano ufficiale è quello delle 03:47; esiti secondo le regole meccaniche del registro (uscita a T1, allo stop o a fine seduta, stop mai spostato)._
 
-## Piano operativo (scenari ricalcolati alle 08:49)
-- **E · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3719,7 (ingresso ≈ 3717,4); stop **3733,1** (rischio 15,7 $/oz); T1 3700,0 (1,1R) · raggiungibilità storica 74%.
+## Piano operativo (scenari ricalcolati alle 12:11)
+- **E · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3719,7 (ingresso ≈ 3717,4); stop **3733,1** (rischio 15,7 $/oz); T1 3700,0 (1,1R) · raggiungibilità storica 80%.
 
 ## Livelli chiave
 
 | Zona | Tipo | Cosa c'è | Forza | Distanza | Tocco oggi |
 |---|---|---|---|---|---|
-| 3864,0–3870,0 | Resistenza | Apertura settimana, Min mese scorso, Min D1 del 02/11 | ★★★ | +131,9 $ | 1% |
-| 3850,0–3857,3 | Resistenza | Massimo di ieri (PDH), Min sett. scorsa (PWL), Cifra tonda 3850 | ★★★ | +117,9 $ | 1% |
-| 3832,1–3843,3 | Resistenza | Min H4 del 16/11, Min H1 del 17/11, Min H1 del 16/11 | ★★ | +100,0 $ | 3% |
-| 3767,3 | Resistenza | Pivot P | ★ | +35,2 $ | 39% |
-| 3758,4 | Resistenza | Massimo di oggi | ★ | +26,3 $ | 50% |
-| 3750,0 | Resistenza | Cifra tonda 3750 | ★ | +17,9 $ | 63% |
-| 3745,3 | Resistenza | EMA20 H1 | ★ | +13,2 $ | 72% |
-| **3732,1** | **PREZZO** | | | | |
-| 3719,7–3727,2 | Supporto | Minimo di ieri (PDL), Chiusura di ieri, Apertura di oggi | ★★★ | −4,9 $ | 90% |
-| 3700,0 | Supporto | Soglia psicologica 3700 | ★ | −32,1 $ | 40% |
-| 3693,3 | Supporto | Minimo di oggi | ★ | −38,8 $ | 30% |
+| 3864,0–3870,0 | Resistenza | Apertura settimana, Min mese scorso, Min D1 del 02/11 | ★★★ | +134,1 $ | 1% |
+| 3850,0–3857,3 | Resistenza | Massimo di ieri (PDH), Min sett. scorsa (PWL), Cifra tonda 3850 | ★★★ | +120,2 $ | 1% |
+| 3832,1–3843,3 | Resistenza | Min H4 del 16/11, Min H1 del 17/11, Min H1 del 16/11 | ★★ | +102,3 $ | 3% |
+| 3767,3 | Resistenza | Pivot P | ★ | +37,5 $ | 30% |
+| 3758,4 | Resistenza | Max sessione Asia | ★ | +28,6 $ | 40% |
+| 3750,0 | Resistenza | Cifra tonda 3750 | ★ | +20,2 $ | 54% |
+| 3741,2 | Resistenza | EMA20 H1 | ★ | +11,4 $ | 75% |
+| **3729,8** | **PREZZO** | | | | |
+| 3719,7–3727,2 | Supporto | Minimo di ieri (PDL), Chiusura di ieri, Apertura di oggi | ★★★ | −2,7 $ | 96% |
+| 3700,0 | Supporto | Soglia psicologica 3700 | ★ | −29,8 $ | 43% |
+| 3693,3 | Supporto | Min sessione Asia | ★ | −36,5 $ | 31% |
 
 ## Agenda (ora di Roma)
 - **14:30** USD · Indice Philadelphia Fed (atteso 20,6, prec. 20,9)
