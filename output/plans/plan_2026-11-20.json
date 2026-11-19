@@ -1,0 +1,34 @@
+{
+ "tday": "2026-11-20",
+ "asof": "2026-11-19T22:00:00+00:00",
+ "price": 3625.555,
+ "bias": "Ribassista forte",
+ "score": -1.0,
+ "close": "2026-11-20T22:00:00+00:00",
+ "invalidation": null,
+ "evaluated": false,
+ "setups": [
+  {
+   "id": "A",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3619.8,
+   "zone_hi": 3625.6,
+   "trigger": 3619.8,
+   "entry": 3617.5,
+   "stop": 3633.8,
+   "risk": 16.3,
+   "targets": [
+    {
+     "price": 3600.0,
+     "rr": 1.07,
+     "label": "Soglia psicologica 3600",
+     "proj": false
+    }
+   ],
+   "rr1": 1.07,
+   "title": "Rottura ribassista"
+  }
+ ]
+}

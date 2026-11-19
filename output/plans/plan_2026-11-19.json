@@ -6,7 +6,7 @@
  "score": -1.0,
  "close": "2026-11-19T22:00:00+00:00",
  "invalidation": null,
- "evaluated": false,
+ "evaluated": true,
  "setups": [
   {
    "id": "A",
@@ -29,6 +29,16 @@
    ],
    "rr1": 1.11,
    "title": "Rottura ribassista"
+  }
+ ],
+ "results": [
+  {
+   "id": "A",
+   "title": "Rottura ribassista",
+   "status": "target 1",
+   "R": 0.38,
+   "entry_px": 3709.068,
+   "exit_px": 3700.0
   }
  ]
 }

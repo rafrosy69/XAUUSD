@@ -1,55 +1,33 @@
 {
- "tday": "2026-11-19",
- "asof": "2026-11-19T21:44:00+00:00",
- "price": 3627.145,
+ "tday": "2026-11-20",
+ "asof": "2026-11-19T22:00:00+00:00",
+ "price": 3625.555,
  "bias": "Ribassista forte",
  "score": -1.0,
- "close": "2026-11-19T22:00:00+00:00",
- "invalidation": 3740.6,
+ "close": "2026-11-20T22:00:00+00:00",
+ "invalidation": null,
  "evaluated": false,
  "setups": [
   {
-   "id": "L",
-   "type": "fade",
-   "dir": -1,
-   "role": "con il trend",
-   "zone_lo": 3719.7,
-   "zone_hi": 3727.2,
-   "trigger": null,
-   "entry": 3723.4,
-   "stop": 3740.6,
-   "risk": 17.2,
-   "targets": [
-    {
-     "price": 3700.0,
-     "rr": 1.36,
-     "label": "Soglia psicologica 3700 +1",
-     "proj": false
-    }
-   ],
-   "rr1": 1.36,
-   "title": "Vendita su rimbalzo"
-  },
-  {
-   "id": "R",
+   "id": "A",
    "type": "break",
    "dir": -1,
    "role": "con il trend · rottura",
-   "zone_lo": 3597.8,
-   "zone_hi": 3602.2,
-   "trigger": 3597.8,
-   "entry": 3595.5,
-   "stop": 3611.2,
-   "risk": 15.7,
+   "zone_lo": 3619.8,
+   "zone_hi": 3625.6,
+   "trigger": 3619.8,
+   "entry": 3617.5,
+   "stop": 3633.8,
+   "risk": 16.3,
    "targets": [
     {
-     "price": 3500.0,
-     "rr": 6.08,
-     "label": "Soglia psicologica 3500",
+     "price": 3600.0,
+     "rr": 1.07,
+     "label": "Soglia psicologica 3600",
      "proj": false
     }
    ],
-   "rr1": 6.08,
+   "rr1": 1.07,
    "title": "Rottura ribassista"
   }
  ]
