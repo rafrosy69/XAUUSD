@@ -1,41 +1,43 @@
 # XAU/USD — Briefing intraday · venerdì 20 novembre 2026
 
-_Dati aggiornati alle 02:05 del 20/11 (ora di Roma). Prezzi spot, lato bid._
+_Dati aggiornati alle 05:23 del 20/11 (ora di Roma). Prezzi spot, lato bid._
 
-**Prezzo 3593,3** (−32,3 $ da ieri) · **Trend: Ribassista forte** (−1,00) · ATR D1 93 $ · RSI H1 18
+**Prezzo 3535,6** (−90,0 $ da ieri) · **Trend: Ribassista forte** (−1,00) · ATR D1 93 $ · RSI H1 14
 
 ## In sintesi
-- **Scenari già pubblicati oggi** (piano ufficiale delle 00:25) — A · Rottura ribassista: **T1 raggiunto** intorno alle 00:50 (+0,3R); D · Rottura ribassista: **T1 raggiunto** intorno alle 01:40 (+0,6R); F · Rottura ribassista: **posizione aperta** dalle 01:45 a 3595,4, ora +0,1R (punta massima +0,6R), stop 3611,7, T1 3577,4.
+- **Scenari già pubblicati oggi** (piano ufficiale delle 00:25) — A · Rottura ribassista: **T1 raggiunto** intorno alle 00:50 (+0,3R); D · Rottura ribassista: **T1 raggiunto** intorno alle 01:40 (+0,6R); F · Rottura ribassista: **T1 raggiunto** intorno alle 02:20 (+1,1R); G · Rottura ribassista: **stop** intorno alle 02:30 (−1R).
 - **Come sono finiti gli scenari di ieri (gio 19/11)** — A · Rottura ribassista: **T1 raggiunto** (+0,4R); B · Vendita su rimbalzo (aggiornamento, fuori registro): **stop** (−1R); E · Rottura ribassista (aggiornamento, fuori registro): **T1 raggiunto** (+1,3R); K · Rottura ribassista (aggiornamento, fuori registro): **T1 raggiunto** (+0,4R); M · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); P · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); Q · Rottura ribassista (aggiornamento, fuori registro): chiusa a fine seduta (+3,6R); scenari L e R non attivati.
 - **Contesto di trend: ribassista forte** (punteggio −1,00 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 ribassista, M15 ribassista. Struttura H1: rottura dell'ultimo minimo H1 (massimi decrescenti).
 - **Ieri (gio 19/11)**: chiusura a 3625,6 (−2,67%), range 3619,8–3758,4 = 139 $ (149% dell'ATR giornaliero).
-- **Oggi finora**: apertura 3627,5, minimo 3585,7, massimo 3636,4; range 51 $, pari al 54% del range medio giornaliero (ADR20 = 94 $).
-- **Mercato molto esteso al ribasso**: RSI H1 a 18, prezzo 3,4 ATR orari sotto la EMA20 H1 (3672,6). Un rimbalzo tecnico è plausibile: meglio attendere il prezzo sulle resistenze che inseguirlo sui minimi.
+- **Oggi finora**: apertura 3627,5, minimo 3517,2, massimo 3636,4; range 119 $, pari al 127% del range medio giornaliero (ADR20 = 94 $).
+- **Mercato molto esteso al ribasso**: RSI H1 a 14, prezzo 3,7 ATR orari sotto la EMA20 H1 (3636,9). Un rimbalzo tecnico è plausibile: meglio attendere il prezzo sulle resistenze che inseguirlo sui minimi.
 - **Zone chiave** — resistenze: 3619,8–3627,5. Supporti: n.d..
 - **Eventi da presidiare (ora di Roma)**: 16:00 Fiducia consumatori Univ. Michigan (finale); 16:00 Aspettative d'inflazione Univ. Michigan (finale).
 
-## Scenari già pubblicati oggi — situazione alle 02:05
+## Scenari già pubblicati oggi — situazione alle 05:23
 - **A · Rottura ribassista** (SHORT, piano ufficiale: chiusura M15 sotto 3619,8 · stop 3633,8 · T1 3600,0) — **TARGET 1**. Ingresso alle 00:45 a 3608,5 (chiusura M15 di conferma); rischio 25,3 $/oz. T1 raggiunto intorno alle 00:50: +0,3R.
 - **D · Rottura ribassista** (SHORT, aggiornamento delle 01:15 · fuori registro: chiusura M15 sotto 3619,8 · stop 3633,8 · T1 3600,0) — **TARGET 1**. Ingresso alle 01:30 a 3612,5 (chiusura M15 di conferma); rischio 21,3 $/oz. T1 raggiunto intorno alle 01:40: +0,6R.
-- **F · Rottura ribassista** (SHORT, aggiornamento delle 01:40 · fuori registro: chiusura M15 sotto 3597,7 · stop 3611,7 · T1 3577,4) — **APERTA**. Ingresso alle 01:45 a 3595,4 (chiusura M15 di conferma); rischio 16,3 $/oz. Miglior prezzo toccato: 3585,7 (+0,6R). Alle 02:05: +0,1R (+2,1 $/oz); mancano 16 $ a T1 e 18 $ allo stop.
+- **F · Rottura ribassista** (SHORT, aggiornamento delle 01:40 · fuori registro: chiusura M15 sotto 3597,7 · stop 3611,7 · T1 3577,4) — **TARGET 1**. Ingresso alle 01:45 a 3595,4 (chiusura M15 di conferma); rischio 16,3 $/oz. T1 raggiunto intorno alle 02:20: +1,1R.
+- **G · Rottura ribassista** (SHORT, aggiornamento delle 02:05 · fuori registro: chiusura M15 sotto 3575,1 · stop 3589,1 · T1 3500,0) — **STOP**. Ingresso alle 02:30 a 3575,0 (chiusura M15 di conferma); rischio 14,1 $/oz. Stop colpito intorno alle 02:30: −1R.
 - _Il piano ufficiale è quello delle 00:25; esiti secondo le regole meccaniche del registro (uscita a T1, allo stop o a fine seduta, stop mai spostato)._
 
-## Piano operativo (scenari ricalcolati alle 02:05)
-- **E · Vendita su rimbalzo** (SHORT, con il trend): zona 3619,8–3627,5 (centro 3623,6); stop **3641,4** (rischio 17,8 $/oz); T1 3600,0 (1,3R) · raggiungibilità storica 58%.
-- **G · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3575,1 (ingresso ≈ 3572,8); stop **3589,1** (rischio 16,3 $/oz); T1 3500,0 (4,5R) · raggiungibilità storica 68%.
+## Piano operativo (scenari ricalcolati alle 05:23)
+- **E · Vendita su rimbalzo** (SHORT, con il trend): zona 3619,8–3627,5 (centro 3623,6); stop **3641,4** (rischio 17,8 $/oz); T1 3600,0 (1,3R) · raggiungibilità storica 7%.
+- **H · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3497,7 (ingresso ≈ 3495,3); stop **3511,7** (rischio 16,3 $/oz); T1 3400,0 (5,8R) · raggiungibilità storica 40%.
 - **Invalidazione** della lettura ribassista: chiusura H1 sopra 3641,4.
 
 ## Livelli chiave
 
 | Zona | Tipo | Cosa c'è | Forza | Distanza | Tocco oggi |
 |---|---|---|---|---|---|
-| 3636,4 | Resistenza | Massimo di oggi | ★ | +43,2 $ | 36% |
-| 3619,8–3627,5 | Resistenza | Minimo di ieri (PDL), Chiusura di ieri, Apertura di oggi | ★★★ | +26,5 $ | 58% |
-| 3600,0 | Resistenza | Soglia psicologica 3600 | ★ | +6,7 $ | 88% |
-| **3593,3** | **PREZZO** | | | | |
-| 3585,7 | Supporto | Minimo di oggi | ★ | −7,6 $ | 88% |
-| 3577,4 | Supporto | Pivot S1 | ★ | −15,8 $ | 72% |
-| 3550,0 | Supporto | Cifra tonda 3550 | ★ | −43,3 $ | 44% |
+| 3619,8–3627,5 | Resistenza | Minimo di ieri (PDL), Chiusura di ieri, Apertura di oggi | ★★★ | +84,2 $ | 7% |
+| 3577,4 | Resistenza | Pivot S1 | ★ | +41,8 $ | 32% |
+| 3550,0 | Resistenza | Cifra tonda 3550 | ★ | +14,4 $ | 70% |
+| 3542,7 | Resistenza | Proiezione ADR (min) | ★ | +7,1 $ | 84% |
+| **3535,6** | **PREZZO** | | | | |
+| 3529,3 | Supporto | Pivot S2 | ★ | −6,3 $ | 88% |
+| 3517,2 | Supporto | Minimo di oggi | ★ | −18,4 $ | 66% |
+| 3500,0 | Supporto | Soglia psicologica 3500 | ★ | −35,6 $ | 44% |
 
 ## Agenda (ora di Roma)
 - **16:00** USD · Fiducia consumatori Univ. Michigan (finale) (atteso 51,7, prec. 51,0)
