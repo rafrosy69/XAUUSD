@@ -176,6 +176,37 @@
    "pub": "2026-11-20T01:05:00+00:00",
    "official": false,
    "withdrawn": null
+  },
+  {
+   "id": "H",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3497.7,
+   "zone_hi": 3502.3,
+   "trigger": 3497.7,
+   "entry": 3495.3,
+   "stop": 3511.7,
+   "risk": 16.3,
+   "targets": [
+    {
+     "price": 3470.9,
+     "rr": 1.5,
+     "label": "proiezione 1.5R",
+     "proj": true
+    },
+    {
+     "price": 3454.6,
+     "rr": 2.5,
+     "label": "proiezione 2.5R",
+     "proj": true
+    }
+   ],
+   "rr1": 1.5,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-20T01:52:00+00:00",
+   "official": false,
+   "withdrawn": null
   }
  ]
 }
