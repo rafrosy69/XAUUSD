@@ -1,0 +1,68 @@
+{
+ "tday": "2026-11-23",
+ "official_asof": "2026-11-20T22:00:00+00:00",
+ "setups": [
+  {
+   "id": "A",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3595.1,
+   "zone_hi": 3600.0,
+   "trigger": null,
+   "entry": 3597.5,
+   "stop": 3614.4,
+   "risk": 16.9,
+   "targets": [
+    {
+     "price": 3559.1,
+     "rr": 2.28,
+     "label": "Pivot P",
+     "proj": false
+    },
+    {
+     "price": 3502.7,
+     "rr": 5.62,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 2.28,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-20T22:00:00+00:00",
+   "official": true,
+   "withdrawn": null
+  },
+  {
+   "id": "B",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3535.8,
+   "zone_hi": 3540.6,
+   "trigger": 3535.8,
+   "entry": 3533.4,
+   "stop": 3550.2,
+   "risk": 16.8,
+   "targets": [
+    {
+     "price": 3514.4,
+     "rr": 1.13,
+     "label": "Min H4 del 20/11",
+     "proj": false
+    },
+    {
+     "price": 3502.7,
+     "rr": 1.82,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.13,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-20T22:00:00+00:00",
+   "official": true,
+   "withdrawn": null
+  }
+ ]
+}
