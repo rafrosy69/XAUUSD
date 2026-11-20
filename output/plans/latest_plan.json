@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-20",
- "asof": "2026-11-20T15:27:00+00:00",
- "price": 3531.065,
+ "asof": "2026-11-20T15:52:00+00:00",
+ "price": 3550.085,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-20T22:00:00+00:00",
@@ -43,13 +43,19 @@
    "risk": 16.3,
    "targets": [
     {
-     "price": 3400.0,
-     "rr": 6.72,
-     "label": "Soglia psicologica 3400",
-     "proj": false
+     "price": 3485.2,
+     "rr": 1.5,
+     "label": "proiezione 1.5R",
+     "proj": true
+    },
+    {
+     "price": 3468.9,
+     "rr": 2.5,
+     "label": "proiezione 2.5R",
+     "proj": true
     }
    ],
-   "rr1": 6.72,
+   "rr1": 1.5,
    "title": "Rottura ribassista"
   }
  ]
