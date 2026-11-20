@@ -468,6 +468,31 @@
    "title": "Rottura ribassista",
    "pub": "2026-11-20T19:53:00+00:00",
    "official": false,
+   "withdrawn": "2026-11-20T20:43:00+00:00"
+  },
+  {
+   "id": "U",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3497.7,
+   "zone_hi": 3502.3,
+   "trigger": 3497.7,
+   "entry": 3495.3,
+   "stop": 3511.7,
+   "risk": 16.3,
+   "targets": [
+    {
+     "price": 3400.0,
+     "rr": 5.84,
+     "label": "Soglia psicologica 3400",
+     "proj": false
+    }
+   ],
+   "rr1": 5.84,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-20T20:43:00+00:00",
+   "official": false,
    "withdrawn": null
   }
  ]
