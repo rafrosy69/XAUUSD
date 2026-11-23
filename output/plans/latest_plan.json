@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-23",
- "asof": "2026-11-23T14:09:00+00:00",
- "price": 3665.025,
+ "asof": "2026-11-23T14:34:00+00:00",
+ "price": 3679.89,
  "bias": "Neutrale / laterale",
  "score": -0.075,
  "close": "2026-11-23T22:00:00+00:00",
@@ -29,13 +29,13 @@
     {
      "price": 3600.3,
      "rr": 5.34,
-     "label": "Soglia psicologica 3600 +2",
+     "label": "Soglia psicologica 3600 +3",
      "proj": false
     },
     {
      "price": 3565.0,
      "rr": 7.3,
-     "label": "Pivot P +2",
+     "label": "Pivot P +1",
      "proj": false
     }
    ],
@@ -57,7 +57,7 @@
     {
      "price": 3692.8,
      "rr": 3.31,
-     "label": "Soglia psicologica 3700 +2",
+     "label": "Soglia psicologica 3700 +3",
      "proj": false
     }
    ],
