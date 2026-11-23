@@ -99,7 +99,7 @@
    "title": "Vendita su rimbalzo",
    "pub": "2026-11-23T01:12:00+00:00",
    "official": false,
-   "withdrawn": null
+   "withdrawn": "2026-11-23T02:28:00+00:00"
   },
   {
    "id": "D",
@@ -129,6 +129,37 @@
    "rr1": 1.65,
    "title": "Rottura ribassista",
    "pub": "2026-11-23T01:12:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "E",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3595.1,
+   "zone_hi": 3600.0,
+   "trigger": null,
+   "entry": 3597.5,
+   "stop": 3614.4,
+   "risk": 16.9,
+   "targets": [
+    {
+     "price": 3565.0,
+     "rr": 1.93,
+     "label": "Pivot P +1",
+     "proj": false
+    },
+    {
+     "price": 3502.7,
+     "rr": 5.62,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.93,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-23T02:28:00+00:00",
    "official": false,
    "withdrawn": null
   }
