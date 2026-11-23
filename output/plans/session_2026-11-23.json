@@ -624,7 +624,7 @@
    "title": "Vendita su resistenza (range)",
    "pub": "2026-11-23T14:09:00+00:00",
    "official": false,
-   "withdrawn": null
+   "withdrawn": "2026-11-23T19:11:00+00:00"
   },
   {
    "id": "U",
@@ -685,6 +685,43 @@
    "rr1": 1.64,
    "title": "Rottura ribassista",
    "pub": "2026-11-23T17:56:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "W",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3689.6,
+   "zone_hi": 3700.0,
+   "trigger": null,
+   "entry": 3694.8,
+   "stop": 3714.4,
+   "risk": 19.6,
+   "targets": [
+    {
+     "price": 3637.1,
+     "rr": 2.94,
+     "label": "Massimo di ieri (PDH) +4",
+     "proj": false
+    },
+    {
+     "price": 3600.3,
+     "rr": 4.81,
+     "label": "Soglia psicologica 3600 +3",
+     "proj": false
+    },
+    {
+     "price": 3565.0,
+     "rr": 6.62,
+     "label": "Pivot P +1",
+     "proj": false
+    }
+   ],
+   "rr1": 2.94,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-23T19:11:00+00:00",
    "official": false,
    "withdrawn": null
   }
