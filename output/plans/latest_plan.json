@@ -1,9 +1,9 @@
 {
  "tday": "2026-11-23",
- "asof": "2026-11-23T20:45:00+00:00",
- "price": 3639.565,
+ "asof": "2026-11-23T21:10:00+00:00",
+ "price": 3635.955,
  "bias": "Ribassista",
- "score": -0.5,
+ "score": -0.55,
  "close": "2026-11-23T22:00:00+00:00",
  "invalidation": 3714.4,
  "evaluated": false,
@@ -23,7 +23,7 @@
     {
      "price": 3637.1,
      "rr": 2.94,
-     "label": "Massimo di ieri (PDH) +4",
+     "label": "Massimo di ieri (PDH) +3",
      "proj": false
     },
     {
@@ -51,12 +51,12 @@
    "zone_hi": 3637.1,
    "trigger": 3630.2,
    "entry": 3627.8,
-   "stop": 3644.7,
+   "stop": 3644.6,
    "risk": 16.8,
    "targets": [
     {
      "price": 3600.3,
-     "rr": 1.64,
+     "rr": 1.63,
      "label": "Soglia psicologica 3600 +3",
      "proj": false
     },
@@ -73,7 +73,7 @@
      "proj": false
     }
    ],
-   "rr1": 1.64,
+   "rr1": 1.63,
    "title": "Rottura ribassista"
   }
  ]
