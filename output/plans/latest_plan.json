@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-23",
- "asof": "2026-11-23T17:56:00+00:00",
- "price": 3652.725,
+ "asof": "2026-11-23T18:21:00+00:00",
+ "price": 3654.165,
  "bias": "Ribassista",
  "score": -0.4,
  "close": "2026-11-23T22:00:00+00:00",
@@ -23,7 +23,7 @@
     {
      "price": 3637.1,
      "rr": 3.29,
-     "label": "Massimo di ieri (PDH) +3",
+     "label": "Massimo di ieri (PDH) +4",
      "proj": false
     },
     {
