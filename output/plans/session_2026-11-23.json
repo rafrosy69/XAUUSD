@@ -334,7 +334,7 @@
    "title": "Vendita su rimbalzo",
    "pub": "2026-11-23T07:04:00+00:00",
    "official": false,
-   "withdrawn": null
+   "withdrawn": "2026-11-23T08:17:00+00:00"
   },
   {
    "id": "L",
@@ -401,6 +401,80 @@
    "rr1": 2.72,
    "title": "Rottura ribassista",
    "pub": "2026-11-23T07:52:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "N",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3630.2,
+   "zone_hi": 3637.1,
+   "trigger": null,
+   "entry": 3633.7,
+   "stop": 3651.5,
+   "risk": 17.9,
+   "targets": [
+    {
+     "price": 3615.5,
+     "rr": 1.02,
+     "label": "Pivot R1",
+     "proj": false
+    },
+    {
+     "price": 3600.0,
+     "rr": 1.89,
+     "label": "Soglia psicologica 3600 +1",
+     "proj": false
+    },
+    {
+     "price": 3565.0,
+     "rr": 3.85,
+     "label": "Pivot P +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.02,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-23T08:17:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "P",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3595.1,
+   "zone_hi": 3600.0,
+   "trigger": 3595.1,
+   "entry": 3592.7,
+   "stop": 3609.5,
+   "risk": 16.8,
+   "targets": [
+    {
+     "price": 3565.0,
+     "rr": 1.65,
+     "label": "Pivot P +1",
+     "proj": false
+    },
+    {
+     "price": 3551.4,
+     "rr": 2.45,
+     "label": "Min sessione Asia +1",
+     "proj": false
+    },
+    {
+     "price": 3502.7,
+     "rr": 5.35,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.65,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-23T08:17:00+00:00",
    "official": false,
    "withdrawn": null
   }

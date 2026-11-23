@@ -1,73 +1,79 @@
 {
  "tday": "2026-11-23",
- "asof": "2026-11-23T07:52:00+00:00",
- "price": 3624.225,
- "bias": "Ribassista",
- "score": -0.35,
+ "asof": "2026-11-23T08:17:00+00:00",
+ "price": 3602.525,
+ "bias": "Ribassista forte",
+ "score": -0.6,
  "close": "2026-11-23T22:00:00+00:00",
- "invalidation": 3714.4,
+ "invalidation": 3651.5,
  "evaluated": false,
  "setups": [
   {
-   "id": "K",
+   "id": "N",
    "type": "fade",
    "dir": -1,
    "role": "con il trend",
-   "zone_lo": 3692.8,
-   "zone_hi": 3700.0,
+   "zone_lo": 3630.2,
+   "zone_hi": 3637.1,
    "trigger": null,
-   "entry": 3696.4,
-   "stop": 3714.4,
-   "risk": 18.0,
+   "entry": 3633.7,
+   "stop": 3651.5,
+   "risk": 17.9,
    "targets": [
     {
-     "price": 3636.4,
-     "rr": 3.33,
-     "label": "Massimo di ieri (PDH) +2",
+     "price": 3615.5,
+     "rr": 1.02,
+     "label": "Pivot R1",
      "proj": false
     },
     {
      "price": 3600.0,
-     "rr": 5.36,
+     "rr": 1.89,
      "label": "Soglia psicologica 3600 +1",
      "proj": false
     },
     {
      "price": 3565.0,
-     "rr": 7.3,
+     "rr": 3.85,
      "label": "Pivot P +1",
      "proj": false
     }
    ],
-   "rr1": 3.33,
+   "rr1": 1.02,
    "title": "Vendita su rimbalzo"
   },
   {
-   "id": "M",
+   "id": "P",
    "type": "break",
    "dir": -1,
    "role": "con il trend · rottura",
-   "zone_lo": 3613.1,
-   "zone_hi": 3617.9,
-   "trigger": 3613.1,
-   "entry": 3610.7,
-   "stop": 3627.5,
+   "zone_lo": 3595.1,
+   "zone_hi": 3600.0,
+   "trigger": 3595.1,
+   "entry": 3592.7,
+   "stop": 3609.5,
    "risk": 16.8,
    "targets": [
     {
      "price": 3565.0,
-     "rr": 2.72,
+     "rr": 1.65,
      "label": "Pivot P +1",
      "proj": false
     },
     {
+     "price": 3551.4,
+     "rr": 2.45,
+     "label": "Min sessione Asia +1",
+     "proj": false
+    },
+    {
      "price": 3502.7,
-     "rr": 6.42,
+     "rr": 5.35,
      "label": "Minimo di ieri (PDL) +1",
      "proj": false
     }
    ],
-   "rr1": 2.72,
+   "rr1": 1.65,
    "title": "Rottura ribassista"
   }
  ]
