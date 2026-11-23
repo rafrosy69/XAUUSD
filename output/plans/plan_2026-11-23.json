@@ -6,7 +6,7 @@
  "score": -0.55,
  "close": "2026-11-23T22:00:00+00:00",
  "invalidation": 3614.4,
- "evaluated": false,
+ "evaluated": true,
  "setups": [
   {
    "id": "A",
@@ -63,6 +63,24 @@
    ],
    "rr1": 1.1,
    "title": "Rottura ribassista"
+  }
+ ],
+ "results": [
+  {
+   "id": "A",
+   "title": "Vendita su rimbalzo",
+   "status": "stop",
+   "R": -1.0,
+   "entry_px": 3597.5,
+   "exit_px": 3614.4
+  },
+  {
+   "id": "B",
+   "title": "Rottura ribassista",
+   "status": "non attivato",
+   "R": 0.0,
+   "entry_px": null,
+   "exit_px": null
   }
  ]
 }

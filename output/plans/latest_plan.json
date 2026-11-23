@@ -1,15 +1,15 @@
 {
- "tday": "2026-11-23",
- "asof": "2026-11-23T21:35:00+00:00",
- "price": 3634.115,
+ "tday": "2026-11-24",
+ "asof": "2026-11-23T22:00:00+00:00",
+ "price": 3634.69,
  "bias": "Ribassista",
  "score": -0.55,
- "close": "2026-11-23T22:00:00+00:00",
- "invalidation": 3714.4,
+ "close": "2026-11-24T22:00:00+00:00",
+ "invalidation": 3715.0,
  "evaluated": false,
  "setups": [
   {
-   "id": "W",
+   "id": "A",
    "type": "fade",
    "dir": -1,
    "role": "con il trend",
@@ -17,63 +17,63 @@
    "zone_hi": 3700.0,
    "trigger": null,
    "entry": 3694.8,
-   "stop": 3714.4,
-   "risk": 19.6,
+   "stop": 3715.0,
+   "risk": 20.2,
    "targets": [
     {
      "price": 3637.1,
-     "rr": 2.94,
-     "label": "Massimo di ieri (PDH) +4",
+     "rr": 2.85,
+     "label": "Chiusura di ieri +5",
      "proj": false
     },
     {
      "price": 3600.3,
-     "rr": 4.81,
-     "label": "Soglia psicologica 3600 +3",
-     "proj": false
-    },
-    {
-     "price": 3565.0,
-     "rr": 6.62,
-     "label": "Pivot P +1",
-     "proj": false
-    }
-   ],
-   "rr1": 2.94,
-   "title": "Vendita su rimbalzo"
-  },
-  {
-   "id": "V",
-   "type": "break",
-   "dir": -1,
-   "role": "con il trend · rottura",
-   "zone_lo": 3630.2,
-   "zone_hi": 3637.1,
-   "trigger": 3630.2,
-   "entry": 3627.8,
-   "stop": 3644.7,
-   "risk": 16.8,
-   "targets": [
-    {
-     "price": 3600.3,
-     "rr": 1.64,
-     "label": "Soglia psicologica 3600 +3",
-     "proj": false
-    },
-    {
-     "price": 3565.0,
-     "rr": 3.74,
-     "label": "Pivot P +1",
+     "rr": 4.67,
+     "label": "Soglia psicologica 3600 +2",
      "proj": false
     },
     {
      "price": 3551.4,
-     "rr": 4.54,
-     "label": "Min sessione Asia +1",
+     "rr": 7.09,
+     "label": "Minimo di ieri (PDL) +1",
      "proj": false
     }
    ],
-   "rr1": 1.64,
+   "rr1": 2.85,
+   "title": "Vendita su rimbalzo"
+  },
+  {
+   "id": "B",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3625.2,
+   "zone_hi": 3637.1,
+   "trigger": 3625.2,
+   "entry": 3622.7,
+   "stop": 3640.2,
+   "risk": 17.5,
+   "targets": [
+    {
+     "price": 3600.3,
+     "rr": 1.28,
+     "label": "Soglia psicologica 3600 +2",
+     "proj": false
+    },
+    {
+     "price": 3551.4,
+     "rr": 4.07,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    },
+    {
+     "price": 3502.7,
+     "rr": 6.86,
+     "label": "Min sett. scorsa (PWL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.28,
    "title": "Rottura ribassista"
   }
  ]
