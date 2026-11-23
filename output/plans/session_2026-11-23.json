@@ -423,9 +423,9 @@
      "proj": false
     },
     {
-     "price": 3600.0,
-     "rr": 1.89,
-     "label": "Soglia psicologica 3600 +2",
+     "price": 3600.3,
+     "rr": 1.87,
+     "label": "Soglia psicologica 3600 +3",
      "proj": false
     },
     {
@@ -550,7 +550,7 @@
    "title": "Rottura ribassista",
    "pub": "2026-11-23T12:29:00+00:00",
    "official": false,
-   "withdrawn": null
+   "withdrawn": "2026-11-23T13:19:00+00:00"
   }
  ]
 }
