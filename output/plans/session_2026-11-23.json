@@ -593,7 +593,7 @@
    "id": "T",
    "type": "fade",
    "dir": -1,
-   "role": "range",
+   "role": "con il trend",
    "zone_lo": 3692.8,
    "zone_hi": 3700.0,
    "trigger": null,
@@ -648,6 +648,43 @@
    "rr1": 3.31,
    "title": "Acquisto su supporto (range)",
    "pub": "2026-11-23T14:09:00+00:00",
+   "official": false,
+   "withdrawn": "2026-11-23T17:56:00+00:00"
+  },
+  {
+   "id": "V",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3630.2,
+   "zone_hi": 3637.1,
+   "trigger": 3630.2,
+   "entry": 3627.8,
+   "stop": 3644.7,
+   "risk": 16.8,
+   "targets": [
+    {
+     "price": 3600.3,
+     "rr": 1.64,
+     "label": "Soglia psicologica 3600 +3",
+     "proj": false
+    },
+    {
+     "price": 3565.0,
+     "rr": 3.74,
+     "label": "Pivot P +1",
+     "proj": false
+    },
+    {
+     "price": 3551.4,
+     "rr": 4.54,
+     "label": "Min sessione Asia +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.64,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-23T17:56:00+00:00",
    "official": false,
    "withdrawn": null
   }

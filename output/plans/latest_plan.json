@@ -1,18 +1,18 @@
 {
  "tday": "2026-11-23",
- "asof": "2026-11-23T17:31:00+00:00",
- "price": 3661.48,
- "bias": "Neutrale / laterale",
- "score": -0.075,
+ "asof": "2026-11-23T17:56:00+00:00",
+ "price": 3652.725,
+ "bias": "Ribassista",
+ "score": -0.4,
  "close": "2026-11-23T22:00:00+00:00",
- "invalidation": null,
+ "invalidation": 3714.4,
  "evaluated": false,
  "setups": [
   {
    "id": "T",
    "type": "fade",
    "dir": -1,
-   "role": "range",
+   "role": "con il trend",
    "zone_lo": 3692.8,
    "zone_hi": 3700.0,
    "trigger": null,
@@ -40,29 +40,41 @@
     }
    ],
    "rr1": 3.29,
-   "title": "Vendita su resistenza (range)"
+   "title": "Vendita su rimbalzo"
   },
   {
-   "id": "U",
-   "type": "fade",
-   "dir": 1,
-   "role": "range",
+   "id": "V",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
    "zone_lo": 3630.2,
    "zone_hi": 3637.1,
-   "trigger": null,
-   "entry": 3633.7,
-   "stop": 3615.8,
-   "risk": 17.9,
+   "trigger": 3630.2,
+   "entry": 3627.8,
+   "stop": 3644.7,
+   "risk": 16.8,
    "targets": [
     {
-     "price": 3692.8,
-     "rr": 3.31,
-     "label": "Soglia psicologica 3700 +3",
+     "price": 3600.3,
+     "rr": 1.64,
+     "label": "Soglia psicologica 3600 +3",
+     "proj": false
+    },
+    {
+     "price": 3565.0,
+     "rr": 3.74,
+     "label": "Pivot P +1",
+     "proj": false
+    },
+    {
+     "price": 3551.4,
+     "rr": 4.54,
+     "label": "Min sessione Asia +1",
      "proj": false
     }
    ],
-   "rr1": 3.31,
-   "title": "Acquisto su supporto (range)"
+   "rr1": 1.64,
+   "title": "Rottura ribassista"
   }
  ]
 }
