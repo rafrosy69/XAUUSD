@@ -514,6 +514,43 @@
    "pub": "2026-11-23T09:58:00+00:00",
    "official": false,
    "withdrawn": "2026-11-23T10:23:00+00:00"
+  },
+  {
+   "id": "R",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3595.1,
+   "zone_hi": 3600.0,
+   "trigger": 3595.1,
+   "entry": 3592.7,
+   "stop": 3609.5,
+   "risk": 16.8,
+   "targets": [
+    {
+     "price": 3565.0,
+     "rr": 1.65,
+     "label": "Pivot P +1",
+     "proj": false
+    },
+    {
+     "price": 3551.4,
+     "rr": 2.45,
+     "label": "Min sessione Asia +1",
+     "proj": false
+    },
+    {
+     "price": 3502.7,
+     "rr": 5.35,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.65,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-23T12:29:00+00:00",
+   "official": false,
+   "withdrawn": null
   }
  ]
 }
