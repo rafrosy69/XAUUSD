@@ -1,9 +1,9 @@
 {
  "tday": "2026-11-23",
- "asof": "2026-11-23T08:42:00+00:00",
- "price": 3608.895,
- "bias": "Ribassista forte",
- "score": -0.6,
+ "asof": "2026-11-23T09:07:00+00:00",
+ "price": 3611.745,
+ "bias": "Ribassista",
+ "score": -0.55,
  "close": "2026-11-23T22:00:00+00:00",
  "invalidation": 3651.5,
  "evaluated": false,
@@ -29,7 +29,7 @@
     {
      "price": 3600.0,
      "rr": 1.89,
-     "label": "Soglia psicologica 3600 +1",
+     "label": "Soglia psicologica 3600 +2",
      "proj": false
     },
     {
