@@ -1,80 +1,68 @@
 {
  "tday": "2026-11-23",
- "asof": "2026-11-23T13:44:00+00:00",
- "price": 3620.585,
- "bias": "Ribassista",
- "score": -0.4,
+ "asof": "2026-11-23T14:09:00+00:00",
+ "price": 3665.025,
+ "bias": "Neutrale / laterale",
+ "score": -0.075,
  "close": "2026-11-23T22:00:00+00:00",
- "invalidation": 3651.5,
+ "invalidation": null,
  "evaluated": false,
  "setups": [
   {
-   "id": "N",
+   "id": "T",
    "type": "fade",
    "dir": -1,
-   "role": "con il trend",
-   "zone_lo": 3630.2,
-   "zone_hi": 3637.1,
+   "role": "range",
+   "zone_lo": 3692.8,
+   "zone_hi": 3700.0,
    "trigger": null,
-   "entry": 3633.7,
-   "stop": 3651.5,
-   "risk": 17.9,
+   "entry": 3696.4,
+   "stop": 3714.4,
+   "risk": 18.0,
    "targets": [
     {
-     "price": 3615.5,
-     "rr": 1.02,
-     "label": "Pivot R1",
+     "price": 3637.1,
+     "rr": 3.29,
+     "label": "Massimo di ieri (PDH) +2",
      "proj": false
     },
     {
      "price": 3600.3,
-     "rr": 1.87,
-     "label": "Soglia psicologica 3600 +3",
+     "rr": 5.34,
+     "label": "Soglia psicologica 3600 +2",
      "proj": false
     },
     {
      "price": 3565.0,
-     "rr": 3.85,
-     "label": "Pivot P +1",
+     "rr": 7.3,
+     "label": "Pivot P +2",
      "proj": false
     }
    ],
-   "rr1": 1.02,
-   "title": "Vendita su rimbalzo"
+   "rr1": 3.29,
+   "title": "Vendita su resistenza (range)"
   },
   {
-   "id": "S",
-   "type": "break",
-   "dir": -1,
-   "role": "con il trend · rottura",
-   "zone_lo": 3613.1,
-   "zone_hi": 3617.9,
-   "trigger": 3613.1,
-   "entry": 3610.7,
-   "stop": 3627.5,
-   "risk": 16.8,
+   "id": "U",
+   "type": "fade",
+   "dir": 1,
+   "role": "range",
+   "zone_lo": 3630.2,
+   "zone_hi": 3637.1,
+   "trigger": null,
+   "entry": 3633.7,
+   "stop": 3615.8,
+   "risk": 17.9,
    "targets": [
     {
-     "price": 3565.0,
-     "rr": 2.72,
-     "label": "Pivot P +1",
-     "proj": false
-    },
-    {
-     "price": 3551.4,
-     "rr": 3.53,
-     "label": "Min sessione Asia +1",
-     "proj": false
-    },
-    {
-     "price": 3502.7,
-     "rr": 6.42,
-     "label": "Minimo di ieri (PDL) +1",
+     "price": 3692.8,
+     "rr": 3.31,
+     "label": "Soglia psicologica 3700 +2",
      "proj": false
     }
    ],
-   "rr1": 2.72,
-   "title": "Rottura ribassista"
+   "rr1": 3.31,
+   "title": "Acquisto su supporto (range)"
   }
  ]
 }
