@@ -660,12 +660,12 @@
    "zone_hi": 3637.1,
    "trigger": 3630.2,
    "entry": 3627.8,
-   "stop": 3644.6,
+   "stop": 3644.7,
    "risk": 16.8,
    "targets": [
     {
      "price": 3600.3,
-     "rr": 1.63,
+     "rr": 1.64,
      "label": "Soglia psicologica 3600 +3",
      "proj": false
     },
@@ -682,7 +682,7 @@
      "proj": false
     }
    ],
-   "rr1": 1.63,
+   "rr1": 1.64,
    "title": "Rottura ribassista",
    "pub": "2026-11-23T17:56:00+00:00",
    "official": false,
@@ -703,7 +703,7 @@
     {
      "price": 3637.1,
      "rr": 2.94,
-     "label": "Massimo di ieri (PDH) +3",
+     "label": "Massimo di ieri (PDH) +4",
      "proj": false
     },
     {
