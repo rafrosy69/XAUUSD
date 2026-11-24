@@ -1,6 +1,6 @@
 {
  "tday": "2026-11-24",
- "official_asof": "2026-11-24T02:12:00+00:00",
+ "official_asof": "2026-11-24T02:37:00+00:00",
  "setups": [
   {
    "id": "A",
@@ -35,7 +35,7 @@
    ],
    "rr1": 2.85,
    "title": "Vendita su resistenza (range)",
-   "pub": "2026-11-24T02:12:00+00:00",
+   "pub": "2026-11-24T02:37:00+00:00",
    "official": true,
    "withdrawn": null
   },
@@ -60,7 +60,7 @@
    ],
    "rr1": 2.79,
    "title": "Acquisto su supporto (range)",
-   "pub": "2026-11-24T02:12:00+00:00",
+   "pub": "2026-11-24T02:37:00+00:00",
    "official": true,
    "withdrawn": null
   }

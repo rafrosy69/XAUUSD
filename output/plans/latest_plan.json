@@ -1,9 +1,9 @@
 {
  "tday": "2026-11-24",
- "asof": "2026-11-24T02:12:00+00:00",
- "price": 3657.165,
+ "asof": "2026-11-24T02:37:00+00:00",
+ "price": 3652.615,
  "bias": "Neutrale / laterale",
- "score": 0.025,
+ "score": -0.125,
  "close": "2026-11-24T22:00:00+00:00",
  "invalidation": null,
  "evaluated": false,
