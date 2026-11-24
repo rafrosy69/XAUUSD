@@ -408,6 +408,43 @@
    "pub": "2026-11-24T13:40:00+00:00",
    "official": false,
    "withdrawn": null
+  },
+  {
+   "id": "M",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3625.2,
+   "zone_hi": 3637.1,
+   "trigger": null,
+   "entry": 3631.2,
+   "stop": 3652.1,
+   "risk": 20.9,
+   "targets": [
+    {
+     "price": 3600.3,
+     "rr": 1.47,
+     "label": "Soglia psicologica 3600 +2",
+     "proj": false
+    },
+    {
+     "price": 3551.4,
+     "rr": 3.81,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    },
+    {
+     "price": 3502.7,
+     "rr": 6.13,
+     "label": "Min sett. scorsa (PWL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 1.47,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-24T14:05:00+00:00",
+   "official": false,
+   "withdrawn": null
   }
  ]
 }

@@ -1,44 +1,44 @@
 # XAU/USD — Briefing intraday · martedì 24 novembre 2026
 
-_Dati aggiornati alle 11:44 del 24/11 (ora di Roma). Prezzi spot, lato bid._
+_Dati aggiornati alle 15:05 del 24/11 (ora di Roma). Prezzi spot, lato bid._
 
-**Prezzo 3624,1** (−10,6 $ da ieri) · **Trend: Ribassista forte** (−0,80) · ATR D1 100 $ · RSI H1 48
+**Prezzo 3617,1** (−17,6 $ da ieri) · **Trend: Ribassista forte** (−1,00) · ATR D1 100 $ · RSI H1 45
 
 ## In sintesi
-- **Scenari già pubblicati oggi** (piano ufficiale delle 06:17) — A · Vendita su rimbalzo: in attesa; B · Rottura ribassista: **posizione aperta** dalle 06:30 a 3630,5, ora +0,3R (punta massima +1,3R), stop 3648,9, T1 3600,3; C · Rottura ribassista: **posizione aperta** dalle 07:30 a 3618,2, ora −0,4R (punta massima +0,7R), stop 3634,5, T1 3600,3; D · Rottura ribassista: **stop** intorno alle 09:45 (−1R).
+- **Scenari già pubblicati oggi** (piano ufficiale delle 06:17) — A · Vendita su rimbalzo: in attesa; B · Rottura ribassista: **posizione aperta** dalle 06:30 a 3630,5, ora +0,7R (punta massima +1,3R), stop 3648,9, T1 3600,3; C · Rottura ribassista: **stop** intorno alle 12:40 (−1R); D · Rottura ribassista: **stop** intorno alle 09:45 (−1R); G · Rottura ribassista: **stop** intorno alle 13:45 (−1R).
 - **Come sono finiti gli scenari di ieri (lun 23/11)** — A · Vendita su rimbalzo: **stop** (−1R); D · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); L · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); M · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); N · Vendita su rimbalzo (aggiornamento, fuori registro): **stop** (−1R); scenari B, V e W non attivati.
-- **Contesto di trend: ribassista forte** (punteggio −0,80 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 ribassista, M15 moderatamente ribassista. Struttura H1: struttura mista.
+- **Contesto di trend: ribassista forte** (punteggio −1,00 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 ribassista, M15 ribassista. Struttura H1: massimi e minimi decrescenti.
 - **Ieri (lun 23/11)**: chiusura a 3634,7 (+2,73%), range 3551,4–3689,6 = 138 $ (138% dell'ATR giornaliero).
 - **Oggi finora**: apertura 3635,8, minimo 3607,4, massimo 3678,2; range 71 $, pari al 70% del range medio giornaliero (ADR20 = 102 $).
-- **Zone chiave** — resistenze: 3630,2–3637,1 · 3689,6–3700,0. Supporti: 3595,1–3600,3 · 3550,0–3551,4 · 3500,0–3502,7.
+- **Zone chiave** — resistenze: 3625,2–3637,1 · 3689,6–3700,0. Supporti: 3595,1–3600,3 · 3550,0–3551,4 · 3500,0–3502,7.
 - **Eventi da presidiare (ora di Roma)**: 16:00 Fiducia dei consumatori (Conference Board).
 
-## Scenari già pubblicati oggi — situazione alle 11:44
-- **A · Vendita su rimbalzo** (SHORT, piano ufficiale: zona 3689,6–3700,0 · stop 3715,0 · T1 3637,1) — **IN ATTESA**. Prezzo d'ingresso 3694,8 non ancora raggiunto (massimo dalla pubblicazione: 3640,1); dista 71 $ dal prezzo attuale.
-- **B · Rottura ribassista** (SHORT, piano ufficiale: chiusura M15 sotto 3633,9 · stop 3648,9 · T1 3600,3) — **APERTA**. Ingresso alle 06:30 a 3630,5 (chiusura M15 di conferma); rischio 18,4 $/oz. Miglior prezzo toccato: 3607,4 (+1,3R). Alle 11:44: +0,3R (+6,4 $/oz); mancano 24 $ a T1 e 25 $ allo stop.
-- **C · Rottura ribassista** (SHORT, aggiornamento delle 07:07 · fuori registro: chiusura M15 sotto 3619,5 · stop 3634,5 · T1 3600,3) — **APERTA**. Ingresso alle 07:30 a 3618,2 (chiusura M15 di conferma); rischio 16,3 $/oz. Miglior prezzo toccato: 3607,4 (+0,7R). Alle 11:44: −0,4R (−5,9 $/oz); mancano 24 $ a T1 e 10 $ allo stop.
+## Scenari già pubblicati oggi — situazione alle 15:05
+- **A · Vendita su rimbalzo** (SHORT, piano ufficiale: zona 3689,6–3700,0 · stop 3715,0 · T1 3637,1) — **IN ATTESA**. Prezzo d'ingresso 3694,8 non ancora raggiunto (massimo dalla pubblicazione: 3646,6); dista 78 $ dal prezzo attuale.
+- **B · Rottura ribassista** (SHORT, piano ufficiale: chiusura M15 sotto 3633,9 · stop 3648,9 · T1 3600,3) — **APERTA**. Ingresso alle 06:30 a 3630,5 (chiusura M15 di conferma); rischio 18,4 $/oz. Miglior prezzo toccato: 3607,4 (+1,3R). Alle 15:05: +0,7R (+13,4 $/oz); mancano 17 $ a T1 e 32 $ allo stop.
+- **C · Rottura ribassista** (SHORT, aggiornamento delle 07:07 · fuori registro: chiusura M15 sotto 3619,5 · stop 3634,5 · T1 3600,3) — **STOP**. Ingresso alle 07:30 a 3618,2 (chiusura M15 di conferma); rischio 16,3 $/oz. Stop colpito intorno alle 12:40: −1R. Prima dello stop il prezzo era arrivato a 3607,4 (+0,7R).
 - **D · Rottura ribassista** (SHORT, aggiornamento delle 09:13 · fuori registro: chiusura M15 sotto 3613,4 · stop 3628,4 · T1 3565,0) — **STOP**. Ingresso alle 09:30 a 3609,8 (chiusura M15 di conferma); rischio 18,6 $/oz. Stop colpito intorno alle 09:45: −1R.
+- **G · Rottura ribassista** (SHORT, aggiornamento delle 12:59 · fuori registro: chiusura M15 sotto 3630,2 · stop 3645,2 · T1 3600,3) — **STOP**. Ingresso alle 13:15 a 3622,7 (chiusura M15 di conferma); rischio 22,5 $/oz. Stop colpito intorno alle 13:45: −1R.
 - _Il piano ufficiale è quello delle 06:17; esiti secondo le regole meccaniche del registro (uscita a T1, allo stop o a fine seduta, stop mai spostato)._
 
-## Piano operativo (scenari ricalcolati alle 11:44)
-- **A · Vendita su rimbalzo** (SHORT, con il trend): zona 3689,6–3700,0 (centro 3694,8); stop **3715,0** (rischio 20,2 $/oz); T1 3637,1 (2,9R) · T2 3600,3 (4,7R) · T3 3551,4 (7,1R) · raggiungibilità storica 12%.
-- **F · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3613,4 (ingresso ≈ 3610,9); stop **3628,4** (rischio 17,5 $/oz); T1 3565,0 (2,6R) · T2 3551,4 (3,4R) · T3 3502,7 (6,2R) · raggiungibilità storica 85%.
-- **Invalidazione** della lettura ribassista: chiusura H1 sopra 3715,0.
+## Piano operativo (scenari ricalcolati alle 15:05)
+- **M · Vendita su rimbalzo** (SHORT, con il trend): zona 3625,2–3637,1 (centro 3631,2); stop **3652,1** (rischio 20,9 $/oz); T1 3600,3 (1,5R) · T2 3551,4 (3,8R) · T3 3502,7 (6,1R) · raggiungibilità storica 80%.
+- **L · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3607,4 (ingresso ≈ 3604,9); stop **3622,4** (rischio 17,5 $/oz); T1 3565,0 (2,3R) · T2 3551,4 (3,0R) · T3 3502,7 (5,8R) · raggiungibilità storica 82%.
+- **Invalidazione** della lettura ribassista: chiusura H1 sopra 3652,1.
 
 ## Livelli chiave
 
 | Zona | Tipo | Cosa c'è | Forza | Distanza | Tocco oggi |
 |---|---|---|---|---|---|
-| 3689,6–3700,0 | Resistenza | Massimo di ieri (PDH), Pivot R1, Soglia psicologica 3700 | ★★★ | +65,5 $ | 12% |
-| 3650,0 | Resistenza | Cifra tonda 3650 | ★ | +25,9 $ | 50% |
-| 3630,2–3637,1 | Resistenza | Chiusura di ieri, Apertura di oggi, EMA50 H1 | ★★ | +6,1 $ | 87% |
-| **3624,1** | **PREZZO** | | | | |
-| 3613,4–3625,2 | Zona attuale | Pivot P, Min sessione Asia, Min H1 del 24/11 | ★★ | 0,0 $ | — |
-| 3607,4 | Supporto | Minimo di oggi | ★ | −16,8 $ | 71% |
-| 3595,1–3600,3 | Supporto | Soglia psicologica 3600, Max H1 del 20/11, Min H1 del 23/11 | ★★ | −23,8 $ | 55% |
-| 3576,4 | Supporto | Proiezione ADR (min) | ★ | −47,7 $ | 25% |
-| 3550,0–3551,4 | Supporto | Minimo di ieri (PDL), Cifra tonda 3550 | ★★ | −72,7 $ | 14% |
-| 3500,0–3502,7 | Supporto | Min sett. scorsa (PWL), Soglia psicologica 3500 | ★★★ | −121,4 $ | 4% |
+| 3689,6–3700,0 | Resistenza | Massimo di ieri (PDH), Pivot R1, Soglia psicologica 3700 | ★★★ | +72,5 $ | 4% |
+| 3650,0 | Resistenza | Cifra tonda 3650 | ★ | +32,9 $ | 30% |
+| 3625,2–3637,1 | Resistenza | Chiusura di ieri, Pivot P, Apertura di oggi | ★★★ | +8,2 $ | 80% |
+| **3617,1** | **PREZZO** | | | | |
+| 3607,4–3619,5 | Zona attuale | Min sessione Asia, Minimo di oggi, Min H1 del 24/11 | ★★ | 0,0 $ | — |
+| 3595,1–3600,3 | Supporto | Soglia psicologica 3600, Max H1 del 20/11, Min H1 del 23/11 | ★★ | −16,7 $ | 65% |
+| 3576,4 | Supporto | Proiezione ADR (min) | ★ | −40,7 $ | 27% |
+| 3550,0–3551,4 | Supporto | Minimo di ieri (PDL), Cifra tonda 3550 | ★★ | −65,7 $ | 14% |
+| 3500,0–3502,7 | Supporto | Min sett. scorsa (PWL), Soglia psicologica 3500 | ★★★ | −114,4 $ | 3% |
 
 ## Agenda (ora di Roma)
 - **16:00** USD · Fiducia dei consumatori (Conference Board) (atteso 92,4, prec. 91,7)
