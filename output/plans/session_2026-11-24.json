@@ -1,6 +1,6 @@
 {
  "tday": "2026-11-24",
- "official_asof": "2026-11-24T01:47:00+00:00",
+ "official_asof": "2026-11-24T02:12:00+00:00",
  "setups": [
   {
    "id": "A",
@@ -17,7 +17,7 @@
     {
      "price": 3637.1,
      "rr": 2.85,
-     "label": "Chiusura di ieri +5",
+     "label": "Chiusura di ieri +6",
      "proj": false
     },
     {
@@ -35,7 +35,7 @@
    ],
    "rr1": 2.85,
    "title": "Vendita su resistenza (range)",
-   "pub": "2026-11-24T01:47:00+00:00",
+   "pub": "2026-11-24T02:12:00+00:00",
    "official": true,
    "withdrawn": null
   },
@@ -56,17 +56,11 @@
      "rr": 2.79,
      "label": "Massimo di ieri (PDH) +3",
      "proj": false
-    },
-    {
-     "price": 3758.4,
-     "rr": 6.07,
-     "label": "Pivot R2 +3",
-     "proj": false
     }
    ],
    "rr1": 2.79,
    "title": "Acquisto su supporto (range)",
-   "pub": "2026-11-24T01:47:00+00:00",
+   "pub": "2026-11-24T02:12:00+00:00",
    "official": true,
    "withdrawn": null
   }
