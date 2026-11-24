@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-25",
- "asof": "2026-11-24T22:00:00+00:00",
- "price": 3556.375,
+ "asof": "2026-11-24T23:13:00+00:00",
+ "price": 3558.855,
  "bias": "Ribassista forte",
  "score": -1.0,
  "close": "2026-11-25T22:00:00+00:00",
@@ -21,9 +21,9 @@
    "risk": 22.2,
    "targets": [
     {
-     "price": 3556.4,
-     "rr": 1.99,
-     "label": "Minimo di ieri (PDL) +2",
+     "price": 3557.3,
+     "rr": 1.95,
+     "label": "Minimo di ieri (PDL) +4",
      "proj": false
     },
     {
@@ -33,7 +33,7 @@
      "proj": false
     }
    ],
-   "rr1": 1.99,
+   "rr1": 1.95,
    "title": "Vendita su rimbalzo"
   },
   {
@@ -42,7 +42,7 @@
    "dir": -1,
    "role": "con il trend · rottura",
    "zone_lo": 3546.6,
-   "zone_hi": 3556.4,
+   "zone_hi": 3557.3,
    "trigger": 3546.6,
    "entry": 3544.0,
    "stop": 3561.9,
