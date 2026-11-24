@@ -370,6 +370,43 @@
    "title": "Rottura ribassista",
    "pub": "2026-11-24T13:15:00+00:00",
    "official": false,
+   "withdrawn": "2026-11-24T13:40:00+00:00"
+  },
+  {
+   "id": "L",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3607.4,
+   "zone_hi": 3619.5,
+   "trigger": 3607.4,
+   "entry": 3604.9,
+   "stop": 3622.4,
+   "risk": 17.5,
+   "targets": [
+    {
+     "price": 3565.0,
+     "rr": 2.28,
+     "label": "Pivot S1 +1",
+     "proj": false
+    },
+    {
+     "price": 3551.4,
+     "rr": 3.05,
+     "label": "Minimo di ieri (PDL) +1",
+     "proj": false
+    },
+    {
+     "price": 3502.7,
+     "rr": 5.84,
+     "label": "Min sett. scorsa (PWL) +1",
+     "proj": false
+    }
+   ],
+   "rr1": 2.28,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-24T13:40:00+00:00",
+   "official": false,
    "withdrawn": null
   }
  ]
