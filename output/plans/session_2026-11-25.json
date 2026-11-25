@@ -369,6 +369,43 @@
    "pub": "2026-11-25T18:49:00+00:00",
    "official": false,
    "withdrawn": null
+  },
+  {
+   "id": "Q",
+   "type": "fade",
+   "dir": 1,
+   "role": "range",
+   "zone_lo": 3546.6,
+   "zone_hi": 3557.3,
+   "trigger": null,
+   "entry": 3551.9,
+   "stop": 3531.2,
+   "risk": 20.7,
+   "targets": [
+    {
+     "price": 3575.1,
+     "rr": 1.12,
+     "label": "Max sessione Asia",
+     "proj": false
+    },
+    {
+     "price": 3593.7,
+     "rr": 2.02,
+     "label": "Pivot P +4",
+     "proj": false
+    },
+    {
+     "price": 3630.2,
+     "rr": 3.78,
+     "label": "Pivot R1 +2",
+     "proj": false
+    }
+   ],
+   "rr1": 1.12,
+   "title": "Acquisto su supporto (range)",
+   "pub": "2026-11-25T20:30:00+00:00",
+   "official": false,
+   "withdrawn": null
   }
  ]
 }
