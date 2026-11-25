@@ -1,8 +1,8 @@
 # XAU/USD — Briefing intraday · mercoledì 25 novembre 2026
 
-_Dati aggiornati alle 21:55 del 25/11 (ora di Roma). Prezzi spot, lato bid._
+_Dati aggiornati alle 22:21 del 25/11 (ora di Roma). Prezzi spot, lato bid._
 
-**Prezzo 3574,8** (+18,4 $ da ieri) · **Trend: Ribassista** (−0,40) · ATR D1 102 $ · RSI H1 59
+**Prezzo 3569,3** (+12,9 $ da ieri) · **Trend: Ribassista** (−0,40) · ATR D1 102 $ · RSI H1 57
 
 ## In sintesi
 - **Scenari già pubblicati oggi** (piano ufficiale delle 01:05) — A · Vendita su rimbalzo: non attivato; B · Rottura ribassista: **stop** intorno alle 03:20 (−1R); C · Vendita su rimbalzo: **stop** intorno alle 03:30 (−1R); F · Rottura ribassista: **stop** intorno alle 13:10 (−1R); J · Rottura ribassista: **stop** intorno alle 18:20 (−1R); K · Vendita su rimbalzo: **stop** intorno alle 19:05 (−1R); P · Rottura ribassista: **stop** intorno alle 21:05 (−1R).
@@ -13,7 +13,7 @@ _Dati aggiornati alle 21:55 del 25/11 (ora di Roma). Prezzi spot, lato bid._
 - **Zone chiave** — resistenze: 3593,7–3607,4 · 3630,2–3640,9 · 3678,2. Supporti: 3546,6–3557,3 · 3500,0–3514,4.
 - **Agenda**: nessun evento USA di rilievo nelle prossime ore della seduta.
 
-## Scenari già pubblicati oggi — situazione alle 21:55
+## Scenari già pubblicati oggi — situazione alle 22:21
 - **A · Vendita su rimbalzo** (SHORT, piano ufficiale: zona 3593,7–3607,4 · stop 3622,7 · T1 3557,3) — **NON ATTIVATO**. Nessun ingresso entro il termine delle 21:00: scaduto senza operazioni.
 - **B · Rottura ribassista** (SHORT, piano ufficiale: chiusura M15 sotto 3546,6 · stop 3561,9 · T1 3514,4) — **STOP**. Ingresso alle 01:30 a 3542,6 (chiusura M15 di conferma); rischio 19,3 $/oz. Stop colpito intorno alle 03:20: −1R.
 - **C · Vendita su rimbalzo** (SHORT, aggiornamento delle 02:22 · fuori registro: zona 3546,6–3557,3 · stop 3572,6 · T1 3514,4) — **STOP**. Ingresso alle 02:35 a 3551,9 (ordine a centro zona); rischio 20,7 $/oz. Stop colpito intorno alle 03:30: −1R.
@@ -23,29 +23,29 @@ _Dati aggiornati alle 21:55 del 25/11 (ora di Roma). Prezzi spot, lato bid._
 - **P · Rottura ribassista** (SHORT, aggiornamento delle 19:49 · fuori registro: chiusura M15 sotto 3546,6 · stop 3561,9 · T1 3514,4) — **STOP**. Ingresso alle 20:00 a 3537,6 (chiusura M15 di conferma); rischio 24,3 $/oz. Stop colpito intorno alle 21:05: −1R.
 - _Il piano ufficiale è quello delle 01:05; esiti secondo le regole meccaniche del registro (uscita a T1, allo stop o a fine seduta, stop mai spostato)._
 
-## Piano operativo (scenari ricalcolati alle 21:55)
-- **A · Vendita su rimbalzo** (SHORT, con il trend): zona 3593,7–3607,4 (centro 3600,5); stop **3622,7** (rischio 22,2 $/oz); T1 3557,3 (1,9R) · T2 3514,4 (3,9R) · raggiungibilità storica 12%.
-- **R · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3546,6 (ingresso ≈ 3544,0); stop **3561,9** (rischio 17,9 $/oz); T1 3514,4 (1,7R) · raggiungibilità storica 7%.
+## Piano operativo (scenari ricalcolati alle 22:21)
+- **A · Vendita su rimbalzo** (SHORT, con il trend): zona 3593,7–3607,4 (centro 3600,5); stop **3622,7** (rischio 22,2 $/oz); T1 3557,3 (1,9R) · T2 3514,4 (3,9R) · raggiungibilità storica 4%.
+- **R · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3546,6 (ingresso ≈ 3544,0); stop **3561,9** (rischio 17,9 $/oz); T1 3514,4 (1,7R) · raggiungibilità storica 2%.
 - **Invalidazione** della lettura ribassista: chiusura H1 sopra 3622,7.
 
 ## Livelli chiave
 
 | Zona | Tipo | Cosa c'è | Forza | Distanza | Tocco oggi |
 |---|---|---|---|---|---|
-| 3689,6–3700,0 | Resistenza | Max settimana in corso, Soglia psicologica 3700, EMA200 H1 | ★★★ | +114,8 $ | 0% |
-| 3678,2 | Resistenza | Massimo di ieri (PDH) | ★★ | +103,4 $ | 0% |
-| 3630,2–3640,9 | Resistenza | Pivot R1, Max H1 del 23/11, Max H1 del 23/11 | ★★ | +55,5 $ | 2% |
-| 3619,5 | Resistenza | Min H1 del 24/11 | ★ | +44,7 $ | 3% |
-| 3593,7–3607,4 | Resistenza | Pivot P, Soglia psicologica 3600, Max H1 del 20/11 | ★★★ | +18,9 $ | 12% |
-| 3587,9 | Resistenza | Massimo di oggi | ★ | +13,1 $ | 23% |
-| 3575,1 | Resistenza | Max sessione Asia | ★ | +0,3 $ | 95% |
-| **3574,8** | **PREZZO** | | | | |
-| 3565,0 | Supporto | Apertura settimana | ★ | −9,8 $ | 40% |
-| 3546,6–3557,3 | Supporto | Minimo di ieri (PDL), Chiusura di ieri, Apertura di oggi | ★★★ | −17,5 $ | 17% |
-| 3538,2 | Supporto | Chiusura sett. scorsa | ★ | −36,6 $ | 2% |
-| 3531,0 | Supporto | Proiezione ADR (max) | ★ | −43,8 $ | 2% |
-| 3527,2 | Supporto | EMA20 H1 | ★ | −47,6 $ | 2% |
-| 3500,0–3514,4 | Supporto | Pivot S1, Min sett. scorsa (PWL), Soglia psicologica 3500 | ★★★ | −60,4 $ | 1% |
+| 3689,6–3700,0 | Resistenza | Max settimana in corso, Soglia psicologica 3700, EMA200 H1 | ★★★ | +120,3 $ | 0% |
+| 3678,2 | Resistenza | Massimo di ieri (PDH) | ★★ | +108,9 $ | 0% |
+| 3630,2–3640,9 | Resistenza | Pivot R1, Max H1 del 23/11, Max H1 del 23/11 | ★★ | +61,0 $ | 0% |
+| 3619,5 | Resistenza | Min H1 del 24/11 | ★ | +50,2 $ | 0% |
+| 3593,7–3607,4 | Resistenza | Pivot P, Soglia psicologica 3600, Max H1 del 20/11 | ★★★ | +24,5 $ | 4% |
+| 3587,9 | Resistenza | Massimo di oggi | ★ | +18,6 $ | 5% |
+| 3575,1 | Resistenza | Max sessione Asia | ★ | +5,9 $ | 30% |
+| **3569,3** | **PREZZO** | | | | |
+| 3565,0 | Supporto | Apertura settimana | ★ | −4,3 $ | 60% |
+| 3546,6–3557,3 | Supporto | Minimo di ieri (PDL), Chiusura di ieri, Apertura di oggi | ★★★ | −12,0 $ | 14% |
+| 3538,2 | Supporto | Chiusura sett. scorsa | ★ | −31,1 $ | 1% |
+| 3531,2 | Supporto | EMA20 H1 | ★ | −38,1 $ | 1% |
+| 3531,0 | Supporto | Proiezione ADR (max) | ★ | −38,3 $ | 1% |
+| 3500,0–3514,4 | Supporto | Pivot S1, Min sett. scorsa (PWL), Soglia psicologica 3500 | ★★★ | −54,9 $ | 0% |
 
 ## Agenda (ora di Roma)
 - **14:30** USD · Indice PCE core m/m (atteso 0,3%, prec. 0,3%)
