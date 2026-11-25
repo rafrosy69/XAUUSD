@@ -1,18 +1,18 @@
 {
  "tday": "2026-11-25",
- "asof": "2026-11-25T20:30:00+00:00",
- "price": 3584.245,
- "bias": "Neutrale / laterale",
- "score": -0.225,
+ "asof": "2026-11-25T20:55:00+00:00",
+ "price": 3574.777,
+ "bias": "Ribassista",
+ "score": -0.4,
  "close": "2026-11-25T22:00:00+00:00",
- "invalidation": null,
+ "invalidation": 3622.7,
  "evaluated": false,
  "setups": [
   {
    "id": "A",
    "type": "fade",
    "dir": -1,
-   "role": "range",
+   "role": "con il trend",
    "zone_lo": 3593.7,
    "zone_hi": 3607.4,
    "trigger": null,
@@ -34,41 +34,29 @@
     }
    ],
    "rr1": 1.95,
-   "title": "Vendita su resistenza (range)"
+   "title": "Vendita su rimbalzo"
   },
   {
-   "id": "Q",
-   "type": "fade",
-   "dir": 1,
-   "role": "range",
+   "id": "R",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
    "zone_lo": 3546.6,
    "zone_hi": 3557.3,
-   "trigger": null,
-   "entry": 3551.9,
-   "stop": 3531.2,
-   "risk": 20.7,
+   "trigger": 3546.6,
+   "entry": 3544.0,
+   "stop": 3561.9,
+   "risk": 17.9,
    "targets": [
     {
-     "price": 3575.1,
-     "rr": 1.12,
-     "label": "Max sessione Asia",
-     "proj": false
-    },
-    {
-     "price": 3593.7,
-     "rr": 2.02,
-     "label": "Pivot P +4",
-     "proj": false
-    },
-    {
-     "price": 3630.2,
-     "rr": 3.78,
-     "label": "Pivot R1 +2",
+     "price": 3514.4,
+     "rr": 1.66,
+     "label": "Pivot S1 +4",
      "proj": false
     }
    ],
-   "rr1": 1.12,
-   "title": "Acquisto su supporto (range)"
+   "rr1": 1.66,
+   "title": "Rottura ribassista"
   }
  ]
 }
