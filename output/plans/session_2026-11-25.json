@@ -181,7 +181,7 @@
    "title": "Vendita su rimbalzo",
    "pub": "2026-11-25T05:58:00+00:00",
    "official": false,
-   "withdrawn": null
+   "withdrawn": "2026-11-25T13:49:00+00:00"
   },
   {
    "id": "H",
@@ -236,6 +236,62 @@
    "rr1": 5.44,
    "title": "Rottura ribassista",
    "pub": "2026-11-25T12:33:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "K",
+   "type": "fade",
+   "dir": -1,
+   "role": "con il trend",
+   "zone_lo": 3500.0,
+   "zone_hi": 3514.4,
+   "trigger": null,
+   "entry": 3507.2,
+   "stop": 3529.7,
+   "risk": 22.5,
+   "targets": [
+    {
+     "price": 3400.0,
+     "rr": 4.76,
+     "label": "Soglia psicologica 3400",
+     "proj": false
+    }
+   ],
+   "rr1": 4.76,
+   "title": "Vendita su rimbalzo",
+   "pub": "2026-11-25T13:49:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "L",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3397.4,
+   "zone_hi": 3402.6,
+   "trigger": 3397.4,
+   "entry": 3394.9,
+   "stop": 3412.8,
+   "risk": 17.9,
+   "targets": [
+    {
+     "price": 3368.0,
+     "rr": 1.5,
+     "label": "proiezione 1.5R",
+     "proj": true
+    },
+    {
+     "price": 3350.1,
+     "rr": 2.5,
+     "label": "proiezione 2.5R",
+     "proj": true
+    }
+   ],
+   "rr1": 1.5,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-25T13:49:00+00:00",
    "official": false,
    "withdrawn": null
   }
