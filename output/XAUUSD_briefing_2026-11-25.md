@@ -1,43 +1,46 @@
 # XAU/USD — Briefing intraday · mercoledì 25 novembre 2026
 
-_Dati aggiornati alle 15:39 del 25/11 (ora di Roma). Prezzi spot, lato bid._
+_Dati aggiornati alle 19:01 del 25/11 (ora di Roma). Prezzi spot, lato bid._
 
-**Prezzo 3462,6** (−93,8 $ da ieri) · **Trend: Ribassista forte** (−1,00) · ATR D1 102 $ · RSI H1 28
+**Prezzo 3518,3** (−38,1 $ da ieri) · **Trend: Ribassista forte** (−0,65) · ATR D1 102 $ · RSI H1 47
 
 ## In sintesi
-- **Scenari già pubblicati oggi** (piano ufficiale delle 01:05) — A · Vendita su rimbalzo: in attesa; B · Rottura ribassista: **stop** intorno alle 03:20 (−1R); C · Vendita su rimbalzo: **stop** intorno alle 03:30 (−1R); F · Rottura ribassista: **stop** intorno alle 13:10 (−1R); J · Rottura ribassista: **posizione aperta** dalle 14:45 a 3476,3, ora +0,3R (punta massima +0,4R), stop 3515,3, T1 3400,0.
+- **Scenari già pubblicati oggi** (piano ufficiale delle 01:05) — A · Vendita su rimbalzo: in attesa; B · Rottura ribassista: **stop** intorno alle 03:20 (−1R); C · Vendita su rimbalzo: **stop** intorno alle 03:30 (−1R); F · Rottura ribassista: **stop** intorno alle 13:10 (−1R); J · Rottura ribassista: **stop** intorno alle 18:20 (−1R); K · Vendita su rimbalzo: **posizione aperta** dalle 18:15 a 3507,2, ora −0,5R (punta massima +0,6R), stop 3529,7, T1 3400,0.
 - **Come sono finiti gli scenari di ieri (mar 24/11)** — B · Rottura ribassista: **T1 raggiunto** (+1,6R); C · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); D · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); G · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); M · Vendita su rimbalzo (aggiornamento, fuori registro): **T1 raggiunto** (+1,5R); N · Rottura ribassista (aggiornamento, fuori registro): **T1 raggiunto** (+1,4R); Q · Rottura ribassista (aggiornamento, fuori registro): chiusa a fine seduta (0,0R); scenari A, P e R non attivati.
-- **Contesto di trend: ribassista forte** (punteggio −1,00 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 ribassista, M15 ribassista. Struttura H1: rottura dell'ultimo minimo H1 (massimi decrescenti).
+- **Contesto di trend: ribassista forte** (punteggio −0,65 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 moderatamente ribassista, M15 moderatamente rialzista. Struttura H1: massimi e minimi decrescenti.
 - **Ieri (mar 24/11)**: chiusura a 3556,4 (−2,15%), range 3546,6–3678,2 = 132 $ (129% dell'ATR giornaliero).
-- **Oggi finora**: apertura 3557,3, minimo 3459,8, massimo 3575,1; range 115 $, pari al 110% del range medio giornaliero (ADR20 = 105 $).
-- **Mercato molto esteso al ribasso**: RSI H1 a 28, prezzo 2,8 ATR orari sotto la EMA20 H1 (3530,7). Un rimbalzo tecnico è plausibile: meglio attendere il prezzo sulle resistenze che inseguirlo sui minimi.
-- **Zone chiave** — resistenze: 3500,0–3514,4 · 3546,6–3557,3 · 3593,7–3607,4. Supporti: n.d..
+- **Oggi finora**: apertura 3557,3, minimo 3426,4, massimo 3575,1; range 149 $, pari al 142% del range medio giornaliero (ADR20 = 105 $).
+- **Zone chiave** — resistenze: 3546,6–3557,3 · 3593,7–3607,4 · 3630,2–3640,9. Supporti: 3500,0–3514,4.
 - **Agenda**: nessun evento USA di rilievo nelle prossime ore della seduta.
 
-## Scenari già pubblicati oggi — situazione alle 15:39
-- **A · Vendita su rimbalzo** (SHORT, piano ufficiale: zona 3593,7–3607,4 · stop 3622,7 · T1 3557,3) — **IN ATTESA**. Prezzo d'ingresso 3600,5 non ancora raggiunto (massimo dalla pubblicazione: 3575,1); dista 138 $ dal prezzo attuale.
+## Scenari già pubblicati oggi — situazione alle 19:01
+- **A · Vendita su rimbalzo** (SHORT, piano ufficiale: zona 3593,7–3607,4 · stop 3622,7 · T1 3557,3) — **IN ATTESA**. Prezzo d'ingresso 3600,5 non ancora raggiunto (massimo dalla pubblicazione: 3575,1); dista 82 $ dal prezzo attuale.
 - **B · Rottura ribassista** (SHORT, piano ufficiale: chiusura M15 sotto 3546,6 · stop 3561,9 · T1 3514,4) — **STOP**. Ingresso alle 01:30 a 3542,6 (chiusura M15 di conferma); rischio 19,3 $/oz. Stop colpito intorno alle 03:20: −1R.
 - **C · Vendita su rimbalzo** (SHORT, aggiornamento delle 02:22 · fuori registro: zona 3546,6–3557,3 · stop 3572,6 · T1 3514,4) — **STOP**. Ingresso alle 02:35 a 3551,9 (ordine a centro zona); rischio 20,7 $/oz. Stop colpito intorno alle 03:30: −1R.
 - **F · Rottura ribassista** (SHORT, aggiornamento delle 06:08 · fuori registro: chiusura M15 sotto 3500,0 · stop 3515,3 · T1 3400,0) — **STOP**. Ingresso alle 13:00 a 3490,3 (chiusura M15 di conferma); rischio 25,0 $/oz. Stop colpito intorno alle 13:10: −1R.
-- **J · Rottura ribassista** (SHORT, aggiornamento delle 13:33 · fuori registro: chiusura M15 sotto 3500,0 · stop 3515,3 · T1 3400,0) — **APERTA**. Ingresso alle 14:45 a 3476,3 (chiusura M15 di conferma); rischio 39,0 $/oz. Miglior prezzo toccato: 3459,8 (+0,4R). Alle 15:39: +0,3R (+13,7 $/oz); mancano 63 $ a T1 e 53 $ allo stop.
+- **J · Rottura ribassista** (SHORT, aggiornamento delle 13:33 · fuori registro: chiusura M15 sotto 3500,0 · stop 3515,3 · T1 3400,0) — **STOP**. Ingresso alle 14:45 a 3476,3 (chiusura M15 di conferma); rischio 39,0 $/oz. Stop colpito intorno alle 18:20: −1R. Prima dello stop il prezzo era arrivato a 3426,4 (+1,3R).
+- **K · Vendita su rimbalzo** (SHORT, aggiornamento delle 14:49 · fuori registro: zona 3500,0–3514,4 · stop 3529,7 · T1 3400,0) — **APERTA**. Ingresso alle 18:15 a 3507,2 (ordine a centro zona); rischio 22,5 $/oz. Miglior prezzo toccato: 3494,8 (+0,6R). Alle 19:01: −0,5R (−11,1 $/oz); mancano 118 $ a T1 e 11 $ allo stop.
 - _Il piano ufficiale è quello delle 01:05; esiti secondo le regole meccaniche del registro (uscita a T1, allo stop o a fine seduta, stop mai spostato)._
 
-## Piano operativo (scenari ricalcolati alle 15:39)
-- **K · Vendita su rimbalzo** (SHORT, con il trend): zona 3500,0–3514,4 (centro 3507,2); stop **3529,7** (rischio 22,5 $/oz); T1 3400,0 (4,8R) · raggiungibilità storica 25%.
-- **L · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3397,4 (ingresso ≈ 3394,9); stop **3412,8** (rischio 17,9 $/oz); T1 3300,0 (5,3R) · raggiungibilità storica 15%.
-- **Invalidazione** della lettura ribassista: chiusura H1 sopra 3529,7.
+## Piano operativo (scenari ricalcolati alle 19:01)
+- **M · Vendita su rimbalzo** (SHORT, con il trend): zona 3546,6–3557,3 (centro 3551,9); stop **3572,6** (rischio 20,7 $/oz); T1 3514,4 (1,8R) · raggiungibilità storica 13%.
+- **N · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3500,0 (ingresso ≈ 3497,4); stop **3515,3** (rischio 17,9 $/oz); T1 3400,0 (5,4R) · raggiungibilità storica 34%.
+- **Invalidazione** della lettura ribassista: chiusura H1 sopra 3572,6.
 
 ## Livelli chiave
 
 | Zona | Tipo | Cosa c'è | Forza | Distanza | Tocco oggi |
 |---|---|---|---|---|---|
-| 3593,7–3607,4 | Resistenza | Pivot P, Soglia psicologica 3600, Max H1 del 20/11 | ★★★ | +131,1 $ | 1% |
-| 3546,6–3557,3 | Resistenza | Minimo di ieri (PDL), Chiusura di ieri, Apertura di oggi | ★★★ | +84,0 $ | 4% |
-| 3500,0–3514,4 | Resistenza | Pivot S1, Min sett. scorsa (PWL), Soglia psicologica 3500 | ★★★ | +37,4 $ | 25% |
-| 3470,6 | Resistenza | Proiezione ADR (min) | ★ | +7,9 $ | 80% |
-| **3462,6** | **PREZZO** | | | | |
-| 3462,1 | Supporto | Pivot S2, Minimo di oggi | ★ | −0,5 $ | 98% |
-| 3450,0 | Supporto | Cifra tonda 3450 | ★ | −12,6 $ | 76% |
+| 3678,2 | Resistenza | Massimo di ieri (PDH) | ★★ | +159,9 $ | 0% |
+| 3630,2–3640,9 | Resistenza | Pivot R1, Max H1 del 23/11, Max H1 del 23/11 | ★★ | +111,9 $ | 1% |
+| 3593,7–3607,4 | Resistenza | Pivot P, Soglia psicologica 3600, Max H1 del 20/11 | ★★★ | +75,4 $ | 2% |
+| 3565,0 | Resistenza | Apertura settimana | ★ | +46,7 $ | 4% |
+| 3546,6–3557,3 | Resistenza | Minimo di ieri (PDL), Chiusura di ieri, Apertura di oggi | ★★★ | +28,3 $ | 13% |
+| 3538,2 | Resistenza | Chiusura sett. scorsa | ★ | +19,9 $ | 25% |
+| 3531,0 | Resistenza | Proiezione ADR (max) | ★ | +12,7 $ | 42% |
+| **3518,3** | **PREZZO** | | | | |
+| 3500,0–3514,4 | Supporto | Pivot S1, Min sett. scorsa (PWL), Soglia psicologica 3500 | ★★★ | −3,9 $ | 83% |
+| 3470,6 | Supporto | Proiezione ADR (min) | ★ | −47,7 $ | 5% |
 
 ## Agenda (ora di Roma)
 - **14:30** USD · Indice PCE core m/m (atteso 0,3%, prec. 0,3%)
