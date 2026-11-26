@@ -148,6 +148,37 @@
    "title": "Vendita su resistenza (range)",
    "pub": "2026-11-26T04:15:00+00:00",
    "official": false,
+   "withdrawn": "2026-11-26T05:56:00+00:00"
+  },
+  {
+   "id": "E",
+   "type": "break",
+   "dir": -1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3533.5,
+   "zone_hi": 3538.8,
+   "trigger": 3533.5,
+   "entry": 3530.8,
+   "stop": 3549.5,
+   "risk": 18.7,
+   "targets": [
+    {
+     "price": 3502.7,
+     "rr": 1.51,
+     "label": "Min sett. scorsa (PWL) +2",
+     "proj": false
+    },
+    {
+     "price": 3426.4,
+     "rr": 5.59,
+     "label": "Minimo di ieri (PDL)",
+     "proj": false
+    }
+   ],
+   "rr1": 1.51,
+   "title": "Rottura ribassista",
+   "pub": "2026-11-26T05:56:00+00:00",
+   "official": false,
    "withdrawn": null
   }
  ]
