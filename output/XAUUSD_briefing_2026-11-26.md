@@ -1,40 +1,43 @@
 # XAU/USD — Briefing intraday · giovedì 26 novembre 2026
 
-_Dati aggiornati alle 02:07 del 26/11 (ora di Roma). Prezzi spot, lato bid._
+_Dati aggiornati alle 05:15 del 26/11 (ora di Roma). Prezzi spot, lato bid._
 
-**Prezzo 3565,8** (−22,6 $ da ieri) · **Trend: Ribassista** (−0,40) · ATR D1 107 $ · RSI H1 55
+**Prezzo 3586,1** (−2,4 $ da ieri) · **Trend: Neutrale / laterale** (−0,07) · ATR D1 107 $ · RSI H1 58
 
 ## In sintesi
+- **Scenari già pubblicati oggi** (piano ufficiale delle 03:09) — A · Vendita su resistenza (range): **posizione aperta** dalle 03:30 a 3593,1, ora +0,3R (punta massima +0,8R), stop 3616,3, T1 3538,2; B · Acquisto su supporto (range): in attesa.
 - **Come sono finiti gli scenari di ieri (mer 25/11)** — B · Rottura ribassista: **stop** (−1R); C · Vendita su rimbalzo (aggiornamento, fuori registro): **stop** (−1R); F · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); J · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); K · Vendita su rimbalzo (aggiornamento, fuori registro): **stop** (−1R); P · Rottura ribassista (aggiornamento, fuori registro): **stop** (−1R); scenari A e S non attivati.
-- **Contesto di trend: ribassista** (punteggio −0,40 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 ribassista, H1 neutrale, M15 rialzista. Struttura H1: massimi e minimi decrescenti.
+- **Contesto di trend: neutrale / laterale** (punteggio −0,07 su una scala da −1 a +1). Per timeframe: D1 ribassista, H4 moderatamente ribassista, H1 moderatamente rialzista, M15 rialzista. Struttura H1: rottura dell'ultimo massimo H1.
 - **Ieri (mer 25/11)**: chiusura a 3588,4 (+0,90%), range 3426,4–3589,9 = 164 $ (153% dell'ATR giornaliero).
-- **Oggi finora**: apertura 3585,9, minimo 3551,1, massimo 3591,5; range 40 $, pari al 37% del range medio giornaliero (ADR20 = 110 $).
-- **Zone chiave** — resistenze: 3585,9–3600,3 · 3630,2–3646,6 · 3689,6–3700,0. Supporti: 3534,9–3538,2 · 3500,0–3502,7 · 3426,4.
+- **Oggi finora**: apertura 3585,9, minimo 3551,1, massimo 3607,0; range 56 $, pari al 51% del range medio giornaliero (ADR20 = 110 $).
+- **Zone chiave** — resistenze: 3630,2–3646,6 · 3689,6–3700,0. Supporti: 3534,9–3538,2 · 3500,0–3502,7 · 3426,4.
 - **Agenda**: nessun evento USA di rilievo nelle prossime ore della seduta.
 
-## Piano operativo (scenari condizionali)
-- **A · Vendita su rimbalzo** (SHORT, con il trend): zona 3585,9–3600,3 (centro 3593,1); stop **3616,3** (rischio 23,2 $/oz); T1 3538,2 (2,4R) · T2 3502,7 (3,9R) · T3 3426,4 (7,2R) · raggiungibilità storica 71%.
-- **B · Rottura ribassista** (SHORT, con il trend · rottura): chiusura M15 sotto 3533,5 (ingresso ≈ 3530,8); stop **3549,5** (rischio 18,7 $/oz); T1 3502,7 (1,5R) · T2 3426,4 (5,6R) · raggiungibilità storica 57%.
-- **Invalidazione** della lettura ribassista: chiusura H1 sopra 3616,3.
+## Scenari già pubblicati oggi — situazione alle 05:15
+- **A · Vendita su resistenza (range)** (SHORT, piano ufficiale: zona 3585,9–3600,3 · stop 3616,3 · T1 3538,2) — **APERTA**. Ingresso alle 03:30 a 3593,1 (ordine a centro zona); rischio 23,2 $/oz. Miglior prezzo toccato: 3574,7 (+0,8R). Alle 05:15: +0,3R (+7,0 $/oz); mancano 48 $ a T1 e 30 $ allo stop.
+- **B · Acquisto su supporto (range)** (LONG, piano ufficiale: zona 3533,5–3538,8 · stop 3517,5 · T1 3585,9) — **IN ATTESA**. Prezzo d'ingresso 3536,1 non ancora raggiunto (minimo dalla pubblicazione: 3574,7); dista 50 $ dal prezzo attuale.
+- _Il piano ufficiale è quello delle 03:09; esiti secondo le regole meccaniche del registro (uscita a T1, allo stop o a fine seduta, stop mai spostato)._
+
+## Piano operativo (scenari ricalcolati alle 05:15)
+- **D · Vendita su resistenza (range)** (SHORT, range): zona 3630,2–3646,6 (centro 3638,4); stop **3662,6** (rischio 24,2 $/oz); T1 3600,3 (1,6R) · T2 3538,2 (4,2R) · T3 3502,7 (5,6R) · raggiungibilità storica 36%.
+- **B · Acquisto su supporto (range)** (LONG, range): zona 3533,5–3538,8 (centro 3536,1); stop **3517,5** (rischio 18,7 $/oz); T1 3585,9 (2,7R) · T2 3630,2 (5,0R) · T3 3689,6 (8,2R) · raggiungibilità storica 40%.
 
 ## Livelli chiave
 
 | Zona | Tipo | Cosa c'è | Forza | Distanza | Tocco oggi |
 |---|---|---|---|---|---|
-| 3689,6–3700,0 | Resistenza | Max settimana in corso, Soglia psicologica 3700, Pivot R2 | ★★★ | +123,8 $ | 6% |
-| 3630,2–3646,6 | Resistenza | Pivot R1, Max H1 del 23/11, Max H1 del 23/11 | ★★ | +64,4 $ | 22% |
-| 3607,4 | Resistenza | Min H1 del 24/11 | ★ | +41,6 $ | 46% |
-| 3585,9–3600,3 | Resistenza | Massimo di ieri (PDH), Chiusura di ieri, Soglia psicologica 3600 | ★★★ | +20,1 $ | 71% |
-| 3575,1 | Resistenza | Max H1 del 25/11 | ★ | +9,3 $ | 85% |
-| **3565,8** | **PREZZO** | | | | |
-| 3565,0 | Supporto | Apertura settimana | ★ | −0,8 $ | 98% |
-| 3561,0 | Supporto | EMA50 H1 | ★ | −4,8 $ | 92% |
-| 3550,0 | Supporto | Minimo di oggi, Cifra tonda 3550 | ★ | −15,8 $ | 76% |
-| 3542,0 | Supporto | EMA20 H1 | ★ | −23,8 $ | 66% |
-| 3534,9–3538,2 | Supporto | Pivot P, Chiusura sett. scorsa | ★★ | −27,6 $ | 62% |
-| 3512,3–3514,4 | Supporto | Min H4 del 20/11, Min H1 del 25/11 | ★ | −51,4 $ | 42% |
-| 3500,0–3502,7 | Supporto | Min sett. scorsa (PWL), Soglia psicologica 3500 | ★★★ | −63,1 $ | 34% |
-| 3426,4 | Supporto | Minimo di ieri (PDL) | ★★ | −139,4 $ | 6% |
+| 3689,6–3700,0 | Resistenza | Max settimana in corso, Soglia psicologica 3700, Pivot R2 | ★★★ | +103,5 $ | 6% |
+| 3630,2–3646,6 | Resistenza | Pivot R1, Max H1 del 23/11, Max H1 del 23/11 | ★★ | +44,2 $ | 36% |
+| 3619,5 | Resistenza | Min H1 del 24/11 | ★ | +33,4 $ | 51% |
+| 3607,4 | Resistenza | Massimo di oggi, Min H1 del 24/11 | ★ | +21,3 $ | 64% |
+| 3585,9–3600,3 | Zona attuale | Massimo di ieri (PDH), Chiusura di ieri, Soglia psicologica 3600 | ★★★ | 0,0 $ | — |
+| **3586,1** | **PREZZO** | | | | |
+| 3575,1 | Supporto | Max H1 del 25/11 | ★ | −10,9 $ | 82% |
+| 3565,0 | Supporto | Apertura settimana, EMA50 H1 | ★ | −21,1 $ | 66% |
+| 3550,0 | Supporto | Minimo di oggi, Cifra tonda 3550, EMA20 H1 | ★ | −36,1 $ | 49% |
+| 3534,9–3538,2 | Supporto | Pivot P, Chiusura sett. scorsa | ★★ | −47,9 $ | 39% |
+| 3500,0–3502,7 | Supporto | Min sett. scorsa (PWL), Soglia psicologica 3500, Proiezione ADR (min) | ★★★ | −83,4 $ | 19% |
+| 3426,4 | Supporto | Minimo di ieri (PDL) | ★★ | −159,7 $ | 3% |
 
 ## Agenda (ora di Roma)
 
