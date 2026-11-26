@@ -6,7 +6,7 @@
  "score": -0.225,
  "close": "2026-11-26T22:00:00+00:00",
  "invalidation": null,
- "evaluated": false,
+ "evaluated": true,
  "setups": [
   {
    "id": "A",
@@ -75,6 +75,24 @@
    ],
    "rr1": 2.66,
    "title": "Acquisto su supporto (range)"
+  }
+ ],
+ "results": [
+  {
+   "id": "A",
+   "title": "Vendita su resistenza (range)",
+   "status": "chiuso a fine sessione",
+   "R": 1.16,
+   "entry_px": 3593.1,
+   "exit_px": 3566.13
+  },
+  {
+   "id": "B",
+   "title": "Acquisto su supporto (range)",
+   "status": "non attivato",
+   "R": 0.0,
+   "entry_px": null,
+   "exit_px": null
   }
  ]
 }
