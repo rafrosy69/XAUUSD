@@ -1,9 +1,9 @@
 {
  "tday": "2026-11-26",
- "asof": "2026-11-26T08:02:00+00:00",
- "price": 3568.215,
- "bias": "Ribassista",
- "score": -0.5,
+ "asof": "2026-11-26T08:27:00+00:00",
+ "price": 3564.315,
+ "bias": "Ribassista forte",
+ "score": -0.7,
  "close": "2026-11-26T22:00:00+00:00",
  "invalidation": 3616.3,
  "evaluated": false,
