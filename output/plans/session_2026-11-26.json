@@ -1,12 +1,12 @@
 {
  "tday": "2026-11-26",
- "official_asof": "2026-11-26T01:57:00+00:00",
+ "official_asof": "2026-11-26T02:09:00+00:00",
  "setups": [
   {
    "id": "A",
    "type": "fade",
    "dir": -1,
-   "role": "con il trend",
+   "role": "range",
    "zone_lo": 3585.9,
    "zone_hi": 3600.3,
    "trigger": null,
@@ -34,39 +34,45 @@
     }
    ],
    "rr1": 2.36,
-   "title": "Vendita su rimbalzo",
-   "pub": "2026-11-26T01:57:00+00:00",
+   "title": "Vendita su resistenza (range)",
+   "pub": "2026-11-26T02:09:00+00:00",
    "official": true,
    "withdrawn": null
   },
   {
    "id": "B",
-   "type": "break",
-   "dir": -1,
-   "role": "con il trend · rottura",
+   "type": "fade",
+   "dir": 1,
+   "role": "range",
    "zone_lo": 3533.5,
    "zone_hi": 3538.8,
-   "trigger": 3533.5,
-   "entry": 3530.8,
-   "stop": 3549.5,
+   "trigger": null,
+   "entry": 3536.1,
+   "stop": 3517.5,
    "risk": 18.7,
    "targets": [
     {
-     "price": 3502.7,
-     "rr": 1.51,
-     "label": "Min sett. scorsa (PWL) +1",
+     "price": 3585.9,
+     "rr": 2.66,
+     "label": "Massimo di ieri (PDH) +6",
      "proj": false
     },
     {
-     "price": 3426.4,
-     "rr": 5.59,
-     "label": "Minimo di ieri (PDL)",
+     "price": 3630.2,
+     "rr": 5.04,
+     "label": "Pivot R1 +3",
+     "proj": false
+    },
+    {
+     "price": 3689.6,
+     "rr": 8.22,
+     "label": "Max settimana in corso +4",
      "proj": false
     }
    ],
-   "rr1": 1.51,
-   "title": "Rottura ribassista",
-   "pub": "2026-11-26T01:57:00+00:00",
+   "rr1": 2.66,
+   "title": "Acquisto su supporto (range)",
+   "pub": "2026-11-26T02:09:00+00:00",
    "official": true,
    "withdrawn": null
   }
