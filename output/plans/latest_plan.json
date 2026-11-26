@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-26",
- "asof": "2026-11-26T02:35:00+00:00",
- "price": 3598.018,
+ "asof": "2026-11-26T03:00:00+00:00",
+ "price": 3588.585,
  "bias": "Neutrale / laterale",
  "score": -0.075,
  "close": "2026-11-26T22:00:00+00:00",
@@ -23,7 +23,7 @@
     {
      "price": 3600.3,
      "rr": 1.58,
-     "label": "Massimo di ieri (PDH) +6",
+     "label": "Massimo di ieri (PDH) +5",
      "proj": false
     },
     {
@@ -35,7 +35,7 @@
     {
      "price": 3502.7,
      "rr": 5.62,
-     "label": "Min sett. scorsa (PWL) +1",
+     "label": "Min sett. scorsa (PWL) +2",
      "proj": false
     }
    ],
