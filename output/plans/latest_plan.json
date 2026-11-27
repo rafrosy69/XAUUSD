@@ -1,80 +1,80 @@
 {
  "tday": "2026-11-27",
- "asof": "2026-11-27T01:35:00+00:00",
- "price": 3574.825,
- "bias": "Ribassista",
- "score": -0.325,
+ "asof": "2026-11-27T02:00:00+00:00",
+ "price": 3594.045,
+ "bias": "Neutrale / laterale",
+ "score": 0.025,
  "close": "2026-11-27T22:00:00+00:00",
- "invalidation": 3622.5,
+ "invalidation": null,
  "evaluated": false,
  "setups": [
   {
-   "id": "A",
+   "id": "D",
    "type": "fade",
    "dir": -1,
-   "role": "con il trend",
-   "zone_lo": 3595.1,
-   "zone_hi": 3607.0,
+   "role": "range",
+   "zone_lo": 3646.6,
+   "zone_hi": 3654.4,
    "trigger": null,
-   "entry": 3601.1,
-   "stop": 3622.5,
-   "risk": 21.5,
+   "entry": 3650.5,
+   "stop": 3669.9,
+   "risk": 19.4,
    "targets": [
     {
+     "price": 3607.0,
+     "rr": 2.24,
+     "label": "Massimo di ieri (PDH) +5",
+     "proj": false
+    },
+    {
      "price": 3575.1,
-     "rr": 1.21,
-     "label": "Pivot P +2",
+     "rr": 3.89,
+     "label": "Pivot P +1",
      "proj": false
     },
     {
      "price": 3552.0,
-     "rr": 2.29,
+     "rr": 5.08,
      "label": "Minimo di ieri (PDL) +2",
-     "proj": false
-    },
-    {
-     "price": 3518.8,
-     "rr": 3.84,
-     "label": "Pivot S2 +2",
      "proj": false
     }
    ],
-   "rr1": 1.21,
-   "title": "Vendita su rimbalzo"
+   "rr1": 2.24,
+   "title": "Vendita su resistenza (range)"
   },
   {
-   "id": "C",
-   "type": "break",
-   "dir": -1,
-   "role": "con il trend · rottura",
+   "id": "E",
+   "type": "fade",
+   "dir": 1,
+   "role": "range",
    "zone_lo": 3572.3,
    "zone_hi": 3577.4,
-   "trigger": 3572.3,
-   "entry": 3569.7,
-   "stop": 3587.8,
+   "trigger": null,
+   "entry": 3574.9,
+   "stop": 3556.8,
    "risk": 18.0,
    "targets": [
     {
-     "price": 3552.0,
-     "rr": 0.98,
-     "label": "Minimo di ieri (PDL) +2",
+     "price": 3595.1,
+     "rr": 1.12,
+     "label": "Massimo di ieri (PDH) +5",
      "proj": false
     },
     {
-     "price": 3518.8,
-     "rr": 2.83,
-     "label": "Pivot S2 +2",
+     "price": 3646.6,
+     "rr": 3.98,
+     "label": "Pivot R3 +2",
      "proj": false
     },
     {
-     "price": 3502.7,
-     "rr": 3.72,
-     "label": "Min sett. scorsa (PWL) +1",
+     "price": 3689.6,
+     "rr": 6.36,
+     "label": "Max settimana in corso +2",
      "proj": false
     }
    ],
-   "rr1": 0.98,
-   "title": "Rottura ribassista"
+   "rr1": 1.12,
+   "title": "Acquisto su supporto (range)"
   }
  ]
 }

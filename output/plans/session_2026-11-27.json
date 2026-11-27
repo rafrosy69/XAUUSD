@@ -112,6 +112,80 @@
    "pub": "2026-11-27T01:35:00+00:00",
    "official": false,
    "withdrawn": null
+  },
+  {
+   "id": "D",
+   "type": "fade",
+   "dir": -1,
+   "role": "range",
+   "zone_lo": 3646.6,
+   "zone_hi": 3654.4,
+   "trigger": null,
+   "entry": 3650.5,
+   "stop": 3669.9,
+   "risk": 19.4,
+   "targets": [
+    {
+     "price": 3607.0,
+     "rr": 2.24,
+     "label": "Massimo di ieri (PDH) +5",
+     "proj": false
+    },
+    {
+     "price": 3575.1,
+     "rr": 3.89,
+     "label": "Pivot P +1",
+     "proj": false
+    },
+    {
+     "price": 3552.0,
+     "rr": 5.08,
+     "label": "Minimo di ieri (PDL) +2",
+     "proj": false
+    }
+   ],
+   "rr1": 2.24,
+   "title": "Vendita su resistenza (range)",
+   "pub": "2026-11-27T02:00:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "E",
+   "type": "fade",
+   "dir": 1,
+   "role": "range",
+   "zone_lo": 3572.3,
+   "zone_hi": 3577.4,
+   "trigger": null,
+   "entry": 3574.9,
+   "stop": 3556.8,
+   "risk": 18.0,
+   "targets": [
+    {
+     "price": 3595.1,
+     "rr": 1.12,
+     "label": "Massimo di ieri (PDH) +5",
+     "proj": false
+    },
+    {
+     "price": 3646.6,
+     "rr": 3.98,
+     "label": "Pivot R3 +2",
+     "proj": false
+    },
+    {
+     "price": 3689.6,
+     "rr": 6.36,
+     "label": "Max settimana in corso +2",
+     "proj": false
+    }
+   ],
+   "rr1": 1.12,
+   "title": "Acquisto su supporto (range)",
+   "pub": "2026-11-27T02:00:00+00:00",
+   "official": false,
+   "withdrawn": null
   }
  ]
 }
