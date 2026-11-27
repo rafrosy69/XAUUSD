@@ -426,6 +426,43 @@
    "title": "Vendita su resistenza (range)",
    "pub": "2026-11-27T14:11:00+00:00",
    "official": false,
+   "withdrawn": "2026-11-27T14:36:00+00:00"
+  },
+  {
+   "id": "N",
+   "type": "fade",
+   "dir": -1,
+   "role": "range",
+   "zone_lo": 3646.6,
+   "zone_hi": 3654.4,
+   "trigger": null,
+   "entry": 3650.5,
+   "stop": 3669.9,
+   "risk": 19.4,
+   "targets": [
+    {
+     "price": 3607.0,
+     "rr": 2.24,
+     "label": "Massimo di ieri (PDH) +5",
+     "proj": false
+    },
+    {
+     "price": 3575.1,
+     "rr": 3.89,
+     "label": "Pivot P +2",
+     "proj": false
+    },
+    {
+     "price": 3557.4,
+     "rr": 4.8,
+     "label": "Minimo di ieri (PDL) +3",
+     "proj": false
+    }
+   ],
+   "rr1": 2.24,
+   "title": "Vendita su resistenza (range)",
+   "pub": "2026-11-27T14:36:00+00:00",
+   "official": false,
    "withdrawn": null
   }
  ]
