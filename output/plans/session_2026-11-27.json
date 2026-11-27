@@ -222,7 +222,7 @@
    "title": "Acquisto su supporto (range)",
    "pub": "2026-11-27T02:50:00+00:00",
    "official": false,
-   "withdrawn": null
+   "withdrawn": "2026-11-27T07:52:00+00:00"
   },
   {
    "id": "G",
@@ -239,7 +239,7 @@
     {
      "price": 3654.4,
      "rr": 1.95,
-     "label": "Pivot R3 +3",
+     "label": "Pivot R3 +2",
      "proj": false
     },
     {
@@ -258,6 +258,31 @@
    "rr1": 1.95,
    "title": "Vendita su resistenza (range)",
    "pub": "2026-11-27T05:21:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "H",
+   "type": "fade",
+   "dir": 1,
+   "role": "range",
+   "zone_lo": 3646.6,
+   "zone_hi": 3654.4,
+   "trigger": null,
+   "entry": 3650.5,
+   "stop": 3631.1,
+   "risk": 19.4,
+   "targets": [
+    {
+     "price": 3689.6,
+     "rr": 2.02,
+     "label": "Max settimana in corso +2",
+     "proj": false
+    }
+   ],
+   "rr1": 2.02,
+   "title": "Acquisto su supporto (range)",
+   "pub": "2026-11-27T07:52:00+00:00",
    "official": false,
    "withdrawn": null
   }
