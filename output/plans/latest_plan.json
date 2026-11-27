@@ -1,7 +1,7 @@
 {
  "tday": "2026-11-27",
- "asof": "2026-11-27T04:56:00+00:00",
- "price": 3631.425,
+ "asof": "2026-11-27T05:21:00+00:00",
+ "price": 3642.135,
  "bias": "Neutrale / laterale",
  "score": 0.1,
  "close": "2026-11-27T22:00:00+00:00",
@@ -9,37 +9,37 @@
  "evaluated": false,
  "setups": [
   {
-   "id": "D",
+   "id": "G",
    "type": "fade",
    "dir": -1,
    "role": "range",
-   "zone_lo": 3646.6,
-   "zone_hi": 3654.4,
+   "zone_lo": 3689.6,
+   "zone_hi": 3700.0,
    "trigger": null,
-   "entry": 3650.5,
-   "stop": 3669.9,
-   "risk": 19.4,
+   "entry": 3694.8,
+   "stop": 3715.5,
+   "risk": 20.7,
    "targets": [
     {
+     "price": 3654.4,
+     "rr": 1.95,
+     "label": "Pivot R3 +3",
+     "proj": false
+    },
+    {
      "price": 3607.0,
-     "rr": 2.24,
+     "rr": 4.25,
      "label": "Massimo di ieri (PDH) +4",
      "proj": false
     },
     {
      "price": 3575.1,
-     "rr": 3.89,
+     "rr": 5.79,
      "label": "Pivot P +2",
-     "proj": false
-    },
-    {
-     "price": 3552.0,
-     "rr": 5.08,
-     "label": "Minimo di ieri (PDL) +2",
      "proj": false
     }
    ],
-   "rr1": 2.24,
+   "rr1": 1.95,
    "title": "Vendita su resistenza (range)"
   },
   {
@@ -57,7 +57,7 @@
     {
      "price": 3630.2,
      "rr": 1.36,
-     "label": "Pivot R2 +3",
+     "label": "Pivot R2 +2",
      "proj": false
     },
     {
