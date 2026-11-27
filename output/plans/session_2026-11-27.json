@@ -195,7 +195,7 @@
    "zone_lo": 3595.1,
    "zone_hi": 3607.0,
    "trigger": null,
-   "entry": 3601.1,
+   "entry": 3601.0,
    "stop": 3579.6,
    "risk": 21.5,
    "targets": [
@@ -208,7 +208,7 @@
     {
      "price": 3646.6,
      "rr": 2.12,
-     "label": "Pivot R3 +2",
+     "label": "Pivot R3 +3",
      "proj": false
     },
     {
@@ -239,7 +239,7 @@
     {
      "price": 3654.4,
      "rr": 1.95,
-     "label": "Pivot R3 +2",
+     "label": "Pivot R3 +3",
      "proj": false
     },
     {
@@ -251,7 +251,7 @@
     {
      "price": 3575.1,
      "rr": 5.79,
-     "label": "Pivot P +2",
+     "label": "Pivot P +1",
      "proj": false
     }
    ],
