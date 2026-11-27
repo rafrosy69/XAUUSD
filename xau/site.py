@@ -1,17 +1,19 @@
 """Static web site built from the briefings already written in the output folder.
 
-    <site>/index.html              latest briefing
-    <site>/archivio/index.html     every session, with the verified outcome of its official plan
-    <site>/archivio/<day>.html     one permanent page per session
+    <site>/index.html              the session in progress, in plain words (price, direction, ideas of the day)
+    <site>/archivio/index.html     every session, with how its ideas went
+    <site>/archivio/<day>.html     one permanent plain page per session
+    <site>/dettagli/index.html     technical briefing of the session in progress (the full report)
+    <site>/dettagli/<day>.html     technical briefing of each session
     <site>/version.json            generation time of the latest briefing (open pages use it to offer a reload)
 
-Pure post-processing of the report HTML: no market data is downloaded, so the site can be rebuilt at any
-time (`run_briefing.py --site-only`). Every link is relative: the folder works at the root of a domain, in a
-sub-folder (e.g. GitHub Pages project sites) and opened from disk.
+The plain pages are drawn by xau/simple.py from the small JSON summaries saved next to each report; the
+technical pages are the stored reports with navigation and footer added. No market data is downloaded, so
+the site can be rebuilt at any time (`run_briefing.py --site-only`). Every link is relative: the folder
+works at the root of a domain, in a sub-folder (e.g. GitHub Pages project sites) and opened from disk.
 """
 from __future__ import annotations
 
-import csv
 import glob
 import html
 import json
@@ -23,15 +25,13 @@ from urllib.parse import quote
 
 import pandas as pd
 
-from . import report
-from .charts import fnum
+from . import report, simple
 from .engine import ROME
-from .extras import NO_TRADE
 
 DEFAULTS = {
-    "titolo": "XAU/USD · Monitor intraday",
-    "sottotitolo": ("Briefing intraday sull'oro spot: trend, zone di supporto e resistenza, scenari con stop e "
-                    "obiettivi, agenda macro in ora di Roma."),
+    "titolo": "Oro oggi",
+    "sottotitolo": ("Il prezzo dell'oro (XAU/USD) spiegato con parole semplici: tendenza, idee del giorno con entrata, "
+                    "obiettivo e stop, appuntamenti importanti. Orari italiani."),
     "autore": "",            # who publishes the page (shown in the footer)
     "contatto": "",          # e-mail address or link (shown in the footer)
     "interessi": "",         # disclosure of positions / interests in gold (shown in the footer)
@@ -73,30 +73,15 @@ SITE_CSS = """
 @media print{.sitebar,.sitenote,.upd,.pager{display:none!important}}
 """
 OLD_CSS = "#banner{display:none!important}"      # past sessions: the static note replaces the expiry banner
-ARCH_CSS = """
-.kpis.k4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.arow{display:grid;grid-template-columns:210px minmax(0,1fr) 78px;gap:8px 18px;padding:13px 2px;border-top:1px solid var(--line2);align-items:start}
-.arow:first-child{border-top:0;padding-top:2px}.arow:last-child{padding-bottom:2px}
-.a-day a{font-weight:700;font-size:14.5px;color:var(--text);text-decoration:none;white-space:nowrap}
-.a-day a:hover{color:var(--gold)}
-.a-day .mut{font-size:12px;margin-top:2px;line-height:1.45}
-.a-sc{display:grid;gap:7px}
-.sc{display:grid;grid-template-columns:23px minmax(0,1fr);gap:9px;align-items:start;font-size:13.5px}
-.sc-b{display:flex;align-items:center;gap:4px 9px;flex-wrap:wrap;min-height:23px}
-.a-r{text-align:right;font-weight:700;font-size:14.5px;white-space:nowrap}
-.a-r .mut{font-weight:400}
-.newtag{display:inline-block;margin-left:8px;font-size:10.5px;font-weight:700;color:var(--gold);border:1px solid rgba(227,179,65,.45);border-radius:5px;padding:0 5px;vertical-align:1px}
-@media (max-width:760px){.kpis.k4{grid-template-columns:repeat(2,minmax(0,1fr))}.arow{grid-template-columns:minmax(0,1fr) auto}.a-sc{grid-column:1/-1;grid-row:2}}
-"""
 SITE_JS = r"""
 (function(){
   var S=JSON.parse(document.getElementById('site-data').textContent), bar=document.getElementById('upd');
   if(!bar||!/^https?:$/.test(location.protocol)) return;   /* opened from disk or in a sandboxed preview: nothing to check */
   function check(){ fetch(S.root+'version.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(v){
     if(!v||!(v.generated_ms>S.generated_ms)) return;
-    document.getElementById('upd-t').textContent=(v.tday!==S.tday?'È stato pubblicato il briefing di una nuova seduta':'È stato pubblicato un aggiornamento')+' ('+v.label+').';
+    document.getElementById('upd-t').textContent=(v.tday!==S.tday?'È uscita la pagina di una nuova giornata':'È uscito un aggiornamento')+' ('+v.label+').';
     bar.style.display='flex'; }).catch(function(){}); }
-  document.getElementById('upd-go').addEventListener('click',function(){ if(S.index) location.reload(); else location.href=S.root+'index.html'; });
+  document.getElementById('upd-go').addEventListener('click',function(){ if(S.reload) location.reload(); else location.href=S.go; });
   check(); setInterval(check,180000);
   document.addEventListener('visibilitychange',function(){ if(!document.hidden) check(); });
 })();
@@ -108,12 +93,7 @@ def E(s) -> str:
 
 
 def day_label(ts: pd.Timestamp) -> str:
-    return f"{report.GIORNI_S[ts.dayofweek]} {ts.day:02d}/{ts.month:02d}/{ts.year}"
-
-
-def stamp(ts: pd.Timestamp) -> str:
-    r = ts.tz_convert(ROME)
-    return f"{r.day:02d}/{r.month:02d}/{r.year} alle {report.hm(r)}"
+    return f"{report.GIORNI_S[ts.day_of_week]} {ts.day:02d}/{ts.month:02d}/{ts.year}"
 
 
 # ----------------------------------------------------------------------------- configuration
@@ -167,7 +147,9 @@ def _json(path: str):
 
 
 def collect(out_dir: str) -> list[dict]:
-    """One entry per session with a briefing in `out_dir` (historical rebuilds and the 'latest' copy excluded)."""
+    """One entry per session with a briefing in `out_dir` (historical rebuilds and the 'latest' copy excluded).
+    `view` is the plain summary of the session: the one saved with the report or, for older sessions, a
+    minimal one rebuilt from the official plan."""
     days = []
     for path in sorted(glob.glob(os.path.join(out_dir, "XAUUSD_briefing_*.html"))):
         m = DAY_RE.match(os.path.basename(path))
@@ -190,27 +172,22 @@ def collect(out_dir: str) -> list[dict]:
                                 minute=int(g.group(5)), tz=ROME).tz_convert("UTC") if g
                    else pd.Timestamp(int(blob["asof_ms"]), unit="ms", tz="UTC"))
         plan = _json(os.path.join(out_dir, "plans", f"plan_{day}.json"))
-        summary = blob.get("summary")
-        if not summary:
-            summary = f"Oro spot, briefing intraday di {report.d_long(ts)}."
+        tech = blob.get("summary")                       # one-line description of the technical page
+        if not tech:
+            tech = f"Oro spot, briefing intraday di {report.d_long(ts)}."
             if plan:
-                sc = " · ".join(f"{s['id']} {report.setup_brief(s)}" for s in plan["setups"])
-                summary = (f"Oro spot, briefing intraday di {report.d_short(ts)}: trend {plan['bias'].lower()}."
-                           + (f" Scenari: {sc}." if sc else ""))
-        days.append({"day": day, "ts": ts, "raw": raw, "blob": blob, "generated": gen, "plan": plan, "summary": summary,
-                     "title": html.unescape(TITLE_RE.search(raw).group(1))})
+                sc = " · ".join(f"{x['id']} {report.setup_brief(x)}" for x in plan["setups"])
+                tech = (f"Oro spot, briefing intraday di {report.d_short(ts)}: trend {plan['bias'].lower()}."
+                        + (f" Scenari: {sc}." if sc else ""))
+        view = simple.load(out_dir, day)
+        if view is None:
+            try:
+                view = simple.legacy_view(day, plan)
+            except Exception:                            # unreadable plan: the page of that day only says so
+                view = simple.legacy_view(day, None)
+        days.append({"day": day, "ts": ts, "raw": raw, "blob": blob, "generated": gen, "plan": plan, "view": view,
+                     "summary": view["summary"], "tech_summary": tech, "title": html.unescape(TITLE_RE.search(raw).group(1))})
     return days
-
-
-def journal_stats(out_dir: str) -> dict:
-    rows = []
-    path = os.path.join(out_dir, "journal.csv")
-    if os.path.exists(path):
-        with open(path, encoding="utf-8") as fh:
-            rows = list(csv.DictReader(fh))
-    tr = [r for r in rows if r["esito"] not in NO_TRADE]
-    return {"setups": len(rows), "trades": len(tr), "tot_R": sum(float(r["R"]) for r in tr),
-            "sessions": len({r["seduta"] for r in rows})}
 
 
 def latest_replay(out_dir: str) -> dict | None:
@@ -221,10 +198,12 @@ def latest_replay(out_dir: str) -> dict | None:
 
 
 # ----------------------------------------------------------------------------- page chrome
-def _head(cfg: dict, title: str, desc: str, root: str, path: str, article: bool) -> str:
+def _head(cfg: dict, title: str, desc: str, root: str, path: str, article: bool, dark: bool = False) -> str:
+    theme = ("<meta name='theme-color' content='#0a0e13'><meta name='color-scheme' content='dark'>" if dark else
+             "<meta name='theme-color' content='#f6f3ec' media='(prefers-color-scheme: light)'>"
+             "<meta name='theme-color' content='#0c1015' media='(prefers-color-scheme: dark)'><meta name='color-scheme' content='light dark'>")
     tags = [f"<meta name='description' content='{E(desc)}'>",
-            f"<meta name='robots' content='{'index,follow' if cfg['indicizzabile'] else 'noindex,nofollow'}'>",
-            "<meta name='theme-color' content='#0a0e13'><meta name='color-scheme' content='dark'>",
+            f"<meta name='robots' content='{'index,follow' if cfg['indicizzabile'] else 'noindex,nofollow'}'>", theme,
             f"<link rel='icon' type='image/svg+xml' href='{ICON_URI}'>",
             f"<meta property='og:type' content='{'article' if article else 'website'}'>",
             f"<meta property='og:site_name' content='{E(cfg['titolo'])}'>",
@@ -249,11 +228,20 @@ def _head(cfg: dict, title: str, desc: str, root: str, path: str, article: bool)
 
 
 def _bar(cfg: dict, root: str, here: str) -> str:
+    """Navigation of the plain pages."""
     on_l = " class='on'" if here == "latest" else ""
     on_a = " class='on'" if here == "archive" else ""
+    return (f"<header class='bar'><a class='brand' href='{root}index.html'>{ICON_SVG}<span>{E(cfg['titolo'])}</span></a>"
+            f"<nav aria-label='Pagine del sito'><a href='{root}index.html'{on_l}>Oggi</a>"
+            f"<a href='{root}archivio/index.html'{on_a}>Giorni passati</a></nav></header>")
+
+
+def _bar_tech(cfg: dict, root: str) -> str:
+    """Navigation of the technical pages (they keep the dark look of the report)."""
     return (f"<div class='sitebar' role='navigation' aria-label='Sito'><a class='brand' href='{root}index.html'>{ICON_SVG}"
-            f"<span>{E(cfg['titolo'])}</span></a><div class='sitelinks'><a href='{root}index.html'{on_l}>Ultimo briefing</a>"
-            f"<a href='{root}archivio/index.html'{on_a}>Archivio</a></div></div>")
+            f"<span>{E(cfg['titolo'])}</span></a><div class='sitelinks'><a href='{root}index.html'>Oggi</a>"
+            f"<a href='{root}archivio/index.html'>Giorni passati</a><a href='{root}dettagli/index.html' class='on'>Per chi fa trading</a>"
+            f"</div></div>")
 
 
 def _contact(c: str) -> str:
@@ -264,30 +252,121 @@ def _contact(c: str) -> str:
     return E(c)
 
 
-def _foot(cfg: dict, root: str, pager: str = "", warning: bool = True) -> str:
-    who = ""
-    if cfg["autore"] or cfg["contatto"] or cfg["interessi"]:
-        bits = []
-        if cfg["autore"]:
-            bits.append(f"Pubblicato da <b>{E(cfg['autore'])}</b>")
-        if cfg["contatto"]:
-            bits.append(f"contatto: {_contact(cfg['contatto'])}")
-        line = " · ".join(bits)
-        if cfg["interessi"]:
-            line += ("<br>" if line else "") + f"<b>Interessi di chi pubblica.</b> {E(cfg['interessi'])}"
-        who = f"<p>{line}</p>"
-    warn = ("<p><b>Avvertenza.</b> Analisi informativa prodotta in automatico da regole meccaniche, uguale per tutti i lettori: "
-            "non è consulenza finanziaria né una raccomandazione personalizzata. La verifica storica pubblicata nei briefing "
-            "mostra che queste regole non hanno un vantaggio statistico dimostrato. Il trading con leva comporta un rischio "
-            "elevato di perdita rapida del capitale.</p>") if warning else ""
-    src = ("<p>Dati: candele spot XAU/USD dal feed pubblico Dukascopy; calendario macro ForexFactory; prezzo in tempo reale "
-           "indicativo gold-api.com; controlli incrociati Swissquote e TradingView. Orari in ora di Roma. Metodo, fonti e "
-           "avvertenze in fondo a ogni briefing.</p>") if warning else ""
+def _who(cfg: dict) -> str:
+    if not (cfg["autore"] or cfg["contatto"] or cfg["interessi"]):
+        return ""
+    bits = []
+    if cfg["autore"]:
+        bits.append(f"Pubblicato da <b>{E(cfg['autore'])}</b>")
+    if cfg["contatto"]:
+        bits.append(f"contatto: {_contact(cfg['contatto'])}")
+    line = " · ".join(bits)
+    if cfg["interessi"]:
+        line += ("<br>" if line else "") + f"<b>Interessi di chi pubblica.</b> {E(cfg['interessi'])}"
+    return f"<p>{line}</p>"
+
+
+def _foot(cfg: dict, pager: str = "") -> str:
+    """Footer of the plain pages: who publishes, where the data come from, privacy."""
+    src = ("<p>Da dove vengono i dati: prezzi dell'oro da Dukascopy, calendario degli appuntamenti da ForexFactory, prezzo in "
+           "diretta da gold-api.com. Tutti gli orari sono italiani.</p>")
+    privacy = ("<p>Questo sito non usa cookie e non raccoglie dati su chi lo legge. Il prezzo in diretta viene chiesto dal tuo "
+               "browser direttamente a gold-api.com.</p>")
+    return f"<footer class='foot'>{pager}{_who(cfg)}{src}{privacy}</footer>"
+
+
+def _foot_tech(cfg: dict, pager: str = "") -> str:
     privacy = ("<p>Questo sito non usa cookie né strumenti di tracciamento. Il prezzo in tempo reale è richiesto dal browser "
                "di chi legge direttamente a gold-api.com.</p>")
-    return f"<div class='sitefoot'>{pager}{warn}{who}{src}{privacy}</div>"
+    return f"<div class='sitefoot'>{pager}{_who(cfg)}{privacy}</div>"
 
 
+def _update_bar(root: str, reload: bool, go: str, d: dict) -> str:
+    """Notice shown by an open page when a newer briefing has been published."""
+    site_data = {"root": root, "reload": reload, "go": go, "tday": d["day"], "generated_ms": int(d["generated"].timestamp() * 1000)}
+    return ("<div class='upd' id='upd' role='status'><span id='upd-t'></span><button type='button' id='upd-go'>"
+            f"{'Aggiorna' if reload else 'Apri'}</button></div>"
+            f"<script type='application/json' id='site-data'>{json.dumps(site_data)}</script><script>{SITE_JS}</script>")
+
+
+def _body(d: dict, opt: dict) -> tuple:
+    """(html, view actually drawn). A summary that cannot be drawn (e.g. written by an older version of the
+    programs) never breaks the site: the page falls back to what the official plan says."""
+    try:
+        return simple.body(d["view"], opt), d["view"]
+    except Exception:
+        try:
+            v = simple.legacy_view(d["day"], d["plan"])
+        except Exception:
+            v = simple.legacy_view(d["day"], None)
+        return simple.body(v, opt), v
+
+
+def _document(title: str, head: str, top: str, body: str, foot: str, end: str = "") -> str:
+    return (f"<!doctype html><html lang='it'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>"
+            f"<title>{E(title)}</title>{head}<style>{simple.CSS}</style></head><body><div class='wrap'>{top}<main>{body}</main>{foot}</div>"
+            f"{end}</body></html>")
+
+
+# ----------------------------------------------------------------------------- plain pages
+def simple_page(d: dict, cfg: dict, root: str, is_index: bool, latest: dict, prev_d: dict | None, next_d: dict | None,
+                rec: dict | None, test: dict | None) -> str:
+    """Plain page of one session: the page of the session in progress (index and its permanent copy) or the
+    recap of a past one."""
+    is_latest = d["day"] == latest["day"]
+    path = "" if is_index else f"archivio/{d['day']}.html"
+    if is_index:
+        title = f"{cfg['titolo']}: prezzo dell'oro, tendenza e idee del giorno (XAU/USD)"
+    else:
+        title = f"Oro, {simple.day_name(d['ts'], True)}: prezzo e idee del giorno — {cfg['titolo']}"
+    head = _head(cfg, title, d["summary"], root, path, article=True)
+    top = _bar(cfg, root, "latest" if is_latest else "")
+    if not is_latest:
+        top += (f"<div class='pastnote'><span>Stai guardando una giornata passata: <b>{simple.day_name(d['ts'], True)}</b>.</span>"
+                f"<a href='{root}index.html'>Vai a oggi&nbsp;→</a></div>")
+    opt = {"latest": is_latest, "record": rec, "test": test, "archive": f"{root}archivio/index.html",
+           "details": f"{root}dettagli/{'index' if is_index else d['day']}.html"}
+    links = []
+    if prev_d:
+        links.append(f"<a href='{root}archivio/{prev_d['day']}.html'>←&nbsp;{simple.day_short(prev_d['ts'])}</a>")
+    links.append(f"<a href='{root}archivio/index.html'>Tutti i giorni</a>")
+    if next_d:
+        links.append(f"<a href='{root}archivio/{next_d['day']}.html'>{simple.day_short(next_d['ts'])}&nbsp;→</a>")
+    foot = _foot(cfg, f"<div class='pager'>{''.join(links)}</div>")
+    body, v = _body(d, opt)
+    end = ""
+    if is_latest and not v.get("final"):                 # live price and freshness notice
+        end += (f"<script type='application/json' id='oro-data'>{json.dumps(simple.page_data(v, True))}</script>"
+                f"<script>{simple.JS}</script>")
+    if is_latest:                                        # only the current page offers the reload when a newer one is published
+        end += _update_bar(root, is_index, f"{root}index.html", d)
+    return _document(title, head, top, body, foot, end)
+
+
+def archive_page(days: list[dict], cfg: dict, rec: dict | None, test: dict | None) -> str:
+    latest = days[-1]
+    title = f"Giorni passati — {cfg['titolo']}"
+    desc = f"L'oro (XAU/USD) giorno per giorno: quanto si è mosso il prezzo e com'è andata con le idee pubblicate. {cfg['sottotitolo']}"
+    entries = [{"view": d["view"], "href": f"{d['day']}.html", "latest": d is latest} for d in reversed(days)]
+    head = _head(cfg, title, desc, "../", "archivio/", article=False)
+    return _document(title, head, _bar(cfg, "../", "archive"), simple.archive_body(entries, rec, test), _foot(cfg))
+
+
+def _checked(d: dict) -> dict:
+    """The session with a summary that the list of the days and the scoreboard can read for sure."""
+    try:
+        simple.archive_body([{"view": d["view"], "href": "x.html", "latest": False}], None, None)
+        simple.record([d["view"]])
+        return d
+    except Exception:
+        try:
+            v = simple.legacy_view(d["day"], d["plan"])
+        except Exception:
+            v = simple.legacy_view(d["day"], None)
+        return dict(d, view=v, summary=v["summary"])
+
+
+# ----------------------------------------------------------------------------- technical pages
 def _inject(raw: str, head: str, css: str, top: str, foot: str, end: str) -> str:
     out = raw.replace("</title>", "</title>" + head, 1)          # first <title> only: charts carry their own <title> tooltips
     out = out.replace(A_CSS, css + A_CSS, 1)
@@ -296,114 +375,31 @@ def _inject(raw: str, head: str, css: str, top: str, foot: str, end: str) -> str
     return out.replace(A_END, end + A_END, 1)
 
 
-def briefing_page(d: dict, cfg: dict, root: str, is_index: bool, latest: dict, prev_d: dict | None, next_d: dict | None) -> str:
+def tech_page(d: dict, cfg: dict, is_index: bool, latest: dict, prev_d: dict | None, next_d: dict | None) -> str:
+    """Technical briefing of one session (folder dettagli/): the stored report with navigation and footer."""
+    root = "../"
     is_latest = d["day"] == latest["day"]
-    path = "" if is_index else f"archivio/{d['day']}.html"
-    head = _head(cfg, d["title"], d["summary"], root, path, article=True)
-    top = _bar(cfg, root, "latest" if is_latest else "")
-    if not is_latest:
-        top += (f"<div class='sitenote'><span>Stai leggendo il briefing di <b>{report.d_long(d['ts'])}</b>: livelli e scenari "
-                f"valevano per quella seduta.</span><a href='{root}index.html'>Vai all'ultimo briefing&nbsp;→</a></div>")
+    path = "dettagli/" if is_index else f"dettagli/{d['day']}.html"
+    head = _head(cfg, d["title"], d["tech_summary"], root, path, article=True, dark=True)
+    top = _bar_tech(cfg, root)
+    if is_latest:
+        top += (f"<div class='sitenote'><span><b>Pagina per chi fa trading</b>: tutti i numeri, i livelli e le verifiche dietro le "
+                f"idee di oggi.</span><a href='{root}index.html'>←&nbsp;Torna alla pagina semplice</a></div>")
+    else:
+        top += (f"<div class='sitenote'><span>Stai leggendo i numeri di <b>{report.d_long(d['ts'])}</b>: livelli e scenari "
+                f"valevano per quella giornata.</span><a href='{root}archivio/{d['day']}.html'>←&nbsp;Pagina semplice di quel giorno</a></div>")
     links = []
     if prev_d:
-        links.append(f"<a href='{root}archivio/{prev_d['day']}.html'>←&nbsp;{day_label(prev_d['ts'])}</a>")
-    links.append(f"<a href='{root}archivio/index.html'>Archivio dei briefing</a>")
+        links.append(f"<a href='{prev_d['day']}.html'>←&nbsp;{day_label(prev_d['ts'])}</a>")
+    links.append(f"<a href='{root}archivio/index.html'>Giorni passati</a>")
     if next_d:
-        links.append(f"<a href='{root}archivio/{next_d['day']}.html'>{day_label(next_d['ts'])}&nbsp;→</a>")
+        links.append(f"<a href='{next_d['day']}.html'>{day_label(next_d['ts'])}&nbsp;→</a>")
     if is_index:
-        links.append(f"<a href='archivio/{d['day']}.html' title='Indirizzo che resterà valido anche dopo i prossimi aggiornamenti'>"
+        links.append(f"<a href='{d['day']}.html' title='Indirizzo che resterà valido anche dopo i prossimi aggiornamenti'>"
                      f"Link permanente a questo briefing</a>")
-    foot = _foot(cfg, root, f"<div class='pager'>{''.join(links)}</div>", warning=False)
-    end = ""
-    if is_latest:                                        # only the current page offers the reload when a newer one is published
-        site_data = {"root": root, "index": is_index, "tday": d["day"], "generated_ms": int(d["generated"].timestamp() * 1000)}
-        end = ("<div class='upd' id='upd' role='status'><span id='upd-t'></span><button type='button' id='upd-go'>"
-               f"{'Ricarica' if is_index else 'Apri'}</button></div>"
-               f"<script type='application/json' id='site-data'>{json.dumps(site_data)}</script><script>{SITE_JS}</script>")
+    foot = _foot_tech(cfg, f"<div class='pager'>{''.join(links)}</div>")
+    end = _update_bar(root, is_index, "index.html", d) if is_latest else ""
     return _inject(d["raw"], head, SITE_CSS + ("" if is_latest else OLD_CSS), top, foot, end)
-
-
-# ----------------------------------------------------------------------------- archive index
-def _plan_when(d: dict) -> str:
-    asof = pd.Timestamp(d["plan"]["asof"]).tz_convert(ROME)
-    if asof.strftime("%Y-%m-%d") == d["day"]:
-        return f"piano delle {report.hm(asof)}"
-    return f"piano di {report.d_short(asof)}, {report.hm(asof)}"
-
-
-def _archive_row(d: dict, is_latest: bool) -> str:
-    plan = d["plan"]
-    tag = "<span class='newtag'>ULTIMO</span>" if is_latest else ""
-    if not plan:
-        return (f"<div class='arow'><div class='a-day'><a href='{d['day']}.html'>{day_label(d['ts'])}</a>{tag}</div>"
-                f"<div class='a-sc mut'>Piano non disponibile.</div><div class='a-r mut'>—</div></div>")
-    res = {r["id"]: r for r in plan.get("results", [])}
-    lines, tot, traded = [], 0.0, False
-    for s in plan["setups"]:
-        r = res.get(s["id"])
-        if r is None:
-            pill = "<span class='pill neu'>ESITO A FINE SEDUTA</span>"
-        else:
-            label, cls = report.STATE_PILL.get(r["status"], (r["status"].upper(), "off"))
-            pill = f"<span class='pill {cls}'>{E(label)}</span>"
-            if r["status"] not in NO_TRADE:
-                traded = True
-                tot += float(r["R"])
-                pill += f" <b class='{'pos' if r['R'] > 0 else ('neg' if r['R'] < 0 else 'mut')}'>{fnum(r['R'], 2, True)}R</b>"
-        brief = report.setup_brief(s)
-        lines.append(f"<div class='sc'><span class='sid'>{E(s['id'])}</span><div class='sc-b'><span>{E(brief[0].upper() + brief[1:])}</span>"
-                     f"{pill}</div></div>")
-    if not plan["setups"]:
-        lines.append("<div class='mut'>Nessuno scenario: prezzo lontano dalle zone.</div>")
-    if not plan.get("evaluated"):
-        total = "<span class='mut'>—</span>"
-    elif traded:
-        total = f"<span class='{'pos' if tot > 0 else ('neg' if tot < 0 else 'mut')}'>{fnum(tot, 2, True)}R</span>"
-    else:
-        total = "<span class='mut'>0R</span>"
-    return (f"<div class='arow'><div class='a-day'><a href='{d['day']}.html'>{day_label(d['ts'])}</a>{tag}"
-            f"<div class='mut'>{E(plan['bias'])} · {_plan_when(d)}</div></div>"
-            f"<div class='a-sc'>{''.join(lines)}</div><div class='a-r'>{total}</div></div>")
-
-
-def archive_page(days: list[dict], cfg: dict, out_dir: str) -> str:
-    latest = days[-1]
-    js, rp = journal_stats(out_dir), latest_replay(out_dir)
-    title = f"Archivio dei briefing — {cfg['titolo']}"
-    desc = f"Tutti i briefing intraday sull'oro (XAU/USD) seduta per seduta, con l'esito verificato degli scenari. {cfg['sottotitolo']}"
-    n = len(days)
-    k = [f"<div class='kpi'><div class='l'>Sedute in archivio</div><div class='v'>{n}</div>"
-         f"<div class='s'>dal {day_label(days[0]['ts'])[4:]}</div></div>",
-         f"<div class='kpi'><div class='l'>Scenari verificati</div><div class='v'>{js['setups']}</div>"
-         f"<div class='s'>{js['trades']} {'attivato' if js['trades'] == 1 else 'attivati'} dal mercato</div></div>",
-         f"<div class='kpi'><div class='l'>Totale del registro</div><div class='v'>"
-         f"<span class='{'pos' if js['tot_R'] > 0 else ('neg' if js['tot_R'] < 0 else 'mut')}'>{fnum(js['tot_R'], 1, True)}R</span></div>"
-         f"<div class='s'>{'1 operazione' if js['trades'] == 1 else str(js['trades']) + ' operazioni'}</div></div>"]
-    honest = ""
-    if rp:
-        t = rp["total"]
-        k.append(f"<div class='kpi'><div class='l'>Replica su {rp['days']} sedute</div><div class='v'>"
-                 f"<span class='{'pos' if t['avg'] > 0 else 'neg'}'>{fnum(t['avg'], 2, True)}R</span></div>"
-                 f"<div class='s'>medio per operazione (±{fnum(t['se'], 2)})</div></div>")
-        honest = (f" Fa fede la replica delle stesse regole su {rp['days']} sedute riportata in ogni briefing: {t['trades']} operazioni, "
-                  f"risultato medio {fnum(t['avg'], 2, True)}R (±{fnum(t['se'], 2)}) prima dei costi, cioè nessun vantaggio statistico dimostrato.")
-    small = ("Con così poche operazioni il totale del registro non dice nulla sulla bontà delle regole." if js["trades"] < 30
-             else "Il totale del registro è al lordo di spread e slippage.")
-    rows = "".join(_archive_row(d, d is latest) for d in reversed(days))
-    body = (f"<div class='top'><div><h1><span class='sym'>XAU/USD</span> · Archivio dei briefing</h1>"
-            f"<div class='sub'>Un briefing per seduta, con l'esito degli scenari verificato sui prezzi reali</div></div>"
-            f"<div class='stamp'>Ultimo aggiornamento<br><b>{stamp(latest['generated'])}</b> (ora di Roma)</div></div>"
-            f"<div class='kpis k4'>{''.join(k)}</div>"
-            f"<section><h2>Sedute <small>dalla più recente</small></h2><div class='card'>{rows}</div>"
-            f"<div class='honest'><b>Come leggere gli esiti.</b> Per ogni seduta conta il <b>piano ufficiale</b>, cioè l'ultimo "
-            f"pubblicato prima dell'apertura di Londra (09:00, ora di Roma). L'esito è meccanico: ingresso solo se il prezzo "
-            f"raggiunge la zona o conferma la rottura, uscita al primo obiettivo, allo stop o a fine seduta, stop mai spostato. "
-            f"R è il risultato in multipli del rischio iniziale (distanza ingresso–stop). Gli esiti vengono aggiunti dopo la "
-            f"chiusura e non sono mai corretti a posteriori. {small}{honest}</div></section>")
-    head = _head(cfg, title, desc, "../", "archivio/", article=False)
-    return (f"<!doctype html><html lang='it'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>"
-            f"<title>{E(title)}</title>{head}<style>{report.CSS}{SITE_CSS}{ARCH_CSS}</style></head><body><div class='wrap'>"
-            f"{_bar(cfg, '../', 'archive')}{body}{_foot(cfg, '../')}</div></body></html>")
 
 
 # ----------------------------------------------------------------------------- build
@@ -426,10 +422,10 @@ def make_zip(site_dir: str, zip_path: str) -> int:
 
 
 def sitemap(days: list[dict], cfg: dict) -> str:
-    """Addresses of every page for the search engines (needs the public address of the site)."""
+    """Addresses of the pages for the search engines (needs the public address of the site)."""
     base = cfg["indirizzo"]
     last = days[-1]["generated"].tz_convert(ROME).isoformat(timespec="seconds")
-    urls = [(base, last), (base + "archivio/", last)]
+    urls = [(base, last), (base + "archivio/", last), (base + "dettagli/", last)]
     urls += [(f"{base}archivio/{d['day']}.html", d["generated"].tz_convert(ROME).isoformat(timespec="seconds")) for d in reversed(days)]
     rows = "".join(f"<url><loc>{E(u)}</loc><lastmod>{t}</lastmod></url>\n" for u, t in urls)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -456,20 +452,26 @@ def build(out_dir: str, site_dir: str, cfg: dict | None = None, assets_dir: str 
         return None
     if cfg["archivio_max"]:
         days = days[-cfg["archivio_max"]:]
+    days = [_checked(d) for d in days]
     latest = days[-1]
-    arch = os.path.join(site_dir, "archivio")
-    os.makedirs(arch, exist_ok=True)
+    rec = simple.record([d["view"] for d in days if d is not latest])          # concluded sessions only
+    test = latest["view"].get("test") or simple._test(latest_replay(out_dir))
+    arch, tech = os.path.join(site_dir, "archivio"), os.path.join(site_dir, "dettagli")
     keep = {f"{d['day']}.html" for d in days} | {"index.html"}
-    for f in os.listdir(arch):                           # only pages written by this builder are ever removed
-        if f not in keep and re.fullmatch(r"\d{4}-\d{2}-\d{2}\.html", f):
-            os.remove(os.path.join(arch, f))
+    for folder in (arch, tech):
+        os.makedirs(folder, exist_ok=True)
+        for f in os.listdir(folder):                     # only pages written by this builder are ever removed
+            if f not in keep and re.fullmatch(r"\d{4}-\d{2}-\d{2}\.html", f):
+                os.remove(os.path.join(folder, f))
     for i, d in enumerate(days):
         prev_d = days[i - 1] if i > 0 else None
         next_d = days[i + 1] if i + 1 < len(days) else None
-        _write(os.path.join(arch, f"{d['day']}.html"), briefing_page(d, cfg, "../", False, latest, prev_d, next_d))
-    _write(os.path.join(site_dir, "index.html"),
-           briefing_page(latest, cfg, "", True, latest, days[-2] if len(days) > 1 else None, None))
-    _write(os.path.join(arch, "index.html"), archive_page(days, cfg, out_dir))
+        _write(os.path.join(arch, f"{d['day']}.html"), simple_page(d, cfg, "../", False, latest, prev_d, next_d, rec, test))
+        _write(os.path.join(tech, f"{d['day']}.html"), tech_page(d, cfg, False, latest, prev_d, next_d))
+    before = days[-2] if len(days) > 1 else None
+    _write(os.path.join(site_dir, "index.html"), simple_page(latest, cfg, "", True, latest, before, None, rec, test))
+    _write(os.path.join(tech, "index.html"), tech_page(latest, cfg, True, latest, before, None))
+    _write(os.path.join(arch, "index.html"), archive_page(days, cfg, rec, test))
     gen_r = latest["generated"].tz_convert(ROME)
     version = {"generated_ms": int(latest["generated"].timestamp() * 1000), "generated": gen_r.isoformat(),
                "label": f"{gen_r.day:02d}/{gen_r.month:02d} alle {report.hm(gen_r)}", "tday": latest["day"],
@@ -488,7 +490,7 @@ def build(out_dir: str, site_dir: str, cfg: dict | None = None, assets_dir: str 
     size = 0
     for base, _, names in os.walk(site_dir):
         size += sum(os.path.getsize(os.path.join(base, f)) for f in names)
-    out = {"dir": site_dir, "pages": len(days) + 2, "sessions": len(days), "latest": latest["day"], "bytes": size,
+    out = {"dir": site_dir, "pages": 2 * len(days) + 3, "sessions": len(days), "latest": latest["day"], "bytes": size,
            "generated": latest["generated"], "zip": None, "sitemap": os.path.exists(smap), "proofs": sorted(proofs)}
     if zip_path:
         make_zip(site_dir, zip_path)

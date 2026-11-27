@@ -18,6 +18,10 @@ if [ $(( ora - 10#${u:-0} )) -ge 10800 ] || [ "$h" = 20 ] || [ "$h" = 21 ]; then
   git add -A
 else
   git add -A -- . ':(exclude)output/XAUUSD_briefing_*'
+  # i riepiloghi delle giornate concluse (file piccoli, scritti una volta sola) si salvano subito
+  for j in output/XAUUSD_briefing_*.json; do
+    if [ -f "$j" ] && grep -q '"final":true' "$j"; then git add -- "$j"; fi
+  done
 fi
 
 if git diff --cached --quiet; then

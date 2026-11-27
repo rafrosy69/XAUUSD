@@ -5,9 +5,11 @@ pronto da pubblicare:
 
 | Percorso | Contenuto |
 |---|---|
-| `site/index.html` | L'ultimo briefing: è la pagina principale |
-| `site/archivio/index.html` | Elenco delle sedute con l'esito verificato degli scenari del piano ufficiale |
-| `site/archivio/<data>.html` | Una pagina permanente per ogni seduta (indirizzo che non cambia) |
+| `site/index.html` | La pagina semplice di oggi: prezzo, tendenza, idee del giorno, appuntamenti, com'è andata |
+| `site/archivio/index.html` | «Giorni passati»: una riga per giornata e il bilancio di tutte le idee scattate |
+| `site/archivio/<data>.html` | Il riepilogo semplice di ogni giornata (indirizzo che non cambia) |
+| `site/dettagli/index.html` | Il report tecnico completo di oggi, per chi fa trading |
+| `site/dettagli/<data>.html` | Il report tecnico di ogni giornata passata |
 | `site/version.json` | Ora dell'ultimo aggiornamento: le pagine aperte lo controllano e propongono di ricaricare |
 | `xauusd-sito.zip` | La stessa cartella compressa, da scaricare in un colpo solo |
 
@@ -87,6 +89,17 @@ qualsiasi momento si può lanciare un aggiornamento a mano: scheda Actions → i
 A ogni giro vengono salvati nel repository piani e registro; le pagine dei briefing, che sono file grandi,
 solo ogni tre ore e nelle ore di fine seduta (lo fa `github/salva.sh`), così il repository non si gonfia.
 
+**L'orologio.** Su alcuni repository appena creati GitHub non fa scattare gli orari, o lo fa con ore di
+ritardo. Il flusso `orologio.yml` non ne dipende: aspetta 25 minuti, fa partire l'aggiornamento e si ricarica
+da solo (il sabato e la domenica fino a sera si limita a ricaricarsi). Se si carica un file o si lancia un
+aggiornamento a mano, il conteggio riparte da lì. Per attivarlo: **Settings → Environments → New
+environment**, nome `attesa`, *Configure environment*, spuntare **Wait timer** e scrivere `25`, *Save
+protection rules*; poi creare nel repository il file `.github/workflows/orologio.yml` con il contenuto di
+`github/orologio.yml`. Il numero del *Wait timer* è l'intervallo tra un aggiornamento e l'altro: si cambia da
+quella pagina, senza toccare i file (minimo 5 minuti). Senza il tempo di attesa l'orologio si ferma da solo
+con un errore, senza avviare nulla. Se un giorno si fermasse, basta lanciarlo a mano una volta: scheda
+Actions → *Orologio* → *Run workflow*.
+
 Da sapere:
 
 - **Collaudo.** Il flusso è stato provato in locale passo per passo (installazione del pacchetto,
@@ -108,8 +121,8 @@ Da sapere:
 
 | Campo | Significato |
 |---|---|
-| `titolo` | Nome del sito, in alto a sinistra |
-| `sottotitolo` | Descrizione usata nell'archivio e nelle anteprime dei link |
+| `titolo` | Nome del sito, in alto a sinistra (ora «Oro oggi») |
+| `sottotitolo` | Descrizione usata nelle anteprime dei link e dai motori di ricerca |
 | `autore` | Chi pubblica (nome e cognome o ragione sociale): compare nel piè di pagina |
 | `contatto` | Indirizzo e-mail o link per essere contattati |
 | `interessi` | Dichiarazione sugli interessi di chi pubblica (posizioni in oro, rapporti con broker) |
@@ -148,11 +161,17 @@ repository come un file qualsiasi.
 
 ## 5. Come si comporta la pagina online
 
-- In alto restano sempre visibili data e ora dei dati. Se sono passate più di quattro ore, o la seduta è
-  finita, compare un avviso.
-- Quando viene pubblicato un aggiornamento, chi ha la pagina aperta vede in basso il pulsante *Ricarica*.
-- Le pagine delle sedute passate segnalano che il piano non è più valido e rimandano all'ultimo briefing.
-- Nell'archivio gli esiti compaiono dopo la chiusura della seduta e non vengono mai corretti.
+- La pagina principale è scritta per chi non fa trading: niente sigle, cifre in dollari per oncia, un
+  piccolo glossario in fondo. Il link «Tutti i numeri, per chi fa trading» porta al report tecnico.
+- Sotto il prezzo c'è sempre l'ora dell'ultimo aggiornamento. Se la pagina ha più di un'ora e mezza, o la
+  giornata è finita, compare un avviso in alto.
+- Quando viene pubblicato un aggiornamento, chi ha la pagina aperta vede in basso il pulsante *Aggiorna*.
+- Nei giorni di festa, quando gli scambi si fermano prima del solito, la pagina dice «mercato fermo» e non
+  propone idee finché i prezzi non ripartono.
+- Le pagine dei giorni passati dicono che la giornata è finita e rimandano alla pagina di oggi.
+- «Com'è andata» e il bilancio contano **tutte** le idee scattate nelle giornate concluse (non solo quelle
+  andate bene), in dollari per oncia e prima dei costi. Il riepilogo di una giornata viene scritto una volta
+  sola, a giornata finita, e non viene più corretto.
 
 ## Bozze per chiedere il consenso
 

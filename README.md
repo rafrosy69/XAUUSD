@@ -22,9 +22,17 @@ Il report viene scritto in `output/`:
 | `plans/plan_<data>.json` | Piano ufficiale della seduta, in formato leggibile da programmi |
 | `plans/session_<data>.json` | Tutti gli scenari pubblicati nella seduta (piano ufficiale e aggiornamenti), con lettera e ora |
 | `journal.csv` | Registro: esito dei piani delle sedute concluse, verificato sui prezzi reali |
+| `XAUUSD_briefing_<data>.json` | Riepilogo in parole semplici della giornata: è quello che il sito mostra nelle pagine per tutti |
 
 Accanto a `output/` viene ricostruito a ogni esecuzione anche il **sito da pubblicare**: cartella `site/`
-(ultimo briefing come pagina principale, archivio delle sedute con gli esiti) e `xauusd-sito.zip`.
+e `xauusd-sito.zip`. Il sito ha due livelli:
+
+- **le pagine semplici** («Oro oggi»): prezzo, tendenza, idee del giorno con entrata, obiettivo e stop,
+  appuntamenti importanti e com'è andata, in italiano di tutti i giorni e senza gergo. Sono la pagina
+  principale e l'elenco dei giorni passati;
+- **il report tecnico completo** descritto qui sopra, raggiungibile dal link «Tutti i numeri, per chi fa
+  trading» (cartella `dettagli/` del sito).
+
 Come metterlo online, anche con aggiornamento automatico su GitHub, è spiegato in
 [PUBBLICAZIONE.md](PUBBLICAZIONE.md).
 

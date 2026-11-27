@@ -116,12 +116,12 @@ def candle_chart(df: pd.DataFrame, *, kind: str = "intraday", width: int = 1180,
         if kind == "daily":
             if i == 0 or t.month != tl.iloc[i - 1].month:
                 ticks.append((i, f"{MESI[t.month - 1]} {str(t.year)[2:]}", True, i > 0))
-            elif t.dayofweek == 0 and n <= 140:
+            elif t.day_of_week == 0 and n <= 140:
                 ticks.append((i, f"{t.day}", False, False))
         else:
             prev = tl.iloc[i - 1] if i else None
             if prev is None or t.date() != prev.date():
-                ticks.append((i, f"{GIORNI[t.dayofweek]} {t.day:02d}", True, prev is not None))
+                ticks.append((i, f"{GIORNI[t.day_of_week]} {t.day:02d}", True, prev is not None))
             elif tick_hours and t.minute == 0 and t.hour % tick_hours == 0:
                 ticks.append((i, f"{t.hour:02d}:00", False, False))
     placed: list[float] = []
@@ -174,7 +174,7 @@ def candle_chart(df: pd.DataFrame, *, kind: str = "intraday", width: int = 1180,
         yo, yc, yh, yl = Y(r["open"]), Y(r["close"]), Y(r["high"]), Y(r["low"])
         top, bh = min(yo, yc), max(abs(yc - yo), 1.0)
         t = tl.iloc[i]
-        ts = f"{GIORNI[t.dayofweek]} {t.day:02d}/{t.month:02d}" + ("" if kind == "daily" else f" {t.hour:02d}:{t.minute:02d}")
+        ts = f"{GIORNI[t.day_of_week]} {t.day:02d}/{t.month:02d}" + ("" if kind == "daily" else f" {t.hour:02d}:{t.minute:02d}")
         tip = f"{ts}  A {fnum(r['open'])}  Max {fnum(r['high'])}  Min {fnum(r['low'])}  C {fnum(r['close'])}"
         o.append(f'<g><title>{tip}</title><line x1="{x:.1f}" x2="{x:.1f}" y1="{yh:.1f}" y2="{yl:.1f}" stroke="{c}" stroke-width="1"/>'
                  f'<rect x="{x - cw / 2:.1f}" y="{top:.1f}" width="{cw:.1f}" height="{bh:.1f}" fill="{c}"/></g>')

@@ -6,9 +6,10 @@
     python3 run_briefing.py --no-replay            # skip the rule-replay statistics (faster)
     python3 run_briefing.py --site-only            # rebuild the web site from the briefings already in ./output
 
-Outputs (folder ./output): XAUUSD_briefing_<date>.html / .md, XAUUSD_briefing_latest.html,
+Outputs (folder ./output): XAUUSD_briefing_<date>.html / .md / .json, XAUUSD_briefing_latest.html,
 plans/plan_<date>.json, journal.csv
-Web site (folder ./site + xauusd-sito.zip): index.html (latest briefing), archivio/ (one page per session)
+Web site (folder ./site + xauusd-sito.zip): index.html (the day in plain words), archivio/ (one page per session),
+dettagli/ (the technical briefings)
 """
 from __future__ import annotations
 
@@ -23,7 +24,7 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-from xau import data, engine, extras, report, site  # noqa: E402
+from xau import data, engine, extras, report, simple, site  # noqa: E402
 from xau.charts import fnum  # noqa: E402
 
 
@@ -172,6 +173,11 @@ def main(argv=None) -> int:
             fh.write(html)
         titles = {s["id"]: report.setup_title(s) for s in A["scenarios"]}
         extras.save_plan(a.out, A, titles, keep=X.get("plan_status") is not None)
+        try:                                      # summary for the plain pages of the site: never blocks the briefing
+            simple.save(a.out, simple.view(A, X))
+            simple.finalize_past(a.out, A, m5)
+        except Exception as ex:
+            print(f"ATTENZIONE: pagina semplice non aggiornata ({ex}).", file=sys.stderr)
 
     r = asof.tz_convert(engine.ROME)
     log("", a.quiet)

@@ -15,6 +15,7 @@ from urllib.parse import quote
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORKFLOW = os.path.join(HERE, "github", "aggiorna-sito.yml")
+ALARM = os.path.join(HERE, "github", "orologio.yml")         # the clock that starts the updates, see PUBBLICAZIONE.md
 SKIP_DIRS = {"site", "__pycache__", ".git", ".github"}
 SKIP_FILES = ["*.zip", "*.pyc", "calendar_*.json", "GUIDA_GITHUB.html", ".DS_Store"]
 
@@ -31,16 +32,21 @@ def build(out: str, code_only: bool = False) -> int:
         for f in files:
             z.write(f, os.path.relpath(f, HERE).replace(os.sep, "/"))
         z.write(WORKFLOW, ".github/workflows/aggiorna-sito.yml")
-    return len(files) + 1
+        z.write(ALARM, ".github/workflows/orologio.yml")
+    return len(files) + 2
 
 
 def links(repo: str, wf_name: str = "aggiorna-sito.yml") -> dict:
     """Direct links for a repository. `wf_name` is the file name the workflow gets in .github/workflows/."""
     with open(WORKFLOW, encoding="utf-8") as fh:
         text = fh.read()
+    with open(ALARM, encoding="utf-8") as fh:
+        alarm = fh.read()
     base = f"https://github.com/{repo}"
     owner, name = repo.split("/", 1)
     return {
+        "environment": f"{base}/settings/environments/new",
+        "orologio": f"{base}/new/main?filename={quote('.github/workflows/orologio.yml', safe='')}&value={quote(alarm, safe='')}",
         "pages": f"{base}/settings/pages",
         "upload": f"{base}/upload/main",
         "workflow": f"{base}/new/main?filename={quote('.github/workflows/' + wf_name, safe='')}&value={quote(text, safe='')}",
@@ -163,12 +169,17 @@ if __name__ == "__main__":
     ap.add_argument("--short", default="", help="indirizzo abbreviato del link già compilato, da mostrare nella guida")
     ap.add_argument("--file", default="aggiorna-sito.yml", help="nome del file del flusso nel repository")
     ap.add_argument("--aggiornamento", action="store_true",
-                    help="prepara anche xauusd-aggiornamento.zip: solo programmi e impostazioni, per un repository già attivo")
+                    help="prepara anche il pacchetto di aggiornamento: solo programmi e impostazioni, per un repository già attivo")
+    ap.add_argument("--nome", default="xauusd-aggiornamento.zip",
+                    help="nome del pacchetto di aggiornamento (un nome nuovo evita di confonderlo con uno scaricato in passato)")
+    ap.add_argument("--solo-aggiornamento", action="store_true",
+                    help="prepara soltanto il pacchetto di aggiornamento, senza quello completo")
     a = ap.parse_args()
-    n = build(a.out)
-    print(f"{a.out}: {n} file, {os.path.getsize(a.out) / 1e6:.2f} MB")
-    if a.aggiornamento:
-        upd = os.path.join(HERE, "xauusd-aggiornamento.zip")
+    if not a.solo_aggiornamento:
+        n = build(a.out)
+        print(f"{a.out}: {n} file, {os.path.getsize(a.out) / 1e6:.2f} MB")
+    if a.aggiornamento or a.solo_aggiornamento:
+        upd = os.path.join(HERE, os.path.basename(a.nome))
         n = build(upd, code_only=True)
         print(f"{upd}: {n} file, {os.path.getsize(upd) / 1e6:.2f} MB")
     if a.repo:

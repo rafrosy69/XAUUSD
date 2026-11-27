@@ -67,7 +67,7 @@ now = pd.Timestamp.now(tz="UTC")
 for day in days:
     day = pd.Timestamp(day)
     b = engine.session_bounds(day)
-    if b["open"] < first_ok or b["close"] > now or day.dayofweek >= 5:
+    if b["open"] < first_ok or b["close"] > now or day.day_of_week >= 5:
         continue
     asof = pd.Timestamp(year=day.year, month=day.month, day=day.day, hour=8, tz="Europe/Rome").tz_convert("UTC")
     deadline = pd.Timestamp(year=day.year, month=day.month, day=day.day, hour=21, tz="Europe/Rome").tz_convert("UTC")

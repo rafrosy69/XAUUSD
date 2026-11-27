@@ -45,7 +45,7 @@ def tday_of(ts):
 
 
 def next_weekday(d: pd.Timestamp) -> pd.Timestamp:
-    while d.dayofweek >= 5:
+    while d.day_of_week >= 5:
         d = d + pd.Timedelta(days=1)
     return d
 
@@ -81,7 +81,7 @@ def to_daily(h1: pd.DataFrame) -> pd.DataFrame:
              .agg(time=("time", "first"), open=("open", "first"), high=("high", "max"),
                   low=("low", "min"), close=("close", "last"), n=("close", "size"))
              .reset_index())
-    return out[out["tday"].dt.dayofweek < 5].reset_index(drop=True)
+    return out[out["tday"].dt.day_of_week < 5].reset_index(drop=True)
 
 
 def _sig(x, eps=0.0):
@@ -166,8 +166,8 @@ def collect_levels(P: dict, d1: pd.DataFrame, h4: pd.DataFrame, ind: dict, cfg=C
             add(td["asia_high"], "Max sessione Asia", 2.0, "asia")
             add(td["asia_low"], "Min sessione Asia", 2.0, "asia")
     # weekly
-    wk = dcomp.assign(wk=dcomp["tday"] - pd.to_timedelta(dcomp["tday"].dt.dayofweek, unit="D"))
-    this_wk = today - pd.Timedelta(days=int(today.dayofweek))
+    wk = dcomp.assign(wk=dcomp["tday"] - pd.to_timedelta(dcomp["tday"].dt.day_of_week, unit="D"))
+    this_wk = today - pd.Timedelta(days=int(today.day_of_week))
     pw = wk[wk["wk"] < this_wk]
     if len(pw):
         lastwk = pw[pw["wk"] == pw["wk"].iloc[-1]]
@@ -784,7 +784,7 @@ def walk_forward(h1_raw: pd.DataFrame, m5_raw: pd.DataFrame, n_days: int = 40, h
     for day in days:
         day = pd.Timestamp(day)
         b = session_bounds(day)
-        if b["open"] < first_ok or (before is not None and b["close"] > before) or day.dayofweek >= 5:
+        if b["open"] < first_ok or (before is not None and b["close"] > before) or day.day_of_week >= 5:
             continue
         asof = pd.Timestamp(year=day.year, month=day.month, day=day.day, hour=hour_rome, tz=ROME).tz_convert("UTC")
         deadline = pd.Timestamp(year=day.year, month=day.month, day=day.day,

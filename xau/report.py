@@ -24,11 +24,11 @@ def rome(ts: pd.Timestamp) -> pd.Timestamp:
 
 
 def d_long(ts) -> str:
-    return f"{GIORNI_L[ts.dayofweek]} {ts.day} {MESI_L[ts.month - 1]} {ts.year}"
+    return f"{GIORNI_L[ts.day_of_week]} {ts.day} {MESI_L[ts.month - 1]} {ts.year}"
 
 
 def d_short(ts) -> str:
-    return f"{GIORNI_S[ts.dayofweek]} {ts.day:02d}/{ts.month:02d}"
+    return f"{GIORNI_S[ts.day_of_week]} {ts.day:02d}/{ts.month:02d}"
 
 
 def hm(ts) -> str:
@@ -73,7 +73,7 @@ def week_stats(A: dict) -> dict | None:
 
 def reopen_text(A: dict) -> str:
     t = rome(A["bounds"]["open"])
-    return f"{GIORNI_L[t.dayofweek]} {t.day:02d}/{t.month:02d} alle {hm(t)}"
+    return f"{GIORNI_L[t.day_of_week]} {t.day:02d}/{t.month:02d} alle {hm(t)}"
 
 
 def session_now(A: dict) -> tuple[str, str]:
@@ -184,11 +184,11 @@ def prepare_events(A: dict, cal: list[dict], ctx: dict) -> dict:
     """Events of the session day (Rome calendar day) and key events of the next day."""
     day = A["tday"].date()
     nxt = (A["tday"] + pd.Timedelta(days=1))
-    while nxt.dayofweek >= 5:
+    while nxt.day_of_week >= 5:
         nxt += pd.Timedelta(days=1)
     over = ctx.get("event_overrides", [])
     today, tomorrow, week = [], [], []
-    week_end = (A["tday"] + pd.Timedelta(days=4 - A["tday"].dayofweek)).date()      # Friday of the session's week
+    week_end = (A["tday"] + pd.Timedelta(days=4 - A["tday"].day_of_week)).date()      # Friday of the session's week
     for ev in cal:
         tr = rome(ev["time"])
         rel = ev_relevance(ev)
@@ -601,7 +601,7 @@ def note_when(ctx: dict) -> str:
 
 
 def since_text(A: dict) -> str:
-    return "da ieri" if prev_label(A) == "Ieri" else f"da {GIORNI_S[pd.Timestamp(A['prev']['tday']).dayofweek]}"
+    return "da ieri" if prev_label(A) == "Ieri" else f"da {GIORNI_S[pd.Timestamp(A['prev']['tday']).day_of_week]}"
 
 
 def sec_kpis(A: dict) -> str:
@@ -620,7 +620,7 @@ def sec_kpis(A: dict) -> str:
         d_abs = prev["close"] - prev["close"] / (1 + prev["chg"])
         first = ("<span id='pxlabel'>Ultima chiusura</span>", f"<span id='px'>{fnum(p)}</span>",
                  f"<span class='{'pos' if prev['chg'] >= 0 else 'neg'}' id='pxchg'>{fnum(d_abs, 1, True)} $ ({pct(prev['chg'])})</span> "
-                 f"<span id='pxsince'>{GIORNI_S[pt.dayofweek]} {pt.day:02d}/{pt.month:02d}</span>")
+                 f"<span id='pxsince'>{GIORNI_S[pt.day_of_week]} {pt.day:02d}/{pt.month:02d}</span>")
         ws = week_stats(A)
         if ws:
             second = ("Settimana", f"<span class='{'pos' if ws['chg'] >= 0 else 'neg'}'>{pct(ws['chg'])}</span>",
