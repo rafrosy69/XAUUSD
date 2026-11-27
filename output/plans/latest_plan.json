@@ -1,9 +1,9 @@
 {
  "tday": "2026-11-27",
- "asof": "2026-11-27T16:42:00+00:00",
- "price": 3629.355,
+ "asof": "2026-11-27T17:07:00+00:00",
+ "price": 3632.915,
  "bias": "Ribassista",
- "score": -0.425,
+ "score": -0.325,
  "close": "2026-11-27T22:00:00+00:00",
  "invalidation": 3669.9,
  "evaluated": false,
@@ -43,37 +43,37 @@
    "title": "Vendita su rimbalzo"
   },
   {
-   "id": "P",
+   "id": "Q",
    "type": "break",
    "dir": -1,
    "role": "con il trend · rottura",
-   "zone_lo": 3595.1,
-   "zone_hi": 3607.0,
-   "trigger": 3595.1,
-   "entry": 3592.5,
-   "stop": 3610.5,
+   "zone_lo": 3630.2,
+   "zone_hi": 3637.1,
+   "trigger": 3630.2,
+   "entry": 3627.7,
+   "stop": 3645.7,
    "risk": 18.0,
    "targets": [
     {
+     "price": 3607.0,
+     "rr": 1.14,
+     "label": "Massimo di ieri (PDH) +5",
+     "proj": false
+    },
+    {
      "price": 3575.1,
-     "rr": 0.96,
+     "rr": 2.91,
      "label": "Pivot P +2",
      "proj": false
     },
     {
      "price": 3557.4,
-     "rr": 1.94,
+     "rr": 3.9,
      "label": "Minimo di ieri (PDL) +3",
-     "proj": false
-    },
-    {
-     "price": 3542.4,
-     "rr": 2.77,
-     "label": "Pivot S1 +1",
      "proj": false
     }
    ],
-   "rr1": 0.96,
+   "rr1": 1.14,
    "title": "Rottura ribassista"
   }
  ]
