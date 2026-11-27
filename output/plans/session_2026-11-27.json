@@ -195,7 +195,7 @@
    "zone_lo": 3595.1,
    "zone_hi": 3607.0,
    "trigger": null,
-   "entry": 3601.0,
+   "entry": 3601.1,
    "stop": 3579.6,
    "risk": 21.5,
    "targets": [
@@ -245,7 +245,7 @@
     {
      "price": 3607.0,
      "rr": 4.25,
-     "label": "Massimo di ieri (PDH) +4",
+     "label": "Massimo di ieri (PDH) +5",
      "proj": false
     },
     {
