@@ -259,13 +259,13 @@
    "title": "Vendita su resistenza (range)",
    "pub": "2026-11-27T05:21:00+00:00",
    "official": false,
-   "withdrawn": null
+   "withdrawn": "2026-11-27T08:17:00+00:00"
   },
   {
    "id": "H",
    "type": "fade",
    "dir": 1,
-   "role": "range",
+   "role": "con il trend",
    "zone_lo": 3646.6,
    "zone_hi": 3654.4,
    "trigger": null,
@@ -278,11 +278,48 @@
      "rr": 2.02,
      "label": "Max settimana in corso +2",
      "proj": false
+    },
+    {
+     "price": 3832.1,
+     "rr": 9.37,
+     "label": "Min H4 del 16/11 +1",
+     "proj": false
     }
    ],
    "rr1": 2.02,
    "title": "Acquisto su supporto (range)",
    "pub": "2026-11-27T07:52:00+00:00",
+   "official": false,
+   "withdrawn": null
+  },
+  {
+   "id": "J",
+   "type": "break",
+   "dir": 1,
+   "role": "con il trend · rottura",
+   "zone_lo": 3689.6,
+   "zone_hi": 3700.0,
+   "trigger": 3700.0,
+   "entry": 3702.6,
+   "stop": 3684.5,
+   "risk": 18.0,
+   "targets": [
+    {
+     "price": 3800.0,
+     "rr": 5.4,
+     "label": "Soglia psicologica 3800",
+     "proj": false
+    },
+    {
+     "price": 3832.1,
+     "rr": 7.18,
+     "label": "Min H4 del 16/11 +1",
+     "proj": false
+    }
+   ],
+   "rr1": 5.4,
+   "title": "Rottura rialzista",
+   "pub": "2026-11-27T08:17:00+00:00",
    "official": false,
    "withdrawn": null
   }
